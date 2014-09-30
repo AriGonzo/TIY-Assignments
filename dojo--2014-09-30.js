@@ -29,13 +29,8 @@ function convL2N(words) {
 }
 
 
-/*function subtract(a, b) {
-  convL2N(a, b)
-
-  /*if (a === "one" && b === "one") {
-  return 0;
-}*/
-  /*if (a === "one" && b === "two") {
+function subtract(a, b) {
+  if (a === "one" && b === "two") {
   return -1;
 }
   if (a === "two" && b === "two") {
@@ -64,7 +59,7 @@ function convL2N(words) {
 
 console.log(subtract(convL2N("one", "one")) === 0)
 
-*/
+
 console.log('it should subtract two and two ',
   subtract("two", "two") === 0);
 console.log('it should subtact one and two ',
