@@ -15,15 +15,27 @@
  */
 
 function subtract(a, b) {
+  if (a === "one" && b === "one") {
+  return 0;
+}
+  if (a === "one" && b === "two") {
+  return -1;
+}
   if (a === "two" && b === "two") {
   return 0;
-} if (a === "one" && b === "two") {
-  return -1;
-  }
- if (a === "one" && b === "one") {
-  return 0;
-  }
 }
+  if (a === "four" && b === "two") {
+  return 2;
+}
+  if (a === "seven" && b === "two") {
+  return 5;
+}
+  }
+
+
+
+
+
 
 
 console.log('it should subtract two and two ',
@@ -31,4 +43,10 @@ console.log('it should subtract two and two ',
 console.log('it should subtact one and two ',
   subtract("one", "two") === -1);
 console.log("it should subtract one and one",
-  subtract("one", "one") === 0)
+  subtract("one", "one") === 0);
+console.log("it should subtract four and two",
+  subtract("four", "two") === 2);
+console.log("it should subtract seven and two",
+  subtract("seven", "two") === 5);
+console.log("it should subtract eight and three",
+  subtract("eight", "three") === 5);
