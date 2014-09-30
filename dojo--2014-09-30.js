@@ -24,40 +24,15 @@ function convL2N(words) {
   if (words == "three") {
     words = 3;
   }
-
   return words;
 }
 
-
 function subtract(a, b) {
-  if (a === "one" && b === "two") {
-  return -1;
-}
-  if (a === "two" && b === "two") {
-  return 0;
-}
-  if (a === "four" && b === "two") {
-  return 2;
-}
-  if (a === "seven" && b === "two") {
-  return 5;
-}
-  if (a === "eight" && b === "three") {
-  return 5;
-  }
-
-  if (a === "one" && b === "three") {
-  return -2;
-  }
-
-  if (a === "two" && b === "one") {
-  return 1;
-  }
+  a = convL2N(a);
+  b = convL2N(b);
+  return a - b;
 }
 
-
-
-console.log(subtract(convL2N("one", "one")) === 0)
 
 
 console.log('it should subtract two and two ',
