@@ -14,41 +14,38 @@
  * commit message.
  */
 
-function convL2N(words) {
-  if (words == "one") {
-    words = 1;
+function wordsToNum(word) {
+  if (word == "one") {
+    word = 1;
   }
-  if (words == "two") {
-    words = 2;
+  if (word == "two"){
+    word = 2;
   }
-  if (words == "three") {
-    words = 3;
+  if (word == "three"){
+    word = 3;
   }
-  return words;
 }
 
-function test_convL2N(a, b) {
- console.log('it should convert "' + a + '" to ' + b + ': ',
-    convL2N(a) === b);
+function add(a, b){
+  if (a === "one") {
+    if (b === "one")
+      return 2;
+    } { if (b === "two")
+      return 3;
+    } { if (b === "three")
+      return 4;
+    } { if (b === "four")
+      return 5;
+    } { if (b === "five")
+      return 6;
+    } { if (b === "six")
+      return 7;
+  }
 }
 
-test_convL2N('one', 1);
-test_convL2N('two', 2);
-
-function test_subtract() {
-
-}
-
-function subtract(a, b) {
-  a = convL2N(a);
-  b = convL2N(b);
-  return a - b;
-}
-
-function test_subtract(a, b, c) {
-  console.log('it should subtract "' + a + '" and ' + b + ': ',
-    subtract(a, b) === c);
-}
-
-
-test_subtract("one", "two", -1);
+console.log(add("one", "one") === 2)
+console.log(add("one", "two") === 3)
+console.log(add("one", "three") === 4)
+console.log(add("one", "four") === 5)
+console.log(add("one", "five") === 6)
+console.log(add("one", "six") === 7)
