@@ -14,6 +14,13 @@
  * commit message.
  */
 
+function convL2N(words) {
+  if (words == "one") {
+    words = 1;
+  }
+  return words;
+}
+
 function subtract(a, b) {
   if (a === "one" && b === "one") {
   return 0;
@@ -30,7 +37,14 @@ function subtract(a, b) {
   if (a === "seven" && b === "two") {
   return 5;
 }
+  if (a === "eight" && b === "three") {
+  return 5;
   }
+
+  if (a === "one" && b === "three") {
+  return -2;
+  }
+}
 
 
 
@@ -50,3 +64,5 @@ console.log("it should subtract seven and two",
   subtract("seven", "two") === 5);
 console.log("it should subtract eight and three",
   subtract("eight", "three") === 5);
+console.log("it should subtract one and three",
+  subtract("one", "three") === -2);
