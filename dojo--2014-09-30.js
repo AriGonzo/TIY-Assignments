@@ -18,14 +18,24 @@ function convL2N(words) {
   if (words == "one") {
     words = 1;
   }
+  if (words == "two") {
+    words = 2;
+  }
+  if (words == "three") {
+    words = 3;
+  }
+
   return words;
 }
 
-function subtract(a, b) {
-  if (a === "one" && b === "one") {
+
+/*function subtract(a, b) {
+  convL2N(a, b)
+
+  /*if (a === "one" && b === "one") {
   return 0;
-}
-  if (a === "one" && b === "two") {
+}*/
+  /*if (a === "one" && b === "two") {
   return -1;
 }
   if (a === "two" && b === "two") {
@@ -44,20 +54,23 @@ function subtract(a, b) {
   if (a === "one" && b === "three") {
   return -2;
   }
+
+  if (a === "two" && b === "one") {
+  return 1;
+  }
 }
 
 
 
+console.log(subtract(convL2N("one", "one")) === 0)
 
-
-
-
+*/
 console.log('it should subtract two and two ',
   subtract("two", "two") === 0);
 console.log('it should subtact one and two ',
   subtract("one", "two") === -1);
-console.log("it should subtract one and one",
-  subtract("one", "one") === 0);
+/*console.log("it should subtract one and one",
+  subtract("one", "one") === 0);*/
 console.log("it should subtract four and two",
   subtract("four", "two") === 2);
 console.log("it should subtract seven and two",
@@ -66,3 +79,6 @@ console.log("it should subtract eight and three",
   subtract("eight", "three") === 5);
 console.log("it should subtract one and three",
   subtract("one", "three") === -2);
+console.log("it should subtract two and one",
+  subtract("two", "one") === 1)
+console.log()
