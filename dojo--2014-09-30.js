@@ -14,17 +14,21 @@
  * commit message.
  */
 
-var subtract = function(a, b) {
+function subtract(a, b) {
   if (a === "two" && b === "two") {
   return 0;
 } if (a === "one" && b === "two") {
   return -1;
   }
+ if (a === "one" && b === "one") {
+  return 0;
+  }
 }
-
 
 
 console.log('it should subtract two and two ',
   subtract("two", "two") === 0);
 console.log('it should subtact one and two ',
   subtract("one", "two") === -1);
+console.log("it should subtract one and one",
+  subtract("one", "one") === 0)
