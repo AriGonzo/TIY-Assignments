@@ -68,6 +68,9 @@ function test_add(a, b, c){
 test_add("seven", "three", 10)
 test_add("nine", "five", 14)
 test_add("six", "eight", 14)
+test_add("one", "one", 2)
+test_add("seven", "two", 9)
+test_add("five", "eight", 13)
 
 console.log(add("one", "one") === 2)
 console.log(add("one", "two") === 3)
