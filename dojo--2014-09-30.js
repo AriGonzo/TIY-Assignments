@@ -15,7 +15,7 @@
  */
 
 function wordsToNum(word) {
-  if (word == "one") {
+  if (word == "one"){
     word = 1;
   }
   if (word == "two"){
@@ -24,24 +24,42 @@ function wordsToNum(word) {
   if (word == "three"){
     word = 3;
   }
+  if (word == "four"){
+    word = 4;
+  }
+  if (word == "five"){
+    word = 5;
+  }
+  if (word == "six"){
+    word = 6;
+  }
+  if (word == "seven"){
+    word = 7;
+  }
+  if (word == "eight"){
+    word = 8;
+  }
+  if (word == "nine"){
+    word = 9;
+  }
+  if (word == "ten"){
+    word = 10;
+  }
+    return word
+}
+
+function test_wordsToNum(a, b){
+  console.log('it should convert "' + a + '" to ' + b + ': ',
+    wordsToNum(a) === b);
 }
 
 function add(a, b){
-  if (a === "one") {
-    if (b === "one")
-      return 2;
-    } { if (b === "two")
-      return 3;
-    } { if (b === "three")
-      return 4;
-    } { if (b === "four")
-      return 5;
-    } { if (b === "five")
-      return 6;
-    } { if (b === "six")
-      return 7;
-  }
+  a = wordsToNum(a);
+  b = wordsToNum(b);
+
+  return a + b;
 }
+
 
 console.log(add("one", "one") === 2)
 console.log(add("one", "two") === 3)
