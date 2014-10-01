@@ -1,0 +1,24 @@
+var cell = false,
+    neighbors = [
+      false, false, false, false,
+      false, false, false, false
+    ];
+
+
+/**
+ * The conway function determines if a cell
+ * in Conway's Game of Life is alive or dead
+ * for a single tick, given the neighbors of
+ * that cell.
+ */
+
+function conway(cell, neighbors) {
+
+}
+
+//conway(cell, neighbors);
+
+console.log(conway(false, [
+  false, false, false, false
+  false, false, false, false
+  ]) === false);
