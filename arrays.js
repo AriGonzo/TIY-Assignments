@@ -8,6 +8,10 @@ var assert = require('assert');
  */
 
 function conway(cell, neighbors) {
+  if (numberOfLiveNeighbors(neighbors) >= 2
+){
+  return true;
+  }
   return false;
 }
 
@@ -37,8 +41,39 @@ assert.equal(conway(true, neighbors), false,
 'a cell with only 1 neighbor dies'
 ) || console.log('pass!');
 
+function numberOfLiveNeighbors(neighbors){
+  var liveCells = 0;
+
+  if (neighbors[0] === true) {
+    liveCells++;
+  }
+}
+
+
+function test_numberOfLiveNeighbors(
+  neighbors, expected, message
+){
+    var actual = numberOfLiveNeighbors(neighbors);
+
+    assert(actual === expected) || console.log(message);
+
+  }
+
 neighbors = [
   false, false, false,
   false,        false,
   false, false, false
 ]
+
+assert(numberOfLiveNeighbors([
+    false, false, false,
+    false,        false,
+    false, false, false
+    ]) === 0 );
+assert( numberOfLive)
+
+test_numberOfLiveNeighbors([
+  false, false, false,
+  false,        false,
+  false, false, false
+  ], 1, '1 live neighbor (not [0]');
