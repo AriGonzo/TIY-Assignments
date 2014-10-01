@@ -15,6 +15,9 @@
  */
 
 function wordsToNum(word) {
+  if (word == "zero"){
+    word = 0;
+  }
   if (word == "one"){
     word = 1;
   }
@@ -65,12 +68,16 @@ function test_add(a, b, c){
     add(a, b) === c);
   }
 
+console.log(add("three", "eight"))
+
+test_add("zero", "five", 5)
 test_add("seven", "three", 10)
 test_add("nine", "five", 14)
 test_add("six", "eight", 14)
 test_add("one", "one", 2)
 test_add("seven", "two", 9)
 test_add("five", "eight", 13)
+test_add("three", "four", 7)
 
 console.log(add("one", "one") === 2)
 console.log(add("one", "two") === 3)
