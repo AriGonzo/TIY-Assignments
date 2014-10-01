@@ -60,6 +60,14 @@ function add(a, b){
   return a + b;
 }
 
+function test_add(a, b, c){
+  console.log('It should add "' + a + '" and "' + b + '": ',
+    add(a, b) === c);
+  }
+
+test_add("seven", "three", 10)
+test_add("nine", "five", 14)
+test_add("six", "eight", 14)
 
 console.log(add("one", "one") === 2)
 console.log(add("one", "two") === 3)
@@ -67,3 +75,5 @@ console.log(add("one", "three") === 4)
 console.log(add("one", "four") === 5)
 console.log(add("one", "five") === 6)
 console.log(add("one", "six") === 7)
+console.log(add("one", "seven") === 8)
+console.log(add("eight", "three") === 11)
