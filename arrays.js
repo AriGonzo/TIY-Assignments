@@ -8,7 +8,7 @@ var assert = require('assert');
  */
 
 function conway(cell, neighbors) {
-
+  return false;
 }
 
 //conway(cell, neighbors);
@@ -18,6 +18,27 @@ var cell = false,
       false, false, false, false,
       false, false, false, false
     ];
-assert(
-    (conway(cell,neighbors), false,
-  ) || console.log('PASS!');
+
+assert.equal(conway(cell,neighbors), false,
+  'an empty board should remain empty'
+) || console.log('pass!')
+
+assert.equal(conway(true, neighbors), false,
+    'a cell with no neighbors dies'
+) || console.log('pass!');
+
+neighbors = [
+  false, true,  false,
+  false,        false,
+  false, false, false
+]
+
+assert.equal(conway(true, neighbors), false,
+'a cell with only 1 neighbor dies'
+) || console.log('pass!');
+
+neighbors = [
+  false, false, false,
+  false,        false,
+  false, false, false
+]
