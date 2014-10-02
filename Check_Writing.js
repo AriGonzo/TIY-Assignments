@@ -36,24 +36,24 @@ function test(actual, expected, success){
  * Make up your own, too.
  */
 
-ones =     ["zero", "one", "two", "three", "four", "five",
+ones =     ["zero", "one", "two", "three", "four", "five", //this array holds all of the ones values to be concatenated later
             "six", "seven", "eight", "nine", "ten", "eleven",
             "twelve", "thirteen", "fourteen", "fifteen",
             "sixteen", "seventeen", "eighteen", "nineteen"]
 
-tens =     ["zero", "ten ", "twenty ", "thirty ", "fourty ", "fifty ",
+tens =     ["zero", "ten ", "twenty ", "thirty ", "fourty ", "fifty ", //this array holds all of the teen values to be concatenated later
             "sixty ", "seventy ", "eighty ", "ninety "]
 
 teens =    ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-            "seventeen", "eighteen", "nineteen"]
+            "seventeen", "eighteen", "nineteen"] //this array holds all of the tens values to be concatenated later
 
 hundreds = ["zero", "one hundred ", "two hundred ", "three hundred ", "four hundred ",
             "five hundred ", "six hundred ", "seven hundred ", "eight hundred ",
-            "nine hundred "]
+            "nine hundred "] //this array holds all of the hundreds values to be concatenated later
 
 thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four thousand ",
              "five thousand ", "six thousand ", "seven thousand ", "eight thousand ",
-             "nine thousand "]
+             "nine thousand "] //this array holds all of the thousands values to be concatenated later
 
   function num2letter(num) {
     var cents = ((num - Math.floor(num))* 100).toFixed(0) //calculates the change
