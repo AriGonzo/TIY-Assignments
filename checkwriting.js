@@ -30,33 +30,52 @@ function test(actual,expected, success) {
   */
 
 function breakItDown(num) {
-  digits = num.toString().split('');
+  digits = num.toString().split();
   return digits
 }
 
-function converter(digits){
-  var ones = 0;
-  var tens = 0;
-  var hundreds = 0;
-  var thousands = 0;
+// function converter(digits){
+//   var ones = 0;
+//   var tens = 0;
+//   var hundreds = 0;
+//   var thousands = 0;
+//
+//   if (digits.length === 1) {
+//     if (digits[0] === 1) {
+//       ones = "one";
+//     }
+//     // while (number[0] === 2) {
+//     //   ones = "two";
+//     // }
+//     // number = ones;
+//     return ones;
+//     }
+//   }
 
-  if (digits.length === 1) {
-    if (digits[0] === 1) {
-      ones = "one";
-    }
-    // while (number[0] === 2) {
-    //   ones = "two";
-    // }
-    // number = ones;
-    return ones;
-    }
-  }
+// function converter(digits){
+//   var index;
+//   for (index = 0; index < digits.length; ++index) {
+//       if (digits.length === 4) {
+//         when (index )
+//       }
+//   }
+// }
 
-console.log(breakItDown(1))
+function cvtr(x) {
+  for (index = 0; x.length = 0; index) {
+    while (x.length = 4) {
+      if (index[0] === 1) {
+        ones = "one";
+      };
+    };
+}
+
+console.log(cvtr[1, 5, 3])
+console.log(breakItDown(5454978))
 console.log(digits.length)
-console.log(digits[0])
-console.log(converter[438])
-
+console.log(digits[6])
+// console.log(converter[438])
+// console.log(converter(22))
 
 //console.log(converter([33]))
 
