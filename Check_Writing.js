@@ -1,3 +1,11 @@
+var assert = require('assert');
+
+function test(actual, expected, success){
+    success = success || 'YOU DID IT!';
+
+    assert(actual === expected) || console.log(success);
+}
+
 /**
  * Check Writing
  *
@@ -52,17 +60,17 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
     num = Math.floor(num) //rounds the number down to a whole number
     var val = num.toString(); //converts the number to an array of strings
 
-    if (num < 20){
+    if (num < 20){ //values 0-20
     return ones[num] + " dollars and " + cents + "/100 cents";
   }
-    if (num < 100) {
+    if (num < 100) { //values 20 - 99
       if (num % 10 === 0) { //fixes the issue of numbers like 30 != thirty zero
       return tens[val[0]] + "dollars and " + cents + "/100 cents";
     } {
       return tens[val[0]] + ones[val[1]] + " dollars and " + cents + "/100 cents";
     }
   }
-  if (num < 1000) {
+  if (num < 1000) { //values 100-999
     if (val[1] === '0' && val[2] === '0') { //fixes the issue to get numbers like 100 to work
     return hundreds[val[0]] + "dollars and " + cents + "/100 cents";
     }
@@ -75,7 +83,7 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
       return hundreds[val[0]] + tens[val[1]] + ones[val[2]] + " dollars and " + cents + "/100 cents";
     }
   }
-  if (num < 10000) {
+  if (num < 10000) { //values 1000 - 9999
     if(val[1] === '0' && val[2] === '0' && val[3] === '0') {
       return thousands[val[0]] + "dollars and " + cents + "/100 cents";
     }
@@ -86,6 +94,12 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
     }
   }
 }
+
+
+
+test(true, true, 'true is true!');
+test(num2letter(19), "nineteen dollars and 0/100 cents", '19 >>> nineteen')
+
 console.log(num2letter(1234.56))
 console.log(num2letter(1100))
 console.log(num2letter(1119.20))
