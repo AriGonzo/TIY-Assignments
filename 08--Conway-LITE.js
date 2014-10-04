@@ -64,9 +64,8 @@ function conway(cell, neighbors) {
       if (livingCell > 3){ //rule #3
         newCell = false;
     }
-  }
-   if (cell === false) { //#rule #4
-     if (livingCell === 3){
+  } else {
+        if (livingCell === 3){
         newCell = true;
    } else {
         newCell = false;
