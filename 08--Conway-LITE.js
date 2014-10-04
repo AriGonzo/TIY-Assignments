@@ -1,14 +1,15 @@
 var assert = require('assert');
 
 //PRODUCTION CODE***
-board = [
-  [true, true,  false],
-  [true, false, false],
-  [true, false, false],
-]
 
+board = [
+  [false, false, false],
+  [false, false, false],
+  [false, false, false],
+]
+//NEIGHBOROF FUNCTION - GIVES YOU THE VALUE OF ALL NEIGHBORS SURROUNDING CELL
+var neighbors;
 function neighborOf(board, x, y) {
-  var neighbors;
   if (x === 0 && y === 0) {
     neighbors = [board[0][1], board[1][0], board[1][1]];
   }
@@ -45,7 +46,16 @@ function neighborOf(board, x, y) {
   return neighbors;
 }
 
-
+//START OF CONWAY FUNCTION - EVALUATES NEIGHBORS AND CHANGES LIFE OF CELL
+var livingCell = 0;
+var newCell;
+function conway(cell, neighbors) {
+  for(var i = 0; i < neighbors.length; i++){
+    if(neighbors[i] === true)
+      livingCell++;
+  }
+  return livingCell;
+}
 
 // TEST CODE***
 function test(actual, expected, success){
@@ -54,6 +64,8 @@ function test(actual, expected, success){
     console.log(success);
 }
 
+
+//TEST VARIABLES
 var actual = neighborOf(board, 0, 0)
 var c2test = neighborOf(board, 1, 0)
 var c3test = neighborOf(board, 2, 0)
@@ -63,8 +75,11 @@ var c6test = neighborOf(board, 1, 2)
 var c7test = neighborOf(board, 2, 0)
 var c8test = neighborOf(board, 2, 1)
 var c9test = neighborOf(board, 2, 2)
-var i = 0
+var con1test = conway(board[0][0], actual)
 
+//TESTS
+test(con1test,livingCell)
+console.log(livingCell)
 test(actual[0], board[0][1]);
 test(actual[1], board[1][0]);
 test(actual[2], board[1][1]);
@@ -89,3 +104,11 @@ test(c4test[3], board[1][2]);
 test(c4test[4], board[0][2]);
 test(c4test.length, 5);
 test(c4test[5], undefined);
+test(c5test[0], board[0][0]);
+test(c5test[1], board[1][0]);
+test(c5test[2], board[2][0]);
+test(c5test[3], board[0][1]);
+test(c5test[4], board[2][1]);
+test(c5test[5], board[0][2]);
+test(c5test[6], board[1][2]);
+test(c5test[7], board[2][2]);
