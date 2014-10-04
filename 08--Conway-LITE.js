@@ -2,90 +2,95 @@ var assert = require('assert');
 
 //PRODUCTION CODE***
 
-board = [
+var board = [
   [false, true, false],
   [false, true, false],
   [false, true, false],
 ]
 
 function conwayGOL(board) {
+  var newBoard;
   var x = 0;
   var y = 0;
   var cell = board[x][y];
-  for (x = 0; x < board.length; x++){
-    for(y = 0; y < board[x]; y++) {
-      var neighbors = new Array();
+  var neighbors = new Array();
+  for (;x < board.length;){
+    for (;y < board[x].length;) {
       function neighborOf(board, x, y) {
         if (x === 0 && y === 0) {
-          neighbors.push([board[0][1], board[1][0], board[1][1]]);
+          neighbors = [board[0][1], board[1][0], board[1][1]];
         }
         if (x === 0 && y === 1) {
-          neighbors.push([board[0][0], board[1][0], board[1][1],
-          board[1][2], board[0][2]]);
+          neighbors = [board[0][0], board[1][0], board[1][1],
+          board[1][2], board[0][2]];
         }
         if (x === 0 && y === 2) {
-          neighbors.push([board[0][1], board[1][1], board[1][2]]);
+          neighbors = [board[0][1], board[1][1], board[1][2]];
         }
         if (x === 1 && y === 0) {
-          neighbors.push([board[0][0], board[0][1], board[1][1],
-          board[2][1], board[2][0]]);
+          neighbors = [board[0][0], board[0][1], board[1][1],
+          board[2][1], board[2][0]];
         }
         if (x === 1 && y === 1) {
-          neighbors.push([board[0][0], board[1][0], board[2][0],
+          neighbors = [board[0][0], board[1][0], board[2][0],
           board[0][1], board[2][1], board[0][2], board[1][2],
-          board[2][2]]);
+          board[2][2]];
         }
         if (x === 1 && y === 2) {
-          neighbors.push([board[0][1], board[0][2], board[1][1],
-          board[2][1], board[2][2]]);
+          neighbors = [board[0][1], board[0][2], board[1][1],
+          board[2][1], board[2][2]];
         }
         if (x === 2 && y === 0) {
-          neighbors.push([board[1][0], board[1][1], board[2][1]]);
+          neighbors = [board[1][0], board[1][1], board[2][1]];
         }
         if (x === 2 && y === 1) {
-          neighbors.push([board[2][0], board[1][0], board[1][1],
-          board[1][2], board[2][2]]);
+          neighbors = [board[2][0], board[1][0], board[1][1],
+          board[1][2], board[2][2]];
         }
         if (x === 2 && y === 2) {
-          neighbors.push([board[2][1], board[1][1], board[1][2]]);
-        }
-        while(x < 3 && y < 3) {
-          function conway(cell, neighbors) {
-            var newBoard = new Array();
-            var livingCell = 0;
-            for (var i = 0; i < neighbors.length; i++){
-              if (neighbors[i] === true)
-                 livingCell++;
-            }         //applying the rules by counting LivingCell Neighbors
-              if (cell === true){    //rule #1
-                if (livingCell < 2) {
-                  newBoard.push(false);
-              }
-                if (livingCell === 2 || livingCell === 3) {
-                  newBoard.push(true); //rule #2
-              }
-                if (livingCell > 3){ //rule #3
-                  newBoard.push(false);
-              }
-            } else {
-                  if (livingCell === 3){
-                  newBoard.push(true);
-             } else {
-                  newBoard.push(false);
-              }
-              board = newBoard
-              return board
-             }
-         }
+          neighbors = [board[2][1], board[1][1], board[1][2]];
         }
       }
+      return neighbors
+      if (x < 3 && y < 3) {
+        function conway(cell, neighbors) {
+          var livingCell = 0;
+          for (var i = 0; i < neighbors.length; i++){
+            if (neighbors[i] === true) {
+               livingCell++;
+          }         //applying the rules by counting LivingCell Neighbors
+            if (cell === true){    //rule #1
+              if (livingCell < 2) {
+                newBoard.push(false);
+            }
+              if (livingCell === 2 || livingCell === 3) {
+                newBoard.push(true); //rule #2
+            }
+              if (livingCell > 3){ //rule #3
+                newBoard.push(false);
+            }
+          } else {
+                if (livingCell === 3){
+                newBoard.push(true);
+           } else {
+                newBoard.push(false);
+            }
+           }
+         }
+       }
+      }
+      y++;
     }
+    x++;
   }
+  board = newBoard;
+  return board;
 }
 
 console.log(conwayGOL(board))
+
 //
-// //NEIGHBOROF FUNCTION - GIVES YOU THE VALUE OF ALL NEIGHBORS SURROUNDING CELL
+//NEIGHBOROF FUNCTION - GIVES YOU THE VALUE OF ALL NEIGHBORS SURROUNDING CELL
 // function neighborOf(board, x, y) {
 //   if (x === 0 && y === 0) {
 //     neighbors = [board[0][1], board[1][0], board[1][1]];
@@ -150,14 +155,14 @@ console.log(conwayGOL(board))
 //    }
 //    return [cell, [newCell]]
 // }
-//
-// // TEST CODE***
-// function test(actual, expected, success){
-//     if (success === undefined) success = 'YOU MAGNIFICENT BASTARD, YOU DID IT!';
-//     assert.strictEqual(actual, expected);
-//     console.log(success);
-// }
 
+// TEST CODE***
+function test(actual, expected, success){
+    if (success === undefined) success = 'YOU MAGNIFICENT BASTARD, YOU DID IT!';
+    assert.strictEqual(actual, expected);
+    console.log(success);
+}
+// test(board, board)
 //
 // //TEST VARIABLES
 // var actual = neighborOf(board, 0, 0)
