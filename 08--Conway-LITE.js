@@ -99,6 +99,14 @@ function test(actual, expected, success){
     console.log(success);
 }
 
+function tick_test(board) {
+  var after = tick(board)
+  console.log("-----------------------");
+  console.log(board);
+  console.log("-----------------");
+  console.log(after);
+  console.log("-----------------------");
+}
 
 //TEST VARIABLES
 var actual = neighborOf(board, 0, 0)
@@ -139,11 +147,22 @@ var board5   = [
                 [false, true, false],
                 [false, true, false],
                 ]
+
+
+
+
+
 //TESTS
+tick_test(board);
+tick_test(board2);
+tick_test(board3);
+tick_test(board4);
+tick_test(board5);
 // console.log(board);
 // console.log(tick(board));
-console.log(board2);
-console.log(tick(board2));
+// console.log(board2);
+// console.log("------------")
+// console.log(tick(board2));
 // test(con1test, false);
 // test(con2test, true);
 // test(con3test, false);
