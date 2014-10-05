@@ -89,8 +89,6 @@ function tick(board){
   return board;
 }
 
-// console.log(board)
-// console.log(tick(board));
 
 // TEST CODE***
 function test(actual, expected, success){
@@ -156,12 +154,12 @@ var board6   = [
 
 
 //TESTS
-// tick_test(board);
-// tick_test(board2);
-// tick_test(board3);
-// tick_test(board4);
-// tick_test(board5);
-tick_test(board6);
+tick_test(board);
+tick_test(board2);
+tick_test(board3);
+tick_test(board4);
+tick_test(board5);
+// tick_test(board6);
 // console.log(board);
 // console.log(tick(board));
 // console.log(board2);
