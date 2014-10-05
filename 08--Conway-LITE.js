@@ -65,7 +65,7 @@ function conway(cell, neighbors) {
         newCell = false;
     }
   } else {
-        if (livingCell === 3){
+        if (livingCell === 3){  //rule #4
         newCell = true;
    } else {
         newCell = false;
