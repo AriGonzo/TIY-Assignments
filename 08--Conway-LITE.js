@@ -74,6 +74,24 @@ function conway(cell, neighbors) {
    return newCell
 }
 
+//TICK CODE***
+
+function tick(board){
+  var newBoard = [] //create an empty array for the new board
+  for (var i = 0; i < board.length; i++) {
+    for (var j = 0; j < board[i].length; j++) {
+      newBoard.push(conway(board[i][j], neighborOf(board, i, j)));
+    }
+  }
+  var row1 = newBoard.splice(0, 3);
+  var row2 = newBoard.splice(0, 3);
+  board = [row1, row2, newBoard];
+  return board;
+}
+
+// console.log(board)
+// console.log(tick(board));
+
 // TEST CODE***
 function test(actual, expected, success){
     if (success === undefined) success = 'YOU MAGNIFICENT BASTARD, YOU DID IT!';
@@ -101,17 +119,40 @@ var con6test = conway(board[2][1], c6test)
 var con7test = conway(board[0][2], c7test)
 var con8test = conway(board[1][2], c8test)
 var con9test = conway(board[2][2], c9test)
-
+var board2   = [
+                [false, false, false],
+                [false, true , false],
+                [false, false, false],
+                ]
+var board3   = [
+                [false, false, false],
+                [false, true,  true ],
+                [false, false, false],
+                ]
+var board4   = [
+                [true,  false, false],
+                [false, true,  false],
+                [false, false, false],
+                ]
+var board5   = [
+                [false, true, false],
+                [false, true, false],
+                [false, true, false],
+                ]
 //TESTS
-test(con1test, false);
-test(con2test, true);
-test(con3test, false);
-test(con4test, false);
-test(con5test, true);
-test(con6test, false);
-test(con7test, false);
-test(con8test, true);
-test(con9test, false);
+// console.log(board);
+// console.log(tick(board));
+console.log(board2);
+console.log(tick(board2));
+// test(con1test, false);
+// test(con2test, true);
+// test(con3test, false);
+// test(con4test, false);
+// test(con5test, true);
+// test(con6test, false);
+// test(con7test, false);
+// test(con8test, true);
+// test(con9test, false);
 // test(actual[0], board[0][1]);
 // test(actual[1], board[1][0]);
 // test(actual[2], board[1][1]);
