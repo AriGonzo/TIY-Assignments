@@ -3,12 +3,12 @@ var assert = require('assert');
 //PRODUCTION CODE***
 
 board = [
-  [false, true, false],
-  [false, true, false],
-  [false, true, false],
+  [false, false, false],
+  [false, false, false],
+  [false, false, false],
 ]
 //NEIGHBOROF FUNCTION - GIVES YOU THE VALUE OF ALL NEIGHBORS SURROUNDING CELL
-var neighbors;
+
 function neighborOf(board, x, y) {
   if (x === 0 && y === 0) {
     neighbors = [board[0][1], board[1][0], board[1][1]];
@@ -47,31 +47,36 @@ function neighborOf(board, x, y) {
 }
 
 //START OF CONWAY FUNCTION - EVALUATES NEIGHBORS AND CHANGES LIFE OF CELL
-var newCell;
+
 function conway(cell, neighbors) {
   var livingCell = 0;
-  for (var i = 0; i < neighbors.length; i++){
-    if (neighbors[i] === true)
-       livingCell++;
-  }         //applying the rules by counting LivingCell Neighbors
-    if (cell === true){    //rule #1
-      if (livingCell < 2) {
-        newCell = false;
-    }
-      if (livingCell === 2 || livingCell === 3) {
-        newCell = true; //rule #2
-    }
-      if (livingCell > 3){ //rule #3
-        newCell = false;
-    }
-  } else {
-        if (livingCell === 3){  //rule #4
-        newCell = true;
-   } else {
-        newCell = false;
-    }
+  var neighbors = neighborOf(board, x, y);
+  for (var x = 0; x < board.length; x++ ) {
+    for (var y = 0; y < board[x].length; y++){
+      for (var i = 0; i < neighbors.length; i++){
+        if (neighbors[i] === true)
+           livingCell++;
+      }         //applying the rules by counting LivingCell Neighbors
+        if (cell === true){    //rule #1
+          if (livingCell < 2) {
+            newCell = false;
+        }
+          if (livingCell === 2 || livingCell === 3) {
+            newCell = true; //rule #2
+        }
+          if (livingCell > 3){ //rule #3
+            newCell = false;
+        }
+      } else {
+            if (livingCell === 3){
+            newCell = true;
+       } else {
+            newCell = false;
+        }
+       }
+       return newCell
+     }
    }
-   return newCell
 }
 
 //TICK CODE***
@@ -159,7 +164,7 @@ tick_test(board2);
 tick_test(board3);
 tick_test(board4);
 tick_test(board5);
-// tick_test(board6);
+tick_test(board6);
 // console.log(board);
 // console.log(tick(board));
 // console.log(board2);
