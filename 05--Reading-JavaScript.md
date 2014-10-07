@@ -166,4 +166,157 @@
 * * Variable:
 * ==========
 * symbol = chartistGuyData
-* String = '1st', '2nd', '3rd', 'Workers', 'Nobles'
+*
+* Type Literal
+* ============
+* Name: String
+* Symbol: "..." / '...'
+* Values = '1st', '2nd', '3rd', 'Workers', 'Nobles'
+
+```javascript
+function() {
+  var arrayProto = Array.prototype,
+      slice = arrayProto.slice,
+      _each = arrayProto.forEach;
+```
+
+* forEach Method
+* =======
+* symbol: .forEach
+*
+* Operator
+* ==========
+* name: Assignment Operator
+* symbol:  =
+*
+* Variable:
+* ==========
+* symbol = arrayProto
+* value = Array
+
+```javascript
+    for (var i = 0, length = arguments.length; i < length; i++) {
+      var lambda = arguments[i];
+      try {
+        returnValue = lambda();
+        break;
+      } catch (e) { }
+    }
+```
+* Variable
+* ==========
+* symbol = lambda
+* value = Array Element
+*
+* Keyword
+* ===========
+* name: conditional
+* symbol: for
+*
+* Keyword
+* ==========
+*  name: Variable Declaration
+* symbol: var
+*
+* Operator
+* ==========
+* name: Assignment Operator
+* symbol:  =
+
+```javascript
+function $w(string) {
+  if (!Object.isString(string)) return [];
+  string = string.strip();
+  return string ? string.split(/\s+/) : [];
+}
+```
+* Keyword
+* ===========
+* name: conditional
+* symbol: if
+*
+* Type Literal
+* ============
+* name: Array
+* symbol: [ ]
+*
+* Operator
+* ============
+* symbol: ?
+* type: conditional
+*
+```javascript
+  function each(iterator, context) {
+    for (var i = 0, length = this.length >>> 0; i < length; i++) {
+      if (i in this) iterator.call(context, this[i], i, this);
+    }
+  }
+  if (!_each) _each = each;
+```
+* Keyword
+* ==========
+*  name: Variable Declaration
+* symbol: var
+*
+* Keyword
+* ===========
+* name: conditional
+* symbol: for
+*
+* Keyword
+* ===========
+* name: conditional
+* symbol: if
+
+```javascript
+  function clear() {
+    this.length = 0;
+    return this;
+```
+
+* Keyword
+* ========
+* name: Function declaration
+* symbol: function
+*
+* Operator
+* ==========
+* name: Assignment Operator
+* symbol:  =
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 0
+
+```javascript
+    i = Number(i);
+    if (isNaN(i)) {
+      i = 0;
+    } else if (i !== 0 && isFinite(i)) {
+```
+
+* Operator
+* ==========
+* name: Assignment Operator
+* symbol:  =
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 0
+*
+* Keyword
+* ===========
+* name: conditional
+* symbol: if
+*
+* Keyword
+* ===========
+* name: conditional
+* symbol: else/if
+*
+* Operator
+* ==========
+* name: Comparison Operator
+* symbol:  !==
