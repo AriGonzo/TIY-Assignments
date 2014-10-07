@@ -71,19 +71,22 @@ function conway(cell, neighbors) {
             newCell = false;
         };
       };
-       return newCell
      });
+     return newCell
 }
 
 //TICK CODE***
 
 function tick(board){
   var newBoard = [] //create an empty array for the new board
-  for (var i = 0; i < board.length; i++) { //walks along the rows of board
-    for (var j = 0; j < board[i].length; j++) { //walks along columns of board
-      newBoard.push(conway(board[i][j], neighborOf(board, i, j)));
-    }                     //running conway and neighborOf functions and pushing
-  }                       //them into an array.
+  board.forEach(function(value, index){
+    value.forEach(function(i, j){
+
+  // for (var i = 0; i < board.length; i++) { //walks along the rows of board
+  //   for (var j = 0; j < board[i].length; j++) { //walks along columns of board
+      newBoard.push(conway(board[index][j], neighborOf(board, index, j)));
+    });                     //running conway and neighborOf functions and pushing
+  });                       //them into an array.
   var row1 = newBoard.splice(0, 3);//splicing the array into 3 parts
   var row2 = newBoard.splice(0, 3);
   board = [row1, row2, newBoard]; //returning the full assembled board
@@ -155,19 +158,19 @@ var board6   = [
 
 
 //TESTS
-tick_test(board);
-tick_test(board2);
-tick_test(board3);
-tick_test(board4);
-tick_test(board5);
-tick_test(board6);
-// console.log(board);
-// console.log(tick(board));
-// console.log(board2);
-// console.log("------------")
-// console.log(tick(board2));
-// test(con1test, false);
-// test(con2test, true);
+// tick_test(board);
+// tick_test(board2);
+// tick_test(board3);
+// tick_test(board4);
+// tick_test(board5);
+// tick_test(board6);
+console.log(board);
+console.log(tick(board));
+console.log(board2);
+console.log("------------")
+console.log(tick(board2));
+test(con1test, false);
+test(con2test, true);
 // test(con3test, false);
 // test(con4test, false);
 // test(con5test, true);
