@@ -5,17 +5,50 @@
           showGrid: true,
         },
 ```
-* Variable: defaultOptions
-* Number =  10
-* Boolean = true
-* Boolean = true
-    
+* Variable:
+* ==========
+* symbol = defaultOptions
+
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 10
+*
+* Type Literal
+* ============
+* Name: Boolean
+* Symbol: True
+
+
 ```javascript
     return String.fromCharCode(97 + n % 26);
   };
 ```
-* Operators = '+' , '%'
-* Number - 97, 26
+* Operator
+* ==========
+* name: Assignment Operator
+* symbol:  =
+*
+* Operator
+* ==========
+* name: Addition
+* symbol:  +
+*
+* Operator
+* ==========
+* name: Modulus
+* symbol:  %
+*  
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 97
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 26
+
 
 ```javascript
         startAngle: 0,
@@ -30,9 +63,25 @@
       },
 ```
 
-* Number = 0, 60
-* Boolean = false, true, false
-* Value = undefined 
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 0
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 60
+*
+* Type Literal
+* ============
+* Name: Boolean
+* Symbol: True
+*
+* Type Literal
+* ============
+* Name: Boolean
+* Symbol: False
 
 ```javascript
       var center = {
@@ -41,10 +90,26 @@
       };
 ```
 
-* Variable = center
-* Number = 2
-* Operator = '/'
- 
+* Variable:
+* ==========
+* symbol = center
+*
+* Operator
+* ==========
+* name: Assignment Operator
+* symbol:  =
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 2
+*
+* Operator
+* ==========
+* name: Division
+* symbol:  /
+
+
 ```javascript
         var endAngle = startAngle + dataArray[i] / totalDataSum * 360;
         // If we need to draw the arc for all 360 degrees we need to add a hack where we close the circle
@@ -54,6 +119,7 @@
         }
 ```
 
+*
 * Variable = endAngle
 * Number = 360, 359.99, 0.01
 * Operator = '/' , '-' , '*'
