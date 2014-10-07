@@ -5,17 +5,17 @@
           showGrid: true,
         },
 ```
-* Variable:
-* ==========
+Variable:
+==========
 * symbol = defaultOptions
 
-* Type Literal
-* ============
+Type Literal
+============
 * Name: Number
 * Symbol: 10
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Boolean
 * Symbol: True
 
@@ -24,28 +24,28 @@
     return String.fromCharCode(97 + n % 26);
   };
 ```
-* Operator
-* ==========
+Operator
+==========
 * name: Assignment Operator
 * symbol:  =
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Addition
 * symbol:  +
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Modulus
 * symbol:  %
-*  
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 97
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 26
 
@@ -63,23 +63,23 @@
       },
 ```
 
-* Type Literal
-* ============
+Type Literal
+============
 * Name: Number
 * Symbol: 0
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 60
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Boolean
 * Symbol: True
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Boolean
 * Symbol: False
 
@@ -90,22 +90,22 @@
       };
 ```
 
-* Variable:
-* ==========
+Variable:
+==========
 * symbol = center
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Assignment Operator
 * symbol:  =
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 2
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Division
 * symbol:  /
 
@@ -119,32 +119,32 @@
         }
 ```
 
-* Operator
-* ==========
+Operator
+==========
 * name: Division
 * symbol:  /
-*
-* Variable:
-* ==========
+
+Variable:
+==========
 * symbol = endAngle
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 360
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 359.99
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 0.01
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Subtraction
 * symbol:  -
 
@@ -163,12 +163,12 @@
     ]
   };
 ```
-* * Variable:
-* ==========
+Variable:
+==========
 * symbol = chartistGuyData
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: String
 * Symbol: "..." / '...'
 * Values = '1st', '2nd', '3rd', 'Workers', 'Nobles'
@@ -180,17 +180,17 @@ function() {
       _each = arrayProto.forEach;
 ```
 
-* forEach Method
-* =======
+forEach Method
+=======
 * symbol: .forEach
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Assignment Operator
 * symbol:  =
-*
-* Variable:
-* ==========
+
+Variable:
+==========
 * symbol = arrayProto
 * value = Array
 
@@ -203,23 +203,23 @@ function() {
       } catch (e) { }
     }
 ```
-* Variable
-* ==========
+Variable
+==========
 * symbol = lambda
 * value = Array Element
-*
-* Keyword
-* ===========
+
+Keyword
+===========
 * name: conditional
 * symbol: for
-*
-* Keyword
-* ==========
+
+Keyword
+==========
 *  name: Variable Declaration
 * symbol: var
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Assignment Operator
 * symbol:  =
 
@@ -230,21 +230,21 @@ function $w(string) {
   return string ? string.split(/\s+/) : [];
 }
 ```
-* Keyword
-* ===========
+Keyword
+===========
 * name: conditional
 * symbol: if
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * name: Array
 * symbol: [ ]
-*
-* Operator
-* ============
+
+Operator
+============
 * symbol: ?
 * type: conditional
-*
+
 ```javascript
   function each(iterator, context) {
     for (var i = 0, length = this.length >>> 0; i < length; i++) {
@@ -253,18 +253,18 @@ function $w(string) {
   }
   if (!_each) _each = each;
 ```
-* Keyword
-* ==========
+Keyword
+==========
 *  name: Variable Declaration
 * symbol: var
-*
-* Keyword
-* ===========
+
+Keyword
+===========
 * name: conditional
 * symbol: for
-*
-* Keyword
-* ===========
+
+Keyword
+===========
 * name: conditional
 * symbol: if
 
@@ -274,18 +274,18 @@ function $w(string) {
     return this;
 ```
 
-* Keyword
-* ========
+Keyword
+========
 * name: Function declaration
 * symbol: function
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Assignment Operator
 * symbol:  =
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 0
 
@@ -296,27 +296,27 @@ function $w(string) {
     } else if (i !== 0 && isFinite(i)) {
 ```
 
-* Operator
-* ==========
+Operator
+==========
 * name: Assignment Operator
 * symbol:  =
-*
-* Type Literal
-* ============
+
+Type Literal
+============
 * Name: Number
 * Symbol: 0
-*
-* Keyword
-* ===========
+
+Keyword
+===========
 * name: conditional
 * symbol: if
-*
-* Keyword
-* ===========
+
+Keyword
+===========
 * name: conditional
 * symbol: else/if
-*
-* Operator
-* ==========
+
+Operator
+==========
 * name: Comparison Operator
 * symbol:  !==
