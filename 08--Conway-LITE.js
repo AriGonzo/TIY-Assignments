@@ -158,19 +158,19 @@ var board6   = [
 
 
 //TESTS
-// tick_test(board);
-// tick_test(board2);
-// tick_test(board3);
-// tick_test(board4);
-// tick_test(board5);
-// tick_test(board6);
-console.log(board);
-console.log(tick(board));
-console.log(board2);
-console.log("------------")
-console.log(tick(board2));
-test(con1test, false);
-test(con2test, true);
+tick_test(board);
+tick_test(board2);
+tick_test(board3);
+tick_test(board4);
+tick_test(board5);
+tick_test(board6);
+// console.log(board);
+// console.log(tick(board));
+// console.log(board2);
+// console.log("------------")
+// console.log(tick(board2));
+// test(con1test, false);
+// test(con2test, true);
 // test(con3test, false);
 // test(con4test, false);
 // test(con5test, true);

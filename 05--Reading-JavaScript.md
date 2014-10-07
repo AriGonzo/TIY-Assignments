@@ -119,10 +119,34 @@
         }
 ```
 
+* Operator
+* ==========
+* name: Division
+* symbol:  /
 *
-* Variable = endAngle
-* Number = 360, 359.99, 0.01
-* Operator = '/' , '-' , '*'
+* Variable:
+* ==========
+* symbol = endAngle
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 360
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 359.99
+*
+* Type Literal
+* ============
+* Name: Number
+* Symbol: 0.01
+*
+* Operator
+* ==========
+* name: Subtraction
+* symbol:  -
 
 ```javascript
   var chartistGuyData = {
@@ -139,5 +163,7 @@
     ]
   };
 ```
-* Variable = chartistGuyData
+* * Variable:
+* ==========
+* symbol = chartistGuyData
 * String = '1st', '2nd', '3rd', 'Workers', 'Nobles'
