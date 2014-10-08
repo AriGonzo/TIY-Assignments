@@ -57,10 +57,7 @@ function wordsToNum(word) {
 // }
 
 function add(a, b){
-  a = wordsToNum(a);
-  b = wordsToNum(b);
-
-  return a + b;
+  return wordsToNum(a) + b = wordsToNum(b);
 }
 
 // function test_add(a, b, c){
@@ -72,7 +69,7 @@ var assert = require('assert');
 
 suite(wordsToNum(0), function() {
   test('should return "0" when given "zero"', function(){
-    assert.equal("blue", wordsToNum);
+    assert.equal(0, wordsToNum("zero"));
   })
 })
 //
