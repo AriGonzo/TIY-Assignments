@@ -1,11 +1,3 @@
-var assert = require('assert');
-
-function test(actual, expected, success){
-    success = success || 'YOU DID IT!';
-
-    assert(actual === expected) || console.log(success);
-}
-
 /**
  * Check Writing
  *
@@ -84,8 +76,11 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
     }
   }
   if (num < 10000) { //values 1000 - 9999
+    if(num % 100 === 0) {
+      return thousands[val[0]] + hundreds[val[1]] + "`dollars and " + cents + "/100 cents";
+    }
     if(val[1] === '0' && val[2] === '0' && val[3] === '0') {
-      return thousands[val[0]] + "dollars and " + cents + "/100 cents";
+      return thousands[val[0]] + " dollars and " + cents + "/100 cents";
     }
   if (val[2] < 2) {
     return thousands[val[0]] + hundreds[val[1]] + teens[val[3]] + " dollars and " + cents + "/100 cents";
@@ -95,41 +90,77 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
   }
 }
 
+var assert = require('assert');
 
+function test(actual, expected, success){
+    success = success || 'YOU DID IT!';
 
-test(true, true, 'true is true!');
-test(num2letter(19), "nineteen dollars and 0/100 cents", '19 >>> nineteen')
+    assert(actual === expected) || console.log(success);
+}
 
-console.log(num2letter(1234.56))
-console.log(num2letter(1100))
-console.log(num2letter(1119.20))
-console.log(num2letter(12.50))
-console.log(num2letter(19))
-console.log(num2letter(0))
-console.log(num2letter(17))
-console.log(num2letter(13))
-console.log(num2letter(11))
-console.log(num2letter(7))
-console.log(num2letter(65))
-console.log(num2letter(99))
-console.log(num2letter(41))
-console.log(num2letter(30.12))
-console.log(num2letter(112))
-console.log(num2letter(115))
-console.log(num2letter(119))
-console.log(num2letter(130))
-console.log(num2letter(340))
-console.log(num2letter(729))
-console.log(num2letter(283))
-console.log(num2letter(492))
-console.log(num2letter(321.92))
-console.log(num2letter(100))
-console.log(num2letter(200))
-console.log(num2letter(300))
-console.log(num2letter(400))
-console.log(num2letter(500))
-console.log(num2letter(1000))
-console.log(num2letter(2000))
-console.log(num2letter(3000))
-console.log(num2letter(4000))
-console.log(num2letter(5000))
+var testCases = [
+  [1234.56, "one thousand two hundred thirty four dollars and 56/100 cents"],
+  [1100, "one thousand one hundred dollars and 0/100 cents"],
+  [1119.20, "one thousand one hundred nineteen dollars and 20/100 cents"],
+  [12.50, "twelve dollars and 50/100 cents"],
+  [19, "nineteen dollars and 0/100 cents"],
+  [0, "zero dollars and 0/100 cents"],
+  [17, "seventeen dollars and 0/100 cents"],
+  [13, "thirteen dollars and 0/100 cents"],
+  [11, "eleven dollars and 0/100 cents"],
+  [7, "seven dollars and 0/100 cents"],
+  [65, "sixty five dollars and 0/100 cents"],
+  [99, "ninety nine dollars and 0/100 cents"],
+  [41, "fourty one dollars and 0/100 cents"],
+  [30.12, "thirty dollars and 12/100 cents"],
+  [112, "one hundred twelve dollars and 0/100 cents"],
+  [115, "one hundred fifteen dollars and 0/100 cents"],
+  [119, "one hundred nineteen dollars and 0/100 cents"],
+  [130, "one hundred thirty dollars and 0/100 cents"],
+  [321.92, "three hundred twenty one dollars and 92/100 cents"]
+]
+
+testCases.forEach(function(testCase) {
+  var actual = num2letter(testCase[0])
+    expected = testCase[1]
+    console.log("Number: " + testCase[0].toFixed(2) + " was converted to '" + testCase[1] + "'!")
+
+  assert.strictEqual(actual, expected);
+});
+//
+// test(true, true, 'true is true!');
+// test(num2letter(19), "nineteen dollars and 0/100 cents", '19 >>> nineteen')
+//
+//   console.log(num2letter(1234.56))
+//   console.log(num2letter(1100))
+// console.log(num2letter(1119.20))
+// console.log(num2letter(12.50))
+// console.log(num2letter(19))
+// console.log(num2letter(0))
+// console.log(num2letter(17))
+// console.log(num2letter(13))
+// console.log(num2letter(11))
+// console.log(num2letter(7))
+// console.log(num2letter(65))
+// console.log(num2letter(99))
+// console.log(num2letter(41))
+// console.log(num2letter(30.12))
+// console.log(num2letter(112))
+// console.log(num2letter(115))
+// console.log(num2letter(119))
+// console.log(num2letter(130))
+// console.log(num2letter(340))
+// console.log(num2letter(729))
+// console.log(num2letter(283))
+// console.log(num2letter(492))
+// console.log(num2letter(321.92))
+// console.log(num2letter(100))
+// console.log(num2letter(200))
+// console.log(num2letter(300))
+// console.log(num2letter(400))
+// console.log(num2letter(500))
+// console.log(num2letter(1000))
+// console.log(num2letter(2000))
+// console.log(num2letter(3000))
+// console.log(num2letter(4000))
+// console.log(num2letter(5000))

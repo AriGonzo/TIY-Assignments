@@ -320,3 +320,39 @@ Operator
 ==========
 * name: Comparison Operator
 * symbol:  !==
+
+```javascript
+if(typeof module === "object"){
+  var Terraformer = require("terraformer");
+  Terraformer.ArcGIS = require("../terraformer-arcgis-parser.js");
+}
+```
+Keyword
+===========
+* name: conditional
+* symbol: if
+
+Operator
+==========
+* name: Strictly Equals
+* symbol:  ===
+
+Type Literal
+============
+* Name: String
+* Symbol: "..." / '...'
+* Values = 'object' "terraformer" "../terraformer-arcgis-parser.js"
+
+```javascript
+describe("ArcGIS Tools", function(){
+
+  it("should convert a GeoJSON Point to an ArcGIS Point", function() {
+    var input = {
+      "type": "Point",
+      "coordinates": [-58.7109375,47.4609375]
+    };
+```
+Keyword
+===========
+* name:testing function
+* symbol: describe

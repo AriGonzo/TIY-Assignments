@@ -51,10 +51,10 @@ function neighborOf(board, x, y) {
 function conway(cell, neighbors) {
   var livingCell = 0;
   neighbors.forEach(function(value, index){
-    if (value === true){
+    if (value){
       livingCell++;    //applying the rules by counting LivingCell Neighbors
     }        //applying the rules by counting LivingCell Neighbors
-        if (cell === true) {    //rule #1
+        if (cell) {    //rule #1
           if (livingCell < 2) {
             newCell = false;
         }
