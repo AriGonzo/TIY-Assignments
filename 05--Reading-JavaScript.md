@@ -356,3 +356,58 @@ Keyword
 ===========
 * name:testing function
 * symbol: describe
+
+Keyword
+========
+* name: Function invocation
+* symbol: function()
+
+Variable:
+==========
+* symbol = input
+
+Operator
+==========
+* name: Assignment Operator
+* symbol:  =
+
+Type Literal
+============
+* Name: String
+* Symbol: "..." / '...'
+* Values = "type" "Point" "coordinates"
+
+```javascript
+    for (var j = 1; j < strings.length; j += 2) {
+      // j is the offset for the x value
+      // Convert the value from base 32 and add the previous x value
+      x = (parseInt(strings[j], 32) + xDiffPrev);
+      xDiffPrev = x;
+```
+Keyword
+===========
+* name: conditional
+* symbol: for
+* operation: loop
+
+Variable:
+==========
+* symbol = j
+* value = 1
+
+```javascript
+points.push([x / coefficient, y / coefficient]);
+```
+Method
+=========
+* symbol: .push
+* operation: push value to array
+
+```javascript
+			function onTabClick()
+```
+
+Keyword
+========
+* name: Function declaration
+* symbol: function
