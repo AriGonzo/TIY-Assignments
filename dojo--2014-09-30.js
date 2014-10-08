@@ -15,46 +15,46 @@
  */
 
 function wordsToNum(word) {
-  if (word == "zero"){
+  if (word === "zero"){
     word = 0;
   }
-  if (word == "one"){
+  if (word === "one"){
     word = 1;
   }
-  if (word == "two"){
+  if (word === "two"){
     word = 2;
   }
-  if (word == "three"){
+  if (word === "three"){
     word = 3;
   }
-  if (word == "four"){
+  if (word === "four"){
     word = 4;
   }
-  if (word == "five"){
+  if (word === "five"){
     word = 5;
   }
-  if (word == "six"){
+  if (word === "six"){
     word = 6;
   }
-  if (word == "seven"){
+  if (word === "seven"){
     word = 7;
   }
-  if (word == "eight"){
+  if (word === "eight"){
     word = 8;
   }
-  if (word == "nine"){
+  if (word === "nine"){
     word = 9;
   }
-  if (word == "ten"){
+  if (word === "ten"){
     word = 10;
   }
     return word
 }
 
-function test_wordsToNum(a, b){
-  console.log('it should convert "' + a + '" to ' + b + ': ',
-    wordsToNum(a) === b);
-}
+// function test_wordsToNum(a, b){
+//   console.log('it should convert "' + a + '" to ' + b + ': ',
+//     wordsToNum(a) === b);
+// }
 
 function add(a, b){
   a = wordsToNum(a);
@@ -63,27 +63,35 @@ function add(a, b){
   return a + b;
 }
 
-function test_add(a, b, c){
-  console.log('It should add "' + a + '" and "' + b + '": ',
-    add(a, b) === c);
-  }
+// function test_add(a, b, c){
+//   console.log('It should add "' + a + '" and "' + b + '": ',
+//     add(a, b) === c);
+//   }
 
-console.log(add("three", "eight"))
+var assert = require('assert');
 
-test_add("zero", "five", 5)
-test_add("seven", "three", 10)
-test_add("nine", "five", 14)
-test_add("six", "eight", 14)
-test_add("one", "one", 2)
-test_add("seven", "two", 9)
-test_add("five", "eight", 13)
-test_add("three", "four", 7)
-
-console.log(add("one", "one") === 2)
-console.log(add("one", "two") === 3)
-console.log(add("one", "three") === 4)
-console.log(add("one", "four") === 5)
-console.log(add("one", "five") === 6)
-console.log(add("one", "six") === 7)
-console.log(add("one", "seven") === 8)
-console.log(add("eight", "three") === 11)
+suite(wordsToNum(0), function() {
+  test('should return "0" when given "zero"', function(){
+    assert.equal("blue", wordsToNum);
+  })
+})
+//
+// console.log(add("three", "eight"))
+//
+// test_add("zero", "five", 5)
+// test_add("seven", "three", 10)
+// test_add("nine", "five", 14)
+// test_add("six", "eight", 14)
+// test_add("one", "one", 2)
+// test_add("seven", "two", 9)
+// test_add("five", "eight", 13)
+// test_add("three", "four", 7)
+//
+// console.log(add("one", "one") === 2)
+// console.log(add("one", "two") === 3)
+// console.log(add("one", "three") === 4)
+// console.log(add("one", "four") === 5)
+// console.log(add("one", "five") === 6)
+// console.log(add("one", "six") === 7)
+// console.log(add("one", "seven") === 8)
+// console.log(add("eight", "three") === 11)
