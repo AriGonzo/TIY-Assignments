@@ -90,43 +90,50 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
   }
 }
 
+
+//
+// function test(actual, expected, success){
+//     success = success || 'YOU DID IT!';
+//
+//     assert(actual === expected) || console.log(success);
+// }
+
+// var testCases = [
+//   [1234.56, "one thousand two hundred thirty four dollars and 56/100 cents"],
+//   [1100, "one thousand one hundred dollars and 0/100 cents"],
+//   [1119.20, "one thousand one hundred nineteen dollars and 20/100 cents"],
+//   [12.50, "twelve dollars and 50/100 cents"],
+//   [19, "nineteen dollars and 0/100 cents"],
+//   [0, "zero dollars and 0/100 cents"],
+//   [17, "seventeen dollars and 0/100 cents"],
+//   [13, "thirteen dollars and 0/100 cents"],
+//   [11, "eleven dollars and 0/100 cents"],
+//   [7, "seven dollars and 0/100 cents"],
+//   [65, "sixty five dollars and 0/100 cents"],
+//   [99, "ninety nine dollars and 0/100 cents"],
+//   [41, "fourty one dollars and 0/100 cents"],
+//   [30.12, "thirty dollars and 12/100 cents"],
+//   [112, "one hundred twelve dollars and 0/100 cents"],
+//   [115, "one hundred fifteen dollars and 0/100 cents"],
+//   [119, "one hundred nineteen dollars and 0/100 cents"],
+//   [130, "one hundred thirty dollars and 0/100 cents"],
+//   [321.92, "three hundred twenty one dollars and 92/100 cents"]
+// ]
 var assert = require('assert');
 
-function test(actual, expected, success){
-    success = success || 'YOU DID IT!';
+suite(num2letter(0), function(){
+  test('should return check amount when given "0"', function(){
+    assert.equal("zero dollars and 0/100 cents", num2letter(0))
+  });
+})
 
-    assert(actual === expected) || console.log(success);
-}
-
-var testCases = [
-  [1234.56, "one thousand two hundred thirty four dollars and 56/100 cents"],
-  [1100, "one thousand one hundred dollars and 0/100 cents"],
-  [1119.20, "one thousand one hundred nineteen dollars and 20/100 cents"],
-  [12.50, "twelve dollars and 50/100 cents"],
-  [19, "nineteen dollars and 0/100 cents"],
-  [0, "zero dollars and 0/100 cents"],
-  [17, "seventeen dollars and 0/100 cents"],
-  [13, "thirteen dollars and 0/100 cents"],
-  [11, "eleven dollars and 0/100 cents"],
-  [7, "seven dollars and 0/100 cents"],
-  [65, "sixty five dollars and 0/100 cents"],
-  [99, "ninety nine dollars and 0/100 cents"],
-  [41, "fourty one dollars and 0/100 cents"],
-  [30.12, "thirty dollars and 12/100 cents"],
-  [112, "one hundred twelve dollars and 0/100 cents"],
-  [115, "one hundred fifteen dollars and 0/100 cents"],
-  [119, "one hundred nineteen dollars and 0/100 cents"],
-  [130, "one hundred thirty dollars and 0/100 cents"],
-  [321.92, "three hundred twenty one dollars and 92/100 cents"]
-]
-
-testCases.forEach(function(testCase) {
-  var actual = num2letter(testCase[0])
-    expected = testCase[1]
-    console.log("Number: " + testCase[0].toFixed(2) + " was converted to '" + testCase[1] + "'!")
-
-  assert.strictEqual(actual, expected);
-});
+// testCases.forEach(function(testCase) {
+//   var actual = num2letter(testCase[0])
+//     expected = testCase[1]
+//     console.log("Number: " + testCase[0].toFixed(2) + " was converted to '" + testCase[1] + "'!")
+//
+//   assert.strictEqual(actual, expected);
+// });
 //
 // test(true, true, 'true is true!');
 // test(num2letter(19), "nineteen dollars and 0/100 cents", '19 >>> nineteen')
