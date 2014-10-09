@@ -77,7 +77,7 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
   }
   if (num < 10000) { //values 1000 - 9999
     if(num % 100 === 0) {
-      return thousands[val[0]] + hundreds[val[1]] + "`dollars and " + cents + "/100 cents";
+      return thousands[val[0]] + hundreds[val[1]] + "dollars and " + cents + "/100 cents";
     }
     if(val[1] === '0' && val[2] === '0' && val[3] === '0') {
       return thousands[val[0]] + " dollars and " + cents + "/100 cents";
@@ -122,8 +122,30 @@ thousands = ["zero", "one thousand ", "two thousand ", "three thousand ", "four 
 var assert = require('assert');
 
 suite(num2letter(0), function(){
+  var pre = "should return check amount when given";
   test('should return check amount when given "0"', function(){
     assert.equal("zero dollars and 0/100 cents", num2letter(0))
+  });
+  test(pre + " 1234.56", function(){
+    assert.equal("one thousand two hundred thirty four dollars and 56/100 cents", num2letter(1234.56))
+  });
+  test(pre +  " 1100", function(){
+    assert.equal("one thousand one hundred dollars and 0/100 cents", num2letter(1100))
+  });
+  test(pre +  " 1119.20", function(){
+    assert.equal("one thousand one hundred nineteen dollars and 20/100 cents", num2letter(1119.20))
+  });
+  test(pre + " 321.92", function(){
+    assert.equal("three hundred twenty one dollars and 92/100 cents", num2letter(321.92))
+  });
+  test(pre + " 30.12", function(){
+    assert.equal("thirty dollars and 12/100 cents", num2letter(30.12))
+  });
+  test(pre + " 112", function(){
+    assert.equal("one hundred twelve dollars and 0/100 cents", num2letter(112))
+  });
+  test(pre + "99", function(){
+    assert.equal("ninety nine dollars and 0/100 cents", num2letter(99))
   });
 })
 

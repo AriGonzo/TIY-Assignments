@@ -65,7 +65,8 @@ function add(a, b){
 //     add(a, b) === c);
 //   }
 
-var assert = require('assert');
+var assert = require('chai').assert;
+
 
 suite(wordsToNum(), function() {
   test('should return "0" when given "zero"', function(){
