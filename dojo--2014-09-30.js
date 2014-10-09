@@ -57,7 +57,7 @@ function wordsToNum(word) {
 // }
 
 function add(a, b){
-  return wordsToNum(a) + b = wordsToNum(b);
+  return wordsToNum(a) + wordsToNum(b);
 }
 
 // function test_add(a, b, c){
@@ -67,9 +67,69 @@ function add(a, b){
 
 var assert = require('assert');
 
-suite(wordsToNum(0), function() {
+suite(wordsToNum(), function() {
   test('should return "0" when given "zero"', function(){
     assert.equal(0, wordsToNum("zero"));
+  })
+  test('should return "1" when given "one"', function(){
+    assert.equal(1, wordsToNum("one"));
+  })
+  test('should return "2" when given "two"', function(){
+    assert.equal(2, wordsToNum("two"));
+  })
+  test('should return "3" when given "three"', function(){
+    assert.equal(3, wordsToNum("three"));
+  })
+  test('should return "4" when given "four"', function(){
+    assert.equal(4, wordsToNum("four"));
+  })
+  test('should return "5" when given "five"', function(){
+    assert.equal(5, wordsToNum("five"));
+  })
+  test('should return "6" when given "six"', function(){
+    assert.equal(6, wordsToNum("six"));
+  })
+  test('should return "7" when given "seven"', function(){
+    assert.equal(7, wordsToNum("seven"));
+  })
+  test('should return "8" when given "eight"', function(){
+    assert.equal(8, wordsToNum("eight"));
+  })
+  test('should return "9" when given "nine"', function(){
+    assert.equal(9, wordsToNum("nine"));
+  })
+  test('should return "10" when given "ten"', function(){
+    assert.equal(10, wordsToNum("ten"));
+  })
+})
+
+suite(add(), function() {
+  test('should return 0 as sum of "0" and "0"', function(){
+    assert.equal(0, add(0, 0));
+  });
+  test('should return 1 as sum of "0" and "1"', function(){
+    assert.equal(1, add(0, 1));
+  })
+  test('should return 6 as sum of "4" and "2"', function(){
+    assert.equal(6, add(4, 2));
+  })
+  test('should return 10 as sum of "5" and "5"', function(){
+    assert.equal(10, add(5, 5));
+  })
+  test('should return 20 as sum of "10" and "10"', function(){
+    assert.equal(20, add(10, 10));
+  })
+  test('should return 14 as sum of "9" and "5"', function(){
+    assert.equal(14, add(9, 5));
+  })
+  test('should return 18 as sum of "10" and "8"', function(){
+    assert.equal(18, add(10, 8));
+  })
+  test('should return 2 as sum of "1" and "1"', function(){
+    assert.equal(2, add(1, 1));
+  })
+  test('should return 9 as sume of "7" and "2"', function(){
+    assert.equal(9, add(7, 2));
   })
 })
 //
