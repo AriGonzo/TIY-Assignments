@@ -10,6 +10,7 @@ board = [
 //NEIGHBOROF FUNCTION - GIVES YOU THE VALUE OF ALL NEIGHBORS SURROUNDING CELL
 
 function neighborOf(board, x, y) {
+  var neighbors;
   if (x === 0 && y === 0) {
     neighbors = [board[0][1], board[1][0], board[1][1]];
   }
@@ -93,13 +94,45 @@ function tick(board){
   return board;
 }
 
+suite(neighborOf(), function(){
+  test('should return a list of neighbors when given a cell at board[0][0]', function(){
+    assert.deepEqual([board[0][1], board[1][0], board[1][1]], neighborOf(board, 0, 0));
+  })
+  test('should return a list of neighbors when given a cell at board[0][1]', function(){
+    assert.deepEqual([board[0][0], board[1][0], board[1][1], board[1][2], board[0][2]],
+    neighborOf(board, 0, 1))
+  });
+})
+
+// suite(conway(cell), function(){
+//   test('should apply conway rules when given a cell at board[0][0]', function(){
+//     assert.equal(false, conway(board[0][0], [board[0][1], board[1][0], board[1][1]]))
+//   });
+// })
+
+suite(tick(board), function(){
+  test('should return a new board given a board with no live cells', function(){
+    assert.deepEqual([
+      [false, false, false],
+      [false, false, false],
+      [false, false, false],
+    ], tick(board))
+  });
+  test('should return a new board given a board with one live cell', function(){
+    assert.deepEqual([
+    [false, false, false],
+    [false, false, false],
+    [false, false, false],
+  ], tick(board2));
+  })
+})
 
 // TEST CODE***
-function test(actual, expected, success){
-    if (success === undefined) success = 'YOU MAGNIFICENT BASTARD, YOU DID IT!';
-    assert.strictEqual(actual, expected);
-    console.log(success);
-}
+// function test(actual, expected, success){
+//     if (success === undefined) success = 'YOU MAGNIFICENT BASTARD, YOU DID IT!';
+//     assert.strictEqual(actual, expected);
+//     console.log(success);
+// }
 
 function tick_test(board) {
   var after = tick(board)
@@ -157,13 +190,13 @@ var board6   = [
 
 
 
-//TESTS
-tick_test(board);
-tick_test(board2);
-tick_test(board3);
-tick_test(board4);
-tick_test(board5);
-tick_test(board6);
+// //TESTS
+// tick_test(board);
+// tick_test(board2);
+// tick_test(board3);
+// tick_test(board4);
+// tick_test(board5);
+// tick_test(board6);
 // console.log(board);
 // console.log(tick(board));
 // console.log(board2);
