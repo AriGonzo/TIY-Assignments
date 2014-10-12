@@ -161,7 +161,7 @@ a = ['elephant', 'car', 'boat', 'elephant']
 _Several methods take as arguments functions to be called back while processing the array. When these methods are called, the length of the array is sampled, and any element added beyond this length from within the callback is not visited. Other changes to the array (setting the value of or deleting an element) may affect the results of the operation if the method visits the changed element afterwards. While the specific behavior of these methods in such cases is well-defined, you should not rely upon it so as not to confuse others who might read your code. If you must mutate the array, copy into a new array instead._
 
 Array.prototype.forEach()
-Calls a function for each element in the array.
+Calls a function for each element in the array. Iterates over the list and performs the function on all of the elements
 
 ```javascript
 var count = 0;
@@ -181,11 +181,49 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 Array.prototype.every()
 Returns true if every element in this array satisfies the provided testing function.
 
+```javascript
+var THRESHOLD = 4
+var test;
+var a = [1, 2, 3, 4, 5]
+
+test = a.every(function(element, index, array){
+  console.log('element:', element);
+  if (element <= THRESHOLD) {
+    return true;
+  }
+
+  return false;
+});
+
+console.log('test: ', test) //element: 1
+                            // element: 2
+                            // element: 3
+                            // element: 4
+                            // element: 5
+                            // test:  false
+```
+
 Array.prototype.some()
 Returns true if at least one element in this array satisfies the provided testing function.
 
 Array.prototype.filter()
-Creates a new array with all of the elements of this array for which the provided filtering function returns true.
+Provide a function and .filter will return all elements for which the function evaluates to true
+
+```javascript
+var THRESHOLD = 3
+var test;
+var a = [1, 2, 3, 4, 5]
+
+test = a.filter(function(element, index, array){
+  if (element <= THRESHOLD) {
+    return true;
+  }
+
+  return false;
+});
+
+console.log('test: ', test) // [1, 2, 3]
+```
 
 Array.prototype.find()**
 Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found.
@@ -197,13 +235,37 @@ Array.prototype.keys()**
 Returns a new Array Iterator that contains the keys for each index in the array.
 
 Array.prototype.map()
-Creates a new array with the results of calling a provided function on every element in this array.
+executes a function on each element of an array and returns the value in a new array
+
+```javascript
+var numbers = [11, 29, 2013]
+var dates = numbers.map(function(num){
+  return num + 60;
+});
+
+console.log(numbers)    // [11, 29, 2013]
+console.log(dates)      // [71, 89, 2073]
+```
 
 Array.prototype.reduce()
-Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.
+Uses the previous return from a function as an argument for the next. (think Fibinocci sequence)
+
+```javascript
+var numbers = [11, 29, 2013].reduce(function(a, b) {
+    return a / b;
+});
+console.log(numbers)    //0.0001884303749764462
+```
 
 Array.prototype.reduceRight()
-Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
+just like reduce, but works right to left
+
+```javascript
+var numbers = [11, 29, 2013].reduce(function(a, b) {
+    return a / b;
+});
+console.log(numbers)    //6.310344827586206
+```
 
 ** = experimental API and should not be used in production code
 !* = this API has not been standardized
