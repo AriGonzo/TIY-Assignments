@@ -1,22 +1,24 @@
-// /* === PRODUCTION CODE === */
-function solution(){
-    // change input to suit the solution, e.g. `limit`
-    return {
-        // I wanna see this one...
-        solveFor: function(limit){ /* perform magic... */ },
-
-        // For Problem 2, for example... However you solve it.
-        fibonacci: function(limit){ /* . . . */ },
-        filterEvens: function(list){ /* . . . */ },
-        sum: function(list){ /* . . . */ }
-    }
-}
+// // /* === PRODUCTION CODE === */
+// function solution(){
+//     // change input to suit the solution, e.g. `limit`
+//     return {
+//         // I wanna see this one...
+//         solveFor: function(limit){ /* perform magic... */ },
+//
+//         // For Problem 2, for example... However you solve it.
+//         fibonacci: function(limit){ /* . . . */ },
+//         filterEvens: function(list){ /* . . . */ },
+//         sum: function(list){ /* . . . */ }
+//     }
+// }
 //
 // /* === TEST CODE === */
 // // You should probably write some...
 
+// Find the largest palindrome made from the product of two 3-digit numbers.
+
 function solution(){
-  return{
+  return {
     mult: function() {
       var results = [];
       for(var x = 999; x > 100; x--) {
@@ -32,4 +34,4 @@ function solution(){
   }
 }
 
-console.log(solution().mult());
+console.log(solution().mult()); // returns 906609
