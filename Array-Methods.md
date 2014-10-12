@@ -91,31 +91,70 @@ a === [1, 2, 3, 4]
 _These methods do not modify the array and return some representation of the array._
 
 Array.prototype.concat()
-concatenates arrays with other arrays and values
+concatenates arrays with other arrays and values. Must be placed into a variable. Changes do not stick
 
+_ex_
+```javascript
+var a = ["well hello there"]
+var b = ["Mr. Smith"]
+var c = a.concat(b) // ['well hello there', 'Mr. Smith']
+a === ["well hello there"]
+b === ["Mr. Smith"]
+c === ['well hello there', 'Mr. Smith']
+```
 Array.prototype.contains()**
 Determines whether an array contains a certain element, responds with boolean
 
 Array.prototype.join()
-Joins all elements of an array into a string. Does not change the original array. Not to be used to combine 2 sepearte arrays
+Joins all elements of an array into a string. Does not change the original array. Not to be used to combine 2 separate arrays, just the values IN an array
+
+```javascript
+var c === ['well hello there', 'Mr. Smith']
+c = c.join() // 'well hello there,Mr. Smith'
+c === ['well hello there,Mr. Smith']
+```
 
 Array.prototype.slice()
-Extracts a section of an array and returns a new array. Sliced array does not change
+Extracts a section of an array and returns a new array. The method takes in a starting an amount of elements in the array. Sliced array does not change unless reassigned.
+
+```javascript
+var a = [1, 2, 3, 4, 5]
+a.slice(0, 2) // [1, 2]
+a === [1, 2, 3, 4, 5]
+```
 
 Array.prototype.toSource()!*
 Returns an array literal representing the specified array; you can use this value to create a new array. Overrides the Object.prototype.toSource() method.
 
 Array.prototype.toString()
-Returns a string of the array and its contents.
+Returns a string of the array and its contents. Does not reassign the variable.
+
+```javascript
+var a = [1, 2, 3, 4, 5]
+a.toString() // '1, 2, 3, 4, 5'
+a === [1, 2, 3, 4, 5]
+```
 
 Array.prototype.toLocaleString()
-Returns a localized string representing the array and its elements. Overrides the Object.prototype.toLocaleString() method.
+Returns a localized string representing the array and its elements. Overrides the Object.prototype.toLocaleString() method. (???)
 
 Array.prototype.indexOf()
-Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
+Gives you the FIRST index of the value you give it
+
+```javascript
+var a = ['elephant', 'car', 'boat', 'elephant']
+a.indexOf('elephant') // 0
+a = ['elephant', 'car', 'boat', 'elephant']
+```
 
 Array.prototype.lastIndexOf()
 Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found.
+
+```javascript
+var a = ['elephant', 'car', 'boat', 'elephant']
+a.indexOf('elephant') // 3
+a = ['elephant', 'car', 'boat', 'elephant']
+```
 
 #### Iteration methods
 
