@@ -19,23 +19,72 @@ Fills an array from start to end with a value
 Array.prototype.pop()
 Removes the last element of an array and returns the value
 
+_ex_
+```javascript
+var a = [1, 2, 3, 4]
+a.pop() // 4
+a === [1, 2, 3]
+```
+
 Array.prototype.push()
 Adds one or more elements to the end of an array and returns the new array length
+
+_ex_
+```javascript
+var a = [1, 2, 3, 4]
+a.push(5) // 5
+a === [1, 2, 3, 4, 5]
+```
 
 Array.prototype.reverse()
 reverses the order of the array elements
 
+_ex_
+```javascript
+var a = [1, 2, 3, 4, 5]
+a.reverse() // [5, 4, 3, 2, 1]
+a === [5, 4, 3, 2, 1]
+```
+
 Array.prototype.shift()
 takes the first elements off of the array and returns that value
+
+_ex_
+```javascript
+var a = [5, 4, 3, 2, 1]
+a.shift  // 5
+a === [4, 3, 2, 1]
+```
 
 Array.prototype.sort()
 Sorts the elements of an array and returns the array
 
+_ex_
+```javascript
+var a = [4, 3, 2, 1]
+a.sort // [1, 2, 3, 4]
+a === [1, 2, 3, 4]
+```
+
 Array.prototype.splice()
-removes the elements out of the array
+removes the elements out of the array. It is given an index starting point and the amount of numbers in the splice. returns the remaining elements after the splice
+
+_ex_
+```javascript
+var a = [1, 2, 3, 4]
+a.splice(0, 2) // [1, 2]
+a === [3, 4]
+```
 
 Array.prototype.unshift()
-Adds elements to the FRONT of the array and returns the array length (opposite of Array.prototype.push)
+Adds elements to the FRONT of the array and returns the array length (versus Array.prototype.push which puts it in the back)
+
+_ex_
+```javascript
+var a = [3, 4]
+a.unshift(1, 2) // 4
+a === [1, 2, 3, 4]
+```
 
 #### Accessor methods
 
@@ -57,7 +106,7 @@ Array.prototype.toSource()!*
 Returns an array literal representing the specified array; you can use this value to create a new array. Overrides the Object.prototype.toSource() method.
 
 Array.prototype.toString()
-Returns a string representing the array and its elements. Overrides the Object.prototype.toString() method.
+Returns a string of the array and its contents.
 
 Array.prototype.toLocaleString()
 Returns a localized string representing the array and its elements. Overrides the Object.prototype.toLocaleString() method.
