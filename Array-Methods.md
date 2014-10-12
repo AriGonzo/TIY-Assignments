@@ -48,10 +48,10 @@ Array.prototype.contains()**
 Determines whether an array contains a certain element, responds with boolean
 
 Array.prototype.join()
-Joins all elements of an array into a string.
+Joins all elements of an array into a string. Does not change the original array. Not to be used to combine 2 sepearte arrays
 
 Array.prototype.slice()
-Extracts a section of an array and returns a new array.
+Extracts a section of an array and returns a new array. Sliced array does not change
 
 Array.prototype.toSource()!*
 Returns an array literal representing the specified array; you can use this value to create a new array. Overrides the Object.prototype.toSource() method.
