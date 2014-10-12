@@ -163,6 +163,18 @@ _Several methods take as arguments functions to be called back while processing 
 Array.prototype.forEach()
 Calls a function for each element in the array.
 
+```javascript
+var count = 0;
+var a = ['elephant', 'dog', 'car', 'purple', 'elephant']
+a.forEach(function(index){
+  if (index === 'elephant') {
+    count++;
+    return count;
+  }
+})
+console.log(count) // 2
+```
+
 Array.prototype.entries()**
 Returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 
