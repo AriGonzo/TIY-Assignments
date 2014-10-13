@@ -16,24 +16,41 @@ console.log(board.join('\n') + '\n\n');
 
 //Catalan Opening: Closed Variation
 
-//black moves
-board[3][3] = board[1][3];
-board[1][3] = ' ';
+var moves = {
+  //White Queen's Pawn moves up 2 spots
+  step1: board[4][3] = board[6][3],
+  step2: board[6][3] = ' ',
 
-// describe('board')
-//
-// board[2][4] = board[1][4];
-// board[1][4] = board[0][5];
-// board[0][5] = ' ';
-// board[2][5] = board[0][6];
-// board[0][6] = ' ';
-// board[4][2] = board[6][2];
-// board[6][2] = ' ';
-// board[4][3] = board[6][3];
-// board[6][3] = ' ';
-// board[5][6] = board[6][6];
-// board[6][6] = board[7][5];
-// board[7][5] = ' ';
-// board[5][5] = board[7][4];
-// board[7][4] = ' ';
+  //Black Queen's pawn moves forward 2 spots
+  step3: board[3][3] = board[1][3],
+  step4: board[1][3] = ' ',
+
+  //White Knight moves up 2 spots and over 1
+  step5: board[5][5] = board[7][6],
+  step6: board[7][6] = ' ',
+
+  //Black King Pawn moves up 1 spot
+  step7: board[2][4] = board[1][4],
+  step8: board[1][4] = ' ',
+
+  //White Knight Pawn moves up 1 spot
+  step9: board[5][6] = board[6][6],
+  step10: board[6][6] = ' ',
+
+  //Black Bishop moves diagonal down and left 1 spot
+  step11: board[1][4] = board[0][5],
+  step12: board[0][5] = ' ',
+
+  //White Bishop's Pawn moves up 2 spots
+  step13: board[4][2] = board[6][2],
+  step14: board[6][2] = ' ',
+
+  //Black Knights moves over 1 spot and down 2
+  step15: board[2][5] = board[0][6],
+  step16: board[0][6] = ' ',
+
+  //White Bishop moves diagonal up and right 1 spot
+  step17: board[6][6] = board[7][5],
+  step18: board[7][5] = ' '
+}
 console.log(board.join('\n'));

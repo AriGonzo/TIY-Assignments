@@ -245,14 +245,14 @@
 // // test(c5test[7], board[2][2]);
 
 var game = {
-    board: {
-    return [
-        [ false, false, false ],
-        [ false, false, false ],
-        [ false, false, false ],
-    ];
-    }
-    newBoard: function()
+    board: undefined,
+    newBoard: function(){
+    [
+      [false, false, false],
+      [false, false, false],
+      [false, false, false],
+    ]
+    },
     rules: function(cell, neighbors){
         var livingCell = 0;
         neighbors.forEach(function(value, index){
@@ -316,22 +316,7 @@ var game = {
       }
       return neighbors;
     },
-    tick: function(){
-      var newBoard = [] //create an empty array for the new board
-      board.forEach(function(value, index){
-        value.forEach(function(i, j){
-
-      // for (var i = 0; i < board.length; i++) { //walks along the rows of board
-      //   for (var j = 0; j < board[i].length; j++) { //walks along columns of board
-          newBoard.push(conway(board[index][j], neighborOf(board, index, j)));
-        });                     //running conway and neighborOf functions and pushing
-      });                       //them into an array.
-      var row1 = newBoard.splice(0, 3);//splicing the array into 3 parts
-      var row2 = newBoard.splice(0, 3);
-      board = [row1, row2, newBoard]; //returning the full assembled board
-      return board;
-    },
-
+    tick: function(){}
     /**
      * WARNING: This is VOODOO MAGIC...
      *
@@ -369,4 +354,4 @@ var game = {
     } // END display
 } // END game
 
-console.log(game.display())
+console.log(game.display)
