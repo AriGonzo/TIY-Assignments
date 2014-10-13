@@ -245,14 +245,16 @@
 // // test(c5test[7], board[2][2]);
 
 var game = {
-    board: undefined,
-    newBoard: function(){
-    [
-      [false, false, false],
-      [false, false, false],
-      [false, false, false],
+  return [
+      board: undefined,
+      newBoard: function(){
+      [
+        [false, false, false],
+        [false, false, false],
+        [false, false, false],
+      ]
     ]
-    },
+  },
     rules: function(cell, neighbors){
         var livingCell = 0;
         neighbors.forEach(function(value, index){

@@ -411,3 +411,34 @@ Keyword
 ========
 * name: Function declaration
 * symbol: function
+
+```javascript
+for (var i = 0; i < array.length; i++)
+```
+Keyword
+===========
+* name: conditional
+* symbol: for
+* operation: loop
+
+Keyword
+==========
+*  name: Variable Declaration
+* symbol: var
+
+Operator
+==========
+* name: Assignment Operator
+* symbol:  =
+
+Operator
+==========
+* name: Comparison Operator
+* value: less than
+* symbol:  <
+
+Operator
+==========
+* name: Arithmetic Operator
+* value: Increment
+* symbol:  ++
