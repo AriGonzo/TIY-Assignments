@@ -54,3 +54,47 @@ var moves = {
   step18: board[7][5] = ' '
 }
 console.log(board.join('\n'));
+
+var assert = require('chai').assert
+var expect = require('chai').expect
+
+
+
+describe('Testing the board state', function(){
+  it('Move 1: pawn at board[4][3]', function(){
+    assert.equal(moves.step1, board[4][3]);
+  });
+  it('after step 2: board[6][3] to be blank', function(){
+    expect(board[6][3]).to.equal(' ');
+  })
+  it('Move 2: should be a pawn at board[3][3]', function(){
+    assert.equal(moves.step3, board[3][3]);
+  })
+  it('should be a knight at board[5][5]', function(){
+    assert.equal(moves.step5, board[5][5]);
+  })
+  it('after step 6: board[7][6] to be blank', function(){
+    expect(board[7][6]).to.equal(' ');
+  })
+  it('should be a pawn at board[2][4]', function(){
+    assert.equal(moves.step7, board[2][4]);
+  })
+  it('should be a pawn at board[5][6]', function(){
+    assert.equal(moves.step9, board[5][6]);
+  })
+  it('should be a bishop at board[1][4]', function(){
+    assert.equal(moves.step11, board[1][4]);
+  })
+  it('after step 12: board[0][5] to be blank', function(){
+    expect(board[0][5]).to.equal(' ');
+  })
+  it('should be a pawn at board[4][2]', function(){
+    assert.equal(moves.step13, board[4][2]);
+  })
+  it('should be a knight at board[2][5]', function(){
+    assert.equal(moves.step15, board[2][5]);
+  })
+  it('should be a bishop at board[6][6]', function(){
+    assert.equal(moves.step17, board[6][6]);
+  })
+})
