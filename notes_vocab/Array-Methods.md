@@ -264,7 +264,7 @@ just like reduce, but works right to left
 var numbers = [11, 29, 2013].reduce(function(a, b) {
     return a / b;
 });
-console.log(numbers)    //6.310344827586206
+console.log(numbers)     //6.310344827586206
 ```
 
 Array Generic Methods
