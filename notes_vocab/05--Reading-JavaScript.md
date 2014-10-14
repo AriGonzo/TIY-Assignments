@@ -625,3 +625,27 @@ Type Literal
 * Name: String
 * Symbol: "..." / '...'
 * Values = 'node insertion'
+
+```javascript
+var astar = {
+    init: function(graph) {
+```
+
+Keyword
+==========
+*  name: Variable Declaration
+* symbol: var
+
+Variable:
+==========
+* symbol = astar
+
+Operator
+==========
+* type: assignment operator
+* symbol: =
+
+Keyword
+==========
+name: key
+symbol: "init"
