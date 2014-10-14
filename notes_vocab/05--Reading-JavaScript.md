@@ -442,3 +442,186 @@ Operator
 * name: Arithmetic Operator
 * value: Increment
 * symbol:  ++
+
+```javascript
+describe("ArcGIS Tools", function(){
+```
+
+Keyword
+===========
+* name:testing function
+* symbol: describe
+* UI: BDD
+
+Type Literal
+============
+* Name: String
+* Symbol: "..." / '...'
+* Values = "ArcGIS Tools"
+
+```javascript
+expect(output).toEqual({
+```
+Keyword
+===========
+* name:testing function
+* symbol: expect/.toEqual
+* Library: Chai
+* Framework: Mocha
+
+```javascript
+var input = {
+      "type":"Feature",
+```
+Keyword
+==========
+*  name: Variable Declaration
+* symbol: var
+
+Variable:
+==========
+* symbol = input
+
+Operator
+==========
+* name: Assignment Operator
+* symbol:  =
+
+Keyword
+==========
+name: key
+symbol: "Type"
+value: "Feature"
+
+```javascript
+var bytes=[ 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2];
+```
+Keyword
+==========
+*  name: Variable Declaration
+* symbol: var
+
+
+Variable:
+==========
+* symbol = bytes
+
+Operator
+==========
+* name: Assignment Operator
+* symbol:  =
+
+Type Literal
+============
+symbol: [ ]
+type: Array
+
+Type Literal
+============
+* Name: Number
+* Symbols: 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2
+
+```javascript
+it('should encode and decode Russian', function() {
+```
+Keyword
+===========
+* name:testing function
+* symbol: it
+* Framework: Mocha
+
+Type Literal
+============
+* Name: String
+* Symbol: "..." / '...'
+* Values = 'should encode and decode Russian'
+
+```javascript
+function Sizzle( selector, context, results, seed ) {
+```
+
+Keyword
+========
+* name: Function declaration
+* symbol: function
+
+* //@params: selector, context, results, seed
+
+```javascript
+function listSheets (spreadsheet) {
+```
+
+Keyword
+========
+* name: Function declaration
+* symbol: function
+
+* //@params: spreadsheet
+
+```javascript
+sheets = spreadsheet.getSheets();
+```
+
+Operator
+==========
+* name: Assignment Operator
+* symbol:  =
+
+Keyword
+=============
+* symbol: getSheets()
+* type: Function Invocation
+
+```javascript
+  for (i = 0; i < sheetNames.length; i +=1) {
+```
+
+Keyword
+===========
+* name: conditional
+* symbol: for
+
+Variable:
+==========
+* symbol = i
+
+Operator
+==========
+* type: Comparison Operator
+* symbol: <
+
+Method
+==========
+* type: String method
+* symbol: .length
+
+```javascript
+it('should work properly', function () {
+```
+
+Keyword
+===========
+* name:testing function
+* symbol: it
+* Framework: Mocha
+
+Type Literal
+============
+* Name: String
+* Symbol: "..." / '...'
+* Values = 'should work properly'
+
+```javascript
+  describe('node insertion', function () {
+```
+
+Keyword
+===========
+* name:testing function
+* symbol: describe
+
+Type Literal
+============
+* Name: String
+* Symbol: "..." / '...'
+* Values = 'node insertion'
