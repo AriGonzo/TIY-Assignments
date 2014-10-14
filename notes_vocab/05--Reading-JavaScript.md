@@ -647,5 +647,5 @@ Operator
 
 Keyword
 ==========
-name:  key
+name: key
 symbol: "init"
