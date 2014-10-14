@@ -267,5 +267,13 @@ var numbers = [11, 29, 2013].reduce(function(a, b) {
 console.log(numbers)    //6.310344827586206
 ```
 
+Array Generic Methods
+
+Using array methods on a string or array like objects like arguments. Treating a string as an array of characters
+
+```javascript
+function isLetter(character) {
+```
+
 ** = experimental API and should not be used in production code
 !* = this API has not been standardized
