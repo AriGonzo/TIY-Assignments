@@ -1,5 +1,41 @@
 module.exports = Game;
 
+function Board(){
+}
+
+/**
+ * @param Number x coordinate
+ * @param Number y coordinate
+ * @return Boolean
+ */
+
+Board.prototype.isAlive = function(x,y){
+  //return true if this.board[x][y] is "alive"
+  return this.board[x + ',' + y];
+};
+
+/**
+ * @param Number x coordinate
+ * @param Number y coordinate
+ * @return undefined
+ */
+
+Board.prototype.live = function(x,y,value){
+  //make the cell at {x,y} "alive", whatever that means
+  this.board[x + ',' + y] = true
+};
+
+/**
+ * @param Number x coordinate
+ * @param Number y coordinate
+ * @return undefined
+ */
+
+Board.prototype.kill = function(x, y){
+  //make the cell at {x,y} "dead", whatever that means
+  delete this.board[x ',' + y]
+};
+
 function board(){
   return [
   [false, false, false],
@@ -47,18 +83,14 @@ function Game(){
   Game.prototype.tick = function(){
     //Start with a fresh board...
     var newBoard = board();
-    for (var i = 0; i < newBoard.length; i++){
-      for(var j = 0; j < newBoard[i].length; j++){
-        //Apply 'rules' to each cell record the results in the new board...
-        newBoard.push(this.rules(i, j, this.board));
-      };
-    };
-    newBoard.splice(0, 3);
-
-    var a = newBoard.splice(0, 3);
-    var b = newBoard.splice(0, 3);
-    //Update the current board to match the new board.
-    this.board = [a, b, newBoard];
+    var self = this;
+    this.board.forEach(function(row, x){
+      row.forEach(function(cell, y){
+        var newCell = self.rules(x, y, this.board);
+        newBoard[x][y] = newCell;
+      });
+    });
+    this.board = newBoard;
   }
  /**
   * @param Number x coordinate
@@ -148,6 +180,21 @@ function Game(){
     }
     return liveCell;
  } //end neighborsOf
+
+/** TRY THIS LATER
+  var neighbors = [ ], diffs = [-1, 0, 1];
+
+  diffs.forEach(function(dX){
+    diffs.forEach(function(dY){
+      if(dX == 0 && dY == 0) return;
+
+      if(this.board[x + dX] && this.board[x + dx][y + dY]) {
+        neighbors.push(true);
+      }
+    });
+  });
+  return neighbors;
+  */
 
 /**
  * @param Number x coordinate
