@@ -47,25 +47,26 @@ function Game(){
   * update the 'board' by applying the 'rules' to each cell.
   */
   Game.prototype.tick = function(){
+    //Start with a fresh board...
     var newBoard = board();
     for (var i = 0; i < newBoard.length; i++){
       for(var j = 0; j < newBoard[i].length; j++){
-        newBoard.push(this.rules(i, j, board));
+        //Apply 'rules' to each cell record the results in the new board...
+        newBoard.push(this.rules(i, j, this.board));
       };
     };
     newBoard.splice(0, 3);
 
-    board = newBoard;
-    var a = board.splice(0, 3);
-    var b = board.splice(0, 3);
-    this.board = [a, b, board];
-    return this.board;
-  }
-    //Start with a fresh board...
-    //Apply 'rules' to each cell in the current board...
-    //Record the results of 'rules' in the new board...
+    var a = newBoard.splice(0, 3);
+    var b = newBoard.splice(0, 3);
     //Update the current board to match the new board.
-
+    this.board = [a, b, newBoard];
+  }
+ /**
+  * @param Number x coordinate
+  * @param Number y coordinate
+  * @return number of surrounding living cells
+  */
  Game.prototype.neighborsOf = function(x, y){
     var neighbors;
     var liveCell = 0;
@@ -139,7 +140,7 @@ function Game(){
         };
       };
     }
-    if (x === 2 & y === 2) {
+    if (x === 2 && y === 2) {
       neighbors = [this.board[2][1], this.board[1][1], this.board[1][2]];
       for(var i = 0; i < neighbors.length; i++) {
         if (neighbors[i] === true) {
@@ -151,10 +152,11 @@ function Game(){
  } //end neighborsOf
 
 /**
- * What goes here?
+ * @param Number x coordinate
+ * @param Number y coordinate
+ * @return Boolean state of cell after rules applied
  */
- Game.prototype.rules = function(x, y, board){
-   board = this.board;
+ Game.prototype.rules = function(x, y){
    var cell = this.board[x][y];
    liveCell = this.neighborsOf(x, y);
           if (cell) {    //rule #1
@@ -211,54 +213,3 @@ Game.prototype.display = function(){
         }).join(spacer) // Place `spacer` between each `row`...
     + spacer;
 } // END display
-
-//ABANDON ALL HOPE! ALL YE WHO ENTER HERE//
-//aka don't go past here, yo
-// var assert = require('assert');
-// assert(false)
-
-
-/**
- * @param Number x coordinate
- * @param Number y coordinate
- * @return Boolean representation of a cell
- */
- // getCell: function(){
-
- // }
-/**
- * @param Number x coordinate
- * @param Number y coordinate
- * @return Boolean if cell at {x,y} is alive
- */
- // isAlive: function(x, y){
-
- // }
-/**
- * @param Number x coordinate
- * @param Number y coordinate
- * @return
- */
- // makeLive: function() {
- //
- // }
- //  board: undefined,
- //  newBoard: function(){
- //    return [
- //    [false, false, false],
- //    [false, false, false],
- //    [false, false, false]
- //    ]
- //  },
- //  rules: function(cell, neighbors){ /* i.e. conway(cell, neighbors) */ },
- //  neighborsOf: function(x,y){ /* . . . */ },
- //  tick: function(){
- //    if ( this.board[0][1] && this.board[1][1] && this.board[2][1] ){
- //      this.board[0][1] = this.board[2][1] = false;
- //      this.board[1][0] = this.board[1][2] = true;
- //    }
- //    else if (this.board[1][0] && this.board[1][1] && this.board[1][2] ){
- //      this.board[1][0] = this.board[1][2] = false;
- //      this.board[0][1] = this.board[2][1] = true;
- //    }
- //  },

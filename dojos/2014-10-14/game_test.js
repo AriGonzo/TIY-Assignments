@@ -48,18 +48,18 @@ it('should play the game', function(){
 
     game.tick();
 
-    game.isTrue(game.isAlive(0,1));
-    game.isTrue(game.isAlive(1,1));
-    game.isTrue(game.isAlive(2,1));
-    //
-    // assert.equal(game.display(),
-    // "+---+---+---+\n" +
-    // "|   | X |   |\n" +
-    // "+---+---+---+\n" +
-    // "|   | X |   |\n" +
-    // "+---+---+---+\n" +
-    // "|   | X |   |\n" +
-    // "+---+---+---+\n"
-    // );
+    assert.isTrue(game.isAlive(0,1));
+    assert.isTrue(game.isAlive(1,1));
+    assert.isTrue(game.isAlive(2,1));
+
+    assert.equal(game.display(),
+    "+---+---+---+\n" +
+    "|   | X |   |\n" +
+    "+---+---+---+\n" +
+    "|   | X |   |\n" +
+    "+---+---+---+\n" +
+    "|   | X |   |\n" +
+    "+---+---+---+\n"
+    );
     // */ //Don't uncomment this line!
 })
