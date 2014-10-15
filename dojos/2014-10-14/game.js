@@ -20,6 +20,8 @@ function Game(){
  Game.prototype.isAlive = function(x, y){
    if(this.board[x][y] === true){
      return true;
+   } {
+     return false;
    };
  }
 
@@ -39,7 +41,7 @@ function Game(){
  * @param Number y coordinate
  * @return undefined
  */
- Game.prototype.setDead = function(x,y){
+ Game.prototype.setDead = function(x, y){
    this.board[x][y] = false;
  }
 
