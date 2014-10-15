@@ -18,11 +18,7 @@ function Game(){
  * @return Boolean if cell at {x, y} is alive
  */
  Game.prototype.isAlive = function(x, y){
-   if(this.board[x][y] === true){
-     return true;
-   } {
-     return false;
-   };
+   return this.board[x][y];
  }
 
 /**
