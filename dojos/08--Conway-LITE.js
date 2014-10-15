@@ -72,22 +72,23 @@ board = [
 //        });
 //        return newCell
 //   },
-//   tick: function(board){
-//     var newBoard = [] //create an empty array for the new board
-//     board.forEach(function(value, index){
-//       value.forEach(function(i, j){
-//
-//     // for (var i = 0; i < board.length; i++) { //walks along the rows of board
-//     //   for (var j = 0; j < board[i].length; j++) { //walks along columns of board
-//         newBoard.push(this.conway(board[index][j], this.neighborOf(board, index, j)));
-//       });                     //running conway and neighborOf functions and pushing
-//     });                       //them into an array.
-//     var row1 = newBoard.splice(0, 3);//splicing the array into 3 parts
-//     var row2 = newBoard.splice(0, 3);
-//     board = [row1, row2, newBoard]; //returning the full assembled board
-//     return board;
-//   }
-// }
+  tick: function(board){
+    var newBoard = [] //create an empty array for the new board
+    board.forEach(function(value, index){
+      value.forEach(function(i, j){
+
+    // for (var i = 0; i < board.length; i++) { //walks along the rows of board
+    //   for (var j = 0; j < board[i].length; j++) { //walks along columns of board
+        newBoard.push(this.conway(board[index][j], this.neighborOf(board, index, j)));
+      });                     //running conway and neighborOf functions and pushing
+    });                       //them into an array.
+    var row1 = newBoard.splice(0, 3);//splicing the array into 3 parts
+    var row2 = newBoard.splice(0, 3);
+    board = [row1, row2, newBoard]; //returning the full assembled board
+    return board;
+    }
+  }
+}
 
 
 //START OF CONWAY FUNCTION - EVALUATES NEIGHBORS AND CHANGES LIFE OF CELL
@@ -322,7 +323,24 @@ var game = {
       }
       return neighbors;
     },
-    tick: function(){}
+    tick: function(board){
+        var newBoard = [] //create an empty array for the new board
+        board.forEach(function(value, index){
+          value.forEach(function(i, j){
+
+        // for (var i = 0; i < board.length; i++) { //walks along the rows of board
+        //   for (var j = 0; j < board[i].length; j++) { //walks along columns of board
+            newBoard.push(this.conway(board[index][j], this.neighborOf(board, index, j)));
+          });                     //running conway and neighborOf functions and pushing
+        });                       //them into an array.
+        var row1 = newBoard.splice(0, 3);//splicing the array into 3 parts
+        var row2 = newBoard.splice(0, 3);
+        board = [row1, row2, newBoard]; //returning the full assembled board
+        return board;
+        }
+      }
+    }
+    },
     /**
      * WARNING: This is VOODOO MAGIC...
      *
