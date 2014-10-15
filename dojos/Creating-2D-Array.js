@@ -33,11 +33,12 @@ var moves = {
     board[5][5] = board[7][6];
     board[7][6] = ' ';
   },
-  //
-  // //Black King Pawn moves up 1 spot
-  // step7: board[2][4] = board[1][4],
-  // step8: board[1][4] = ' ',
-  //
+
+  //Black King Pawn moves up 1 spot
+  step4: function(){
+    board[2][4] = board[1][4];
+    board[1][4] = ' ';
+  }
   // //White Knight Pawn moves up 1 spot
   // step9: board[5][6] = board[6][6],
   // step10: board[6][6] = ' ',
@@ -111,9 +112,19 @@ describe('Testing the board state', function(){
       ['r','n','b','q','k','b',' ','r'] ]
     )
   })
-  // it('after step 6: board[7][6] to be blank', function(){
-  //   expect(board[7][6]).to.equal(' ');
-  // })
+  it('after Move 4, the board should look like:', function(){
+    assert.deepEqual(board,
+      [
+      ['R','N','B','Q','K','B','N','R'],
+      ['P','P','P',' ',' ','P','P','P'],
+      [' ',' ',' ',' ','P',' ',' ',' '],
+      [' ',' ',' ','P',' ',' ',' ',' '],
+      [' ',' ',' ','p',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ','n',' ',' '],
+      ['p','p','p',' ','p','p','p','p'],
+      ['r','n','b','q','k','b',' ','r'] ]
+    )
+  })
   // it('should be a pawn at board[2][4]', function(){
   //   assert.equal(moves.step7, board[2][4]);
   // })
