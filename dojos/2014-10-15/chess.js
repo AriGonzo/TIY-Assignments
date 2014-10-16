@@ -21,6 +21,8 @@ function board(){
 
 function Chess() {
   this.board = board();
+    var currentPlayer;
+    // var currentPiece = Position(x,y);
 }
 
 /*
@@ -29,6 +31,13 @@ function Chess() {
  */
 
 Chess.prototype.getPlayer = function() {
+    if(this.currentPlayer === "white") {
+        this.currentPlayer = "black";
+    } else {
+      if(this.currentPlayer === "black") {
+        this.currentPlayer = "white";
+      };
+    };
 };
 
 /**
@@ -40,52 +49,61 @@ Chess.prototype.display = function(){
 };
 
 /**
- *
+ *Move piece to destination and switch player
+ @param Piece piece to move
+ @param Position destination to move piece to
  */
 
 Chess.prototype.move = function(piece, destination) {
-
+  this.getPlayer()
 };
 
 /**
- *
+ * Position: Represent a position on a chessboard with coordinates
+ * @property: x coordinate
+ * @property: y coordinate
  */
 
 function Position(x, y) {
   board = Chess.board;
-  return board[x][y];
+  return this.board[x][y];
 }
 
 /**
- *
+ * Represent a chesspiece on the board with
+ * name and color and appropriate starting position
  */
 
 function Piece(name, color){
 }
 
 /**
- *
+ * @method getName
+ * @return String name of Piece, e.g. 'Queen', 'Pawn'
  */
 
 Piece.prototype.getName = function(){
 }
 
 /**
- *
+ * @method getColor
+ * @return String player 'black' or 'white'
  */
 
 Piece.prototype.getColor = function(){
 }
 
 /**
- *
+ * @method setPosition: Set Piece to position on board
+ * @param Position position
  */
 
 Piece.prototype.setPosition = function(position){
 }
 
 /**
- *
+ * @method toString()
+ * @return String representation of Piece
  */
 
 Piece.prototype.toString = function() {

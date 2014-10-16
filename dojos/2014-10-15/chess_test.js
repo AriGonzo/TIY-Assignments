@@ -18,8 +18,11 @@ it('should play the game', function(){
     ['p','p','p','p','p','p','p','p'],
     ['r','n','b','q','k','b','n','r']
   ]);
-console.log(Position(0,0))
-console.log(Piece)
+
+  assert.equal(chess.getPlayer(), "black")
+
+console.log(Chess.currentPiece(2,3))
+
   // assert.equal(position(0,0), 'R')
 
 });
