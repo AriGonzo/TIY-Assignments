@@ -1,5 +1,5 @@
-var assert = require('chai')assert
-var expect = require('chai')expect
+var assert = require('chai').assert
+var expect = require('chai').expect
 
 // // /* === PRODUCTION CODE === */
 // function solution(){
@@ -38,8 +38,17 @@ function solution(){
 }
 
 describe('mult()', function(){
+  it('should be at least over 10000', function(){
+    expect(solution().mult()).to.be.above(10000);
+  })
+  it('should be under 998001', function(){
+    expect(solution().mult()).to.be.below(998001)
+  })
   it('should give a 3 digit number', function(){
-    assert.equal(x.length, 3);
+    assert.equal(solution().mult(), 906609);
+  })
+  it('should return a number', function(){
+    expect(solution().mult()).to.be.a('number');
   })
 })
 
