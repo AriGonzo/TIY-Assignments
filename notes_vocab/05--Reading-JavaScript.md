@@ -649,3 +649,42 @@ Keyword
 ==========
 name: key
 symbol: "init"
+
+```javascript
+document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
+```
+* symbol: `document`
+  * Type: identifier
+  * name: "document"
+  * meaning: name of an object
+
+* symbol: `.`
+  * Type: operator
+  * name: ????
+  * meaning: is between an object and a property or method
+  * operands: `document` and `addEventListener`
+
+* symbol: `addEventListener`
+  * Type: identifier method invocation
+  * name: "method addEventListener"
+  * meaning: the key for the function in document
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: ` "device ready" `
+  * Type: String
+  * name: "string device ready"
+  * meaning: a parameter of addEventListener, a string"
+
+* symbol: `handleNfcFromIntentFilter`
+  * Type: identifier
+  * name: parameter handleNfcFromIntentFilter
+  * meaning: a parameter of addEventListener, a variable
+
+* symbol: `false`
+  * type: Boolean
+  * name: "boolean False"
+  * meaning: opposite of true
