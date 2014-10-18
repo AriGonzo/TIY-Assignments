@@ -385,208 +385,178 @@ for (var i = 0; i < array.length; i++)
 describe("ArcGIS Tools", function(){
 ```
 
-Keyword
-===========
-* name:testing function
-* symbol: describe
-* UI: BDD
+* Keyword
+  * name:testing function
+  * symbol: describe
+  * UI: BDD
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = "ArcGIS Tools"
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = "ArcGIS Tools"
 
 ```javascript
 expect(output).toEqual({
 ```
-Keyword
-===========
-* name:testing function
-* symbol: expect/.toEqual
-* Library: Chai
-* Framework: Mocha
+* Keyword
+  * name:testing function
+  * symbol: expect/.toEqual
+  * Library: Chai
+  * Framework: Mocha
 
 ```javascript
 var input = {
       "type":"Feature",
 ```
-Keyword
-==========
-*  name: Variable Declaration
-* symbol: var
+* Keyword
+  *  name: Variable Declaration
+  * symbol: var
 
-Variable:
-==========
-* symbol = input
+* Variable
+  * symbol = input
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Keyword
-==========
-name: key
-symbol: "Type"
-value: "Feature"
+* Keyword
+  * name: key
+  * symbol: "Type"
+  * value: "Feature"
 
 ```javascript
 var bytes=[ 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2];
 ```
-Keyword
-==========
-*  name: Variable Declaration
-* symbol: var
+* Keyword
+  *  name: Variable Declaration
+  * symbol: var
 
 
-Variable:
-==========
-* symbol = bytes
+* Variable:
+  * symbol = bytes
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Type Literal
-============
-symbol: [ ]
-type: Array
+* Type Literal
+  * symbol: [ ]
+  * type: Array
 
-Type Literal
-============
-* Name: Number
-* Symbols: 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2
+* Type Literal
+  * Name: Number
+  * Symbols: 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2
 
 ```javascript
 it('should encode and decode Russian', function() {
 ```
-Keyword
-===========
-* name:testing function
-* symbol: it
-* Framework: Mocha
+* Keyword
+  * name:testing function
+  * symbol: it
+  * Framework: Mocha
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = 'should encode and decode Russian'
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = 'should encode and decode Russian'
 
 ```javascript
 function Sizzle( selector, context, results, seed ) {
 ```
 
-Keyword
-========
-* name: Function declaration
-* symbol: function
+* Keyword
+  * name: Function declaration
+  * symbol: function
 
-* //@params: selector, context, results, seed
+  * //@params: selector, context, results, seed
 
 ```javascript
 function listSheets (spreadsheet) {
 ```
 
-Keyword
-========
-* name: Function declaration
-* symbol: function
+* Keyword
+  * name: Function declaration
+  * symbol: function
 
-* //@params: spreadsheet
+  * //@params: spreadsheet
 
 ```javascript
 sheets = spreadsheet.getSheets();
 ```
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Keyword
-=============
-* symbol: getSheets()
-* type: Function Invocation
+* Keyword
+  * symbol: getSheets()
+  * type: Function Invocation
 
 ```javascript
   for (i = 0; i < sheetNames.length; i +=1) {
 ```
 
-Keyword
-===========
-* name: conditional
-* symbol: for
+* Keyword
+  * name: conditional
+  * symbol: for
 
-Variable:
-==========
-* symbol = i
+* Variable:
+  * symbol = i
 
-Operator
-==========
-* type: Comparison Operator
-* symbol: <
+* Operator
+  * type: Comparison Operator
+  * symbol: <
 
-Method
-==========
-* type: String method
-* symbol: .length
+* Method
+  * type: String method
+  * symbol: .length
 
 ```javascript
 it('should work properly', function () {
 ```
 
-Keyword
-===========
-* name:testing function
-* symbol: it
-* Framework: Mocha
+* Keyword
+  * name:testing function
+  * symbol: it
+  * Framework: Mocha
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = 'should work properly'
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = 'should work properly'
 
 ```javascript
   describe('node insertion', function () {
 ```
 
-Keyword
-===========
-* name:testing function
-* symbol: describe
+* Keyword
+  * name:testing function
+  * symbol: describe
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = 'node insertion'
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = 'node insertion'
 
 ```javascript
 var astar = {
     init: function(graph) {
 ```
 
-Keyword
-==========
-*  name: Variable Declaration
-* symbol: var
+* Keyword
+  *  name: Variable Declaration
+  * symbol: var
 
-Variable:
-==========
-* symbol = astar
+* Variable:
+  * symbol = astar
 
-Operator
-==========
-* type: assignment operator
-* symbol: =
+* Operator
+  * type: assignment operator
+  * symbol: =
 
-Keyword
-==========
-name: key
-symbol: "init"
+* Keyword
+  * name: key
+  * symbol: "init"
 
 ```javascript
 document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
