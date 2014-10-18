@@ -5,49 +5,41 @@
           showGrid: true,
         },
 ```
-Variable:
-==========
-* symbol = defaultOptions
+* Variable:
+  * symbol = defaultOptions
 
-Type Literal
-============
-* Name: Number
-* Symbol: 10
+* Type Literal
+  * Name: Number
+  * Symbol: 10
 
-Type Literal
-============
-* Name: Boolean
-* Symbol: True
+* Type Literal
+  * Name: Boolean
+  * Symbol: True
 
 
 ```javascript
     return String.fromCharCode(97 + n % 26);
   };
 ```
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Operator
-==========
-* name: Addition
-* symbol:  +
+* Operator
+  * name: Addition
+  * symbol:  +
 
-Operator
-==========
-* name: Modulus
-* symbol:  %
+* Operator
+  * name: Modulus
+  * symbol:  %
 
-Type Literal
-============
-* Name: Number
-* Symbol: 97
+* Type Literal
+  * Name: Number
+  * Symbol: 97
 
-Type Literal
-============
-* Name: Number
-* Symbol: 26
+* Type Literal
+  * Name: Number
+  * Symbol: 26
 
 
 ```javascript
@@ -63,25 +55,21 @@ Type Literal
       },
 ```
 
-Type Literal
-============
-* Name: Number
-* Symbol: 0
+* Type Literal
+  * Name: Number
+  * Symbol: 0
 
-Type Literal
-============
-* Name: Number
-* Symbol: 60
+* Type Literal
+  * Name: Number
+  * Symbol: 60
 
-Type Literal
-============
-* Name: Boolean
-* Symbol: True
+* Type Literal
+  * Name: Boolean
+  * Symbol: True
 
-Type Literal
-============
-* Name: Boolean
-* Symbol: False
+* Type Literal
+  * Name: Boolean
+  * Symbol: False
 
 ```javascript
       var center = {
@@ -90,24 +78,20 @@ Type Literal
       };
 ```
 
-Variable:
-==========
-* symbol = center
+* Variable:
+  * symbol = center
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Type Literal
-============
-* Name: Number
-* Symbol: 2
+* Type Literal
+  * Name: Number
+  * Symbol: 2
 
-Operator
-==========
-* name: Division
-* symbol:  /
+* Operator
+  * name: Division
+  * symbol:  /
 
 
 ```javascript
@@ -119,34 +103,28 @@ Operator
         }
 ```
 
-Operator
-==========
-* name: Division
-* symbol:  /
+* Operator
+  * name: Division
+  * symbol:  /
 
-Variable:
-==========
-* symbol = endAngle
+* Variable:
+  * symbol = endAngle
 
-Type Literal
-============
-* Name: Number
-* Symbol: 360
+* Type Literal
+  * Name: Number
+  * Symbol: 360
 
-Type Literal
-============
-* Name: Number
-* Symbol: 359.99
+* Type Literal
+  * Name: Number
+  * Symbol: 359.99
 
-Type Literal
-============
-* Name: Number
-* Symbol: 0.01
+* Type Literal
+  * Name: Number
+  * Symbol: 0.01
 
-Operator
-==========
-* name: Subtraction
-* symbol:  -
+* Operator
+  * name: Subtraction
+  * symbol:  -
 
 ```javascript
   var chartistGuyData = {
@@ -163,15 +141,13 @@ Operator
     ]
   };
 ```
-Variable:
-==========
-* symbol = chartistGuyData
+* Variable:
+  * symbol = chartistGuyData
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = '1st', '2nd', '3rd', 'Workers', 'Nobles'
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = '1st', '2nd', '3rd', 'Workers', 'Nobles'
 
 ```javascript
 function() {
@@ -180,19 +156,16 @@ function() {
       _each = arrayProto.forEach;
 ```
 
-forEach Method
-=======
-* symbol: .forEach
+* forEach Method
+  * symbol: .forEach
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Variable:
-==========
-* symbol = arrayProto
-* value = Array
+* Variable:
+  * symbol = arrayProto
+  * value = Array
 
 ```javascript
     for (var i = 0, length = arguments.length; i < length; i++) {
@@ -203,25 +176,21 @@ Variable:
       } catch (e) { }
     }
 ```
-Variable
-==========
-* symbol = lambda
-* value = Array Element
+* Variable
+  * symbol = lambda
+  * value = Array Element
 
-Keyword
-===========
-* name: conditional
-* symbol: for
+* Keyword
+  * name: conditional
+  * symbol: for
 
-Keyword
-==========
-*  name: Variable Declaration
-* symbol: var
+* Keyword
+  *  name: Variable Declaration
+  * symbol: var
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
 ```javascript
 function $w(string) {
@@ -230,20 +199,17 @@ function $w(string) {
   return string ? string.split(/\s+/) : [];
 }
 ```
-Keyword
-===========
-* name: conditional
-* symbol: if
+* Keyword
+  * name: conditional
+  * symbol: if
 
-Type Literal
-============
-* name: Array
-* symbol: [ ]
+* Type Literal
+  * name: Array
+  * symbol: [ ]
 
-Operator
-============
-* symbol: ?
-* type: conditional
+* Operator
+  * symbol: ?
+  * type: conditional
 
 ```javascript
   function each(iterator, context) {
@@ -253,20 +219,17 @@ Operator
   }
   if (!_each) _each = each;
 ```
-Keyword
-==========
-*  name: Variable Declaration
-* symbol: var
+* Keyword
+  *  name: Variable Declaration
+  * symbol: var
 
-Keyword
-===========
-* name: conditional
-* symbol: for
+* Keyword
+  * name: conditional
+  * symbol: for
 
-Keyword
-===========
-* name: conditional
-* symbol: if
+* Keyword
+  * name: conditional
+  * symbol: if
 
 ```javascript
   function clear() {
@@ -274,20 +237,17 @@ Keyword
     return this;
 ```
 
-Keyword
-========
-* name: Function declaration
-* symbol: function
+* Keyword
+  * name: Function declaration
+  * symbol: function
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Type Literal
-============
-* Name: Number
-* Symbol: 0
+* Type Literal
+  * Name: Number
+  * Symbol: 0
 
 ```javascript
     i = Number(i);
@@ -296,30 +256,25 @@ Type Literal
     } else if (i !== 0 && isFinite(i)) {
 ```
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Type Literal
-============
-* Name: Number
-* Symbol: 0
+* Type Literal
+  * Name: Number
+  * Symbol: 0
 
-Keyword
-===========
-* name: conditional
-* symbol: if
+* Keyword
+  * name: conditional
+  * symbol: if
 
-Keyword
-===========
-* name: conditional
-* symbol: else/if
+* Keyword
+  * name: conditional
+  * symbol: else/if
 
-Operator
-==========
-* name: Comparison Operator
-* symbol:  !==
+* Operator
+  * name: Comparison Operator
+  * symbol:  !==
 
 ```javascript
 if(typeof module === "object"){
@@ -327,21 +282,18 @@ if(typeof module === "object"){
   Terraformer.ArcGIS = require("../terraformer-arcgis-parser.js");
 }
 ```
-Keyword
-===========
-* name: conditional
-* symbol: if
+* Keyword
+  * name: conditional
+  * symbol: if
 
-Operator
-==========
-* name: Strictly Equals
-* symbol:  ===
+* Operator
+  * name: Strictly Equals
+  * symbol:  ===
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = 'object' "terraformer" "../terraformer-arcgis-parser.js"
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = 'object' "terraformer" "../terraformer-arcgis-parser.js"
 
 ```javascript
 describe("ArcGIS Tools", function(){
@@ -352,30 +304,25 @@ describe("ArcGIS Tools", function(){
       "coordinates": [-58.7109375,47.4609375]
     };
 ```
-Keyword
-===========
-* name:testing function
-* symbol: describe
+* Keyword
+  * name:testing function
+  * symbol: describe
 
-Keyword
-========
-* name: Function invocation
-* symbol: function()
+* Keyword
+  * name: Function invocation
+  * symbol: function()
 
-Variable:
-==========
-* symbol = input
+* Variable
+  * symbol = input
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Type Literal
-============
-* Name: String
-* Symbol: "..." / '...'
-* Values = "type" "Point" "coordinates"
+* Type Literal
+  * Name: String
+  * Symbol: "..." / '...'
+  * Values = "type" "Point" "coordinates"
 
 ```javascript
     for (var j = 1; j < strings.length; j += 2) {
@@ -384,64 +331,55 @@ Type Literal
       x = (parseInt(strings[j], 32) + xDiffPrev);
       xDiffPrev = x;
 ```
-Keyword
-===========
-* name: conditional
-* symbol: for
-* operation: loop
+* Keyword
+  * name: conditional
+  * symbol: for
+  * operation: loop
 
-Variable:
-==========
-* symbol = j
-* value = 1
+* Variable
+  * symbol = j
+  * value = 1
 
 ```javascript
 points.push([x / coefficient, y / coefficient]);
 ```
-Method
-=========
-* symbol: .push
-* operation: push value to array
+* Method
+  * symbol: .push
+  * operation: push value to array
 
 ```javascript
 			function onTabClick()
 ```
 
-Keyword
-========
-* name: Function declaration
-* symbol: function
+* Keyword
+  * name: Function declaration
+  * symbol: function
 
 ```javascript
 for (var i = 0; i < array.length; i++)
 ```
-Keyword
-===========
-* name: conditional
-* symbol: for
-* operation: loop
+* Keyword
+  * name: conditional
+  * symbol: for
+  * operation: loop
 
-Keyword
-==========
-*  name: Variable Declaration
-* symbol: var
+* Keyword
+  *  name: Variable Declaration
+  * symbol: var
 
-Operator
-==========
-* name: Assignment Operator
-* symbol:  =
+* Operator
+  * name: Assignment Operator
+  * symbol:  =
 
-Operator
-==========
-* name: Comparison Operator
-* value: less than
-* symbol:  <
+* Operator
+  * name: Comparison Operator
+  * value: less than
+  * symbol:  <
 
-Operator
-==========
-* name: Arithmetic Operator
-* value: Increment
-* symbol:  ++
+* Operator
+  * name: Arithmetic Operator
+  * value: Increment
+  * symbol:  ++
 
 ```javascript
 describe("ArcGIS Tools", function(){
@@ -688,3 +626,34 @@ document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
   * type: Boolean
   * name: "boolean False"
   * meaning: opposite of true
+
+```javascript
+window.lazySizes = factory();
+```
+
+* symbol: 'window'
+  * Type: Identifier
+  * name: "window"
+  * meaning: name of an object
+
+* symbol "."
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operands: window, lazySizes
+
+* symbol: "lazySizes"
+  * Type: Identifier
+  * Name: "lazySizes"
+  * meaning: is the definition of a method to window
+
+* symbol: "="
+  * Type: Operator
+  * Name: "is assigned"
+  * meaning: assigns the value on the right to the element on the left
+  * Operands: window.lazySizes, factory()
+
+* symbol: "factory()"
+  * Type: function definition
+  * Name: "function factory"
+  * meaning:
