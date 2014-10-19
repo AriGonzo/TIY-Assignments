@@ -5,11 +5,18 @@ module.exports = Chess, Position, Piece;
  * representing intial chesspieces
  */
 
-
+var points = {
+  pawn  : 1,
+  bishop: 3,
+  knight: 3,
+  rook  : 5,
+  queen : 9
+}
 
 function Chess() {
-  var pieces = [];
+  pieces = [];
   this.board = [];
+  moveTotal = 0;
   for (var i = 0; i < 8; i++){
     this.board.push(new Array(8));
   }
@@ -36,73 +43,9 @@ function Chess() {
 
   collection.forEach(function(piece, index){
       pieces.push(piece[0] = new Piece(piece[1], piece[2]))
-      piece[0].position = new Position(piece[3], piece[4]))
+      piece[0].position = new Position(piece[3], piece[4])
   })
 
-  // pieces.push(this.Q = new Piece('Queen', 'black'));
-  // this.Q.position = new Position(0,4);
-  // pieces.push(this.q = new Piece('Queen', 'white'));
-  // this.q.position = new Position(7,4);
-  // pieces.push(this.K = new Piece('King', 'black'));
-  // this.K.position = new Position(0,3);
-  // pieces.push(this.k = new Piece('King', 'white'));
-  // this.k.position = new Position(7,3);
-  // pieces.push(this.P1 = new Piece('Pawn', 'black'));
-  // this.P1.position = new Position(1,0);
-  // pieces.push(this.P2 = new Piece('Pawn', 'black'));
-  // this.P2.position = new Position(1,1)
-  // pieces.push(this.P3 = new Piece('Pawn', 'black'));
-  // this.P3.position = new Position(1,2)
-  // pieces.push(this.P4 = new Piece('Pawn', 'black'));
-  // this.P4.position = new Position(1,3);
-  // pieces.push(this.P5 = new Piece('Pawn', 'black'));
-  // this.P5.position = new Position(1,4);
-  // pieces.push(this.P6 = new Piece('Pawn', 'black'));
-  // this.P6.position = new Position(1,5);
-  // pieces.push(this.P7 = new Piece('Pawn', 'black'));
-  // this.P7.position = new Position(1,6);
-  // pieces.push(this.P8 = new Piece('Pawn', 'black'));
-  // this.P8.position = new Position(1,7);
-  // pieces.push(this.p1 = new Piece('Pawn', 'white'));
-  // this.p1.position = new Position(6,0);
-  // pieces.push(this.p2 = new Piece('Pawn', 'white'));
-  // this.p2.position = new Position(6,1);
-  // pieces.push(this.p3 = new Piece('Pawn', 'white'));
-  // this.p3.position = new Position(6,2);
-  // pieces.push(this.p4 = new Piece('Pawn', 'white'));
-  // this.p4.position = new Position(6,3);
-  // pieces.push(this.p5 = new Piece('Pawn', 'white'));
-  // this.p5.position = new Position(6,4);
-  // pieces.push(this.p6 = new Piece('Pawn', 'white'));
-  // this.p6.position = new Position(6,5);
-  // pieces.push(this.p7 = new Piece('Pawn', 'white'));
-  // this.p7.position = new Position(6,6);
-  // pieces.push(this.p8 = new Piece('Pawn', 'white'));
-  // this.p8.position = new Position(6,7);
-  // pieces.push(this.B1 = new Piece('Bishop', 'black'));
-  // this.B1.position = new Position(0,2);
-  // pieces.push(this.B2 = new Piece('Bishop', 'black'));
-  // this.B2.position = new Position(0,5);
-  // pieces.push(this.b1 = new Piece('Bishop', 'white'));
-  // this.b1.position = new Position(7,2);
-  // pieces.push(this.b2 = new Piece('Bishop', 'white'));
-  // this.b2.position = new Position(7,5);
-  // pieces.push(this.N1 = new Piece('Knight', 'black'));
-  // this.N1.position = new Position(0,1);
-  // pieces.push(this.N2 = new Piece('Knight', 'black'));
-  // this.N2.position = new Position(0,6);
-  // pieces.push(this.n1 = new Piece('Knight', 'white'));
-  // this.n1.position = new Position(7,1);
-  // pieces.push(this.n2 = new Piece('Knight', 'white'));
-  // this.n2.position = new Position(7,6);
-  // pieces.push(this.R1 = new Piece('Rook', 'black'));
-  // this.R1.position = new Position(0,0);
-  // pieces.push(this.R2 = new Piece('Rook', 'black'));
-  // this.R2.position = new Position(0,7);
-  // pieces.push(this.r1 = new Piece('Rook', 'white'));
-  // this.r1.position = new Position(7,0);
-  // pieces.push(this.r2 = new Piece('Rook', 'white'));
-  // this.r2.position = new Position(7,7);
 
   console.log(pieces)
 
@@ -114,10 +57,6 @@ function Chess() {
  * current player˜
  */
 
-// function Board() {
-//   Piece.position : Piece.letter
-// }
-
 Chess.prototype.getPlayer = function(pieces){
    if(pieces === pieces.toLowerCase()){
       return 'white';
@@ -126,65 +65,76 @@ Chess.prototype.getPlayer = function(pieces){
 }
 
 /**
- *@return String representation of board
- */
-
-Chess.prototype.display = function(){
-  var self = this;
-  var pieces = [this.Q, this.q, this.K, this.k, this.P1, this.P2, this.P3,
-                this.P4, this.P5, this.P6, this.P7, this.P8, this.p1, this.p2,
-                this.p3, this.p4, this.p5, this.p6, this.p7, this.p8, this.qB,
-                this.kB, this.qb, this.kb, this.qN, this.kN, this.qn, this.kn,
-                this.qR,this.kR, this.qr, this.kr];
-  var board = Array.matrix(8,8,0);
-  var spacer = '+---+---+---+---+---+---+---+---+\n';
-    return spacer +
-        board.map(function renderRow(row){
-          return '| ' +
-              row.map(function renderPosition(){
-                  pieces.forEach(function(value, index){
-                    var x = pieces[index].position[0];
-                    var y = pieces[index].position[1];
-                    board[x][y] = Piece().letter;
-                    return pieces[index].toString() || ' ';
-                  });
-              }).join(' | ')
-          + ' |\n';
-        }).join(spacer)
-    + spacer;
-}
-
-Array.matrix = function(numrows, numcols, initial){
-   var arr = [];
-   for (var i = 0; i < numrows; ++i){
-      var columns = [];
-      for (var j = 0; j < numcols; ++j){
-         columns[j] = initial;
-      }
-      arr[i] = columns;
-    }
-    return arr;
-}
-
-/**
  *Move piece to destination and switch player
  @param Piece piece to move
  @param Position destination to move piece to
  */
 
-Chess.prototype.move = function(piece, destination) {
-pieces.forEach(function(value, index){
+Chess.prototype.move = function (piece, destination){
+  moveTotal++
+  pieces.forEach(function(value, index){
     if (pieces[index].position[0] === piece[0] && pieces[index].position[1] === piece[1]){
-      var x = pieces[index].position[0];
-      var y = pieces[index].position[1];
-      self.board[x][y] = ' ';
-      pieces[index].position = destination
-      x = pieces[index].position[0];
-      y = pieces[index].position[1];
-      self.board[x][y] = pieces[index].letter
+
+      pieces[index].position = destination;
+
+      console.log('Move ' + moveTotal + ': ' + pieces[index].color + ' ' + pieces[index].name + ' to '+ destination);
+      console.log(Chess.prototype.display());
     }
   })
-};
+}
+
+Chess.prototype.opening = function (){
+  this.move([6,3],[4,3]);
+  this.move([0,6],[2,5]);
+  this.move([6,2],[4,2]);
+  this.move([1,4],[2,4]);
+  this.move([6,6],[5,6]);
+  this.move([1,3],[3,3]);
+  this.move([7,5],[6,6]);
+  this.move([0,5],[1,4]);
+  this.move([7,6],[5,5]);
+}
+
+/**
+ *@return String representation of board
+ */
+
+Chess.prototype.display = function(){
+  Array.matrix = function(numrows, numcols, initial){
+     var arr = [];
+     for (var i = 0; i < numrows; ++i){
+        var columns = [];
+        for (var j = 0; j < numcols; ++j){
+           columns[j] = initial;
+        }
+        arr[i] = columns;
+      }
+      return arr;
+  }
+
+  var board = Array.matrix(8,8,0);
+
+  pieces.forEach(function(value, index){
+    var x = pieces[index].position[0];
+    var y = pieces[index].position[1];
+    board[x][y] = pieces[index].letter;
+  })
+  var spacer = '+---+---+---+---+---+---+---+---+\n';
+    return spacer +
+        board.map(function renderRow(row){
+          return '| ' +
+              row.map(function renderPosition(position){
+                    if(position === 0){
+                      return ' ';
+                    }
+                    else{
+                      return position;
+                    }
+              }).join(' | ')
+          + ' |\n';
+        }).join(spacer)
+    + spacer;
+}
 
 /**
  * Position: Represent a position on a chessboard with
@@ -234,10 +184,8 @@ Piece.prototype.getColor = function(){ //Query
  * @param Position position
  */
 
-Piece.prototype.setPosition = function(position){
-  var x,y;
+Piece.prototype.setPosition = function (position){
   this.position = position;
-  position = new Position(x,y)
 }
 
 /**
