@@ -584,6 +584,7 @@ var astar = {
   * name: key
   * symbol: "init"
 
+
 #### 31
 ```javascript
 document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
@@ -623,6 +624,7 @@ document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
   * type: Boolean
   * name: "boolean False"
   * meaning: opposite of true
+
 #### 33
 ```javascript
 window.lazySizes = factory();
@@ -654,6 +656,7 @@ window.lazySizes = factory();
   * Type: function definition
   * Name: "function factory"
   * meaning:
+
 #### 34
 ```javascript
 function Author(name, books) {
