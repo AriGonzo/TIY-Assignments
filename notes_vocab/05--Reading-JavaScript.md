@@ -1,3 +1,4 @@
+#### 1
 ```javascript
     var defaultOptions = {
           offset: 10,
@@ -16,7 +17,7 @@
   * Name: Boolean
   * Symbol: True
 
-
+#### 2
 ```javascript
     return String.fromCharCode(97 + n % 26);
   };
@@ -41,7 +42,7 @@
   * Name: Number
   * Symbol: 26
 
-
+#### 3
 ```javascript
         startAngle: 0,
         total: undefined,
@@ -71,6 +72,7 @@
   * Name: Boolean
   * Symbol: False
 
+#### 4
 ```javascript
       var center = {
         x: chartRect.x1 + chartRect.width() / 2,
@@ -93,7 +95,7 @@
   * name: Division
   * symbol:  /
 
-
+#### 5
 ```javascript
         var endAngle = startAngle + dataArray[i] / totalDataSum * 360;
         // If we need to draw the arc for all 360 degrees we need to add a hack where we close the circle
@@ -126,6 +128,7 @@
   * name: Subtraction
   * symbol:  -
 
+#### 6
 ```javascript
   var chartistGuyData = {
     labels: ['1st', '2nd', '3rd'],
@@ -149,6 +152,7 @@
   * Symbol: "..." / '...'
   * Values = '1st', '2nd', '3rd', 'Workers', 'Nobles'
 
+#### 7
 ```javascript
 function() {
   var arrayProto = Array.prototype,
@@ -167,6 +171,7 @@ function() {
   * symbol = arrayProto
   * value = Array
 
+#### 8
 ```javascript
     for (var i = 0, length = arguments.length; i < length; i++) {
       var lambda = arguments[i];
@@ -192,6 +197,7 @@ function() {
   * name: Assignment Operator
   * symbol:  =
 
+#### 9
 ```javascript
 function $w(string) {
   if (!Object.isString(string)) return [];
@@ -211,6 +217,7 @@ function $w(string) {
   * symbol: ?
   * type: conditional
 
+#### 10
 ```javascript
   function each(iterator, context) {
     for (var i = 0, length = this.length >>> 0; i < length; i++) {
@@ -231,6 +238,7 @@ function $w(string) {
   * name: conditional
   * symbol: if
 
+#### 11
 ```javascript
   function clear() {
     this.length = 0;
@@ -249,6 +257,7 @@ function $w(string) {
   * Name: Number
   * Symbol: 0
 
+#### 12
 ```javascript
     i = Number(i);
     if (isNaN(i)) {
@@ -276,6 +285,7 @@ function $w(string) {
   * name: Comparison Operator
   * symbol:  !==
 
+#### 13
 ```javascript
 if(typeof module === "object"){
   var Terraformer = require("terraformer");
@@ -295,6 +305,7 @@ if(typeof module === "object"){
   * Symbol: "..." / '...'
   * Values = 'object' "terraformer" "../terraformer-arcgis-parser.js"
 
+#### 14
 ```javascript
 describe("ArcGIS Tools", function(){
 
@@ -324,6 +335,7 @@ describe("ArcGIS Tools", function(){
   * Symbol: "..." / '...'
   * Values = "type" "Point" "coordinates"
 
+#### 15
 ```javascript
     for (var j = 1; j < strings.length; j += 2) {
       // j is the offset for the x value
@@ -340,6 +352,7 @@ describe("ArcGIS Tools", function(){
   * symbol = j
   * value = 1
 
+#### 16
 ```javascript
 points.push([x / coefficient, y / coefficient]);
 ```
@@ -347,6 +360,7 @@ points.push([x / coefficient, y / coefficient]);
   * symbol: .push
   * operation: push value to array
 
+#### 17
 ```javascript
 			function onTabClick()
 ```
@@ -355,6 +369,7 @@ points.push([x / coefficient, y / coefficient]);
   * name: Function declaration
   * symbol: function
 
+#### 18
 ```javascript
 for (var i = 0; i < array.length; i++)
 ```
@@ -381,6 +396,7 @@ for (var i = 0; i < array.length; i++)
   * value: Increment
   * symbol:  ++
 
+#### 19
 ```javascript
 describe("ArcGIS Tools", function(){
 ```
@@ -395,6 +411,7 @@ describe("ArcGIS Tools", function(){
   * Symbol: "..." / '...'
   * Values = "ArcGIS Tools"
 
+#### 20
 ```javascript
 expect(output).toEqual({
 ```
@@ -404,6 +421,7 @@ expect(output).toEqual({
   * Library: Chai
   * Framework: Mocha
 
+#### 21
 ```javascript
 var input = {
       "type":"Feature",
@@ -424,6 +442,7 @@ var input = {
   * symbol: "Type"
   * value: "Feature"
 
+#### 22
 ```javascript
 var bytes=[ 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2];
 ```
@@ -447,6 +466,7 @@ var bytes=[ 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2];
   * Name: Number
   * Symbols: 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2
 
+#### 23
 ```javascript
 it('should encode and decode Russian', function() {
 ```
@@ -460,6 +480,7 @@ it('should encode and decode Russian', function() {
   * Symbol: "..." / '...'
   * Values = 'should encode and decode Russian'
 
+#### 24
 ```javascript
 function Sizzle( selector, context, results, seed ) {
 ```
@@ -470,6 +491,7 @@ function Sizzle( selector, context, results, seed ) {
 
   * //@params: selector, context, results, seed
 
+#### 25
 ```javascript
 function listSheets (spreadsheet) {
 ```
@@ -479,7 +501,7 @@ function listSheets (spreadsheet) {
   * symbol: function
 
   * //@params: spreadsheet
-
+#### 26
 ```javascript
 sheets = spreadsheet.getSheets();
 ```
@@ -492,6 +514,7 @@ sheets = spreadsheet.getSheets();
   * symbol: getSheets()
   * type: Function Invocation
 
+#### 27
 ```javascript
   for (i = 0; i < sheetNames.length; i +=1) {
 ```
@@ -511,6 +534,7 @@ sheets = spreadsheet.getSheets();
   * type: String method
   * symbol: .length
 
+#### 28
 ```javascript
 it('should work properly', function () {
 ```
@@ -525,6 +549,7 @@ it('should work properly', function () {
   * Symbol: "..." / '...'
   * Values = 'should work properly'
 
+#### 29
 ```javascript
   describe('node insertion', function () {
 ```
@@ -538,6 +563,7 @@ it('should work properly', function () {
   * Symbol: "..." / '...'
   * Values = 'node insertion'
 
+#### 30
 ```javascript
 var astar = {
     init: function(graph) {
@@ -558,6 +584,7 @@ var astar = {
   * name: key
   * symbol: "init"
 
+#### 31
 ```javascript
 document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
 ```
@@ -596,7 +623,7 @@ document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
   * type: Boolean
   * name: "boolean False"
   * meaning: opposite of true
-
+#### 33
 ```javascript
 window.lazySizes = factory();
 ```
@@ -627,3 +654,32 @@ window.lazySizes = factory();
   * Type: function definition
   * Name: "function factory"
   * meaning:
+#### 34
+```javascript
+function Author(name, books) {
+```
+
+* symbol: "function"
+  * Type: keyword
+  * Name: "function declaration"
+  * meaning: literally declaring a function
+
+* symbol: "Author"
+  * type: identifier
+  * Name: "Author"
+  * meaning: name of the object constructor
+
+* symbol: "()"
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: "name"
+  * Type: identifier
+  * name: "passed the paramater name"
+  * meaning: "parameter of the function Author"
+
+* symbol: "books"
+  * Type: identifier
+  * name: "passed the paramater books"
+  * meaning: "parameter of the function Author"
