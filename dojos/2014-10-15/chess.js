@@ -14,17 +14,14 @@ var points = {
 }
 
 function Chess() {
-  pieces = [];
-  this.board = [];
-  moveTotal = 0;
-  for (var i = 0; i < 8; i++){
-    this.board.push(new Array(8));
-  }
+  this.pieces = [];
 
-  var self = this;
+  moveTotal = 0;
+
+  self = this;
   collection = [
-  [self.K,  'King'  , 'black',0,3] , [self.k,  'King'  , 'white',7,4],
-  [self.Q,  'Queen' , 'black',0,4] , [self.q,  'Queen' , 'white',7,3],
+  [self.K,  'King'  , 'black',0,4] , [self.k,  'King'  , 'white',7,4],
+  [self.Q,  'Queen' , 'black',0,3] , [self.q,  'Queen' , 'white',7,3],
   [self.R1, 'Rook'  , 'black',0,0] , [self.r1, 'Rook'  , 'white',7,0],
   [self.R2, 'Rook'  , 'black',0,7] , [self.r2, 'Rook'  , 'white',7,7],
   [self.N1, 'Knight', 'black',0,1] , [self.n1, 'Knight', 'white',7,1],
@@ -42,12 +39,9 @@ function Chess() {
   ]
 
   collection.forEach(function(piece, index){
-      pieces.push(piece[0] = new Piece(piece[1], piece[2]))
-      piece[0].position = new Position(piece[3], piece[4])
+      self.pieces.push(piece[0] = new Piece(piece[1], piece[2]))
+      piece[0].setPosition([piece[3], piece[4]])
   })
-
-
-  console.log(pieces)
 
 }
 
@@ -72,27 +66,27 @@ Chess.prototype.getPlayer = function(pieces){
 
 Chess.prototype.move = function (piece, destination){
   moveTotal++
-  pieces.forEach(function(value, index){
-    if (pieces[index].position[0] === piece[0] && pieces[index].position[1] === piece[1]){
+  this.pieces.forEach(function(value, index){
+    if (self.pieces[index].position[0] === piece[0] && self.pieces[index].position[1] === piece[1]){
 
-      pieces[index].position = destination;
+      self.pieces[index].position = destination;
 
-      console.log('Move ' + moveTotal + ': ' + pieces[index].color + ' ' + pieces[index].name + ' to '+ destination);
+      console.log('Move ' + moveTotal + ': ' + self.pieces[index].color + ' ' + self.pieces[index].name + ' to '+ destination);
       console.log(Chess.prototype.display());
     }
   })
 }
 
 Chess.prototype.opening = function (){
-  this.move([6,3],[4,3]);
-  this.move([0,6],[2,5]);
-  this.move([6,2],[4,2]);
-  this.move([1,4],[2,4]);
-  this.move([6,6],[5,6]);
-  this.move([1,3],[3,3]);
-  this.move([7,5],[6,6]);
-  this.move([0,5],[1,4]);
-  this.move([7,6],[5,5]);
+  Move1: this.move([6,3],[4,3]);
+  Move2: this.move([0,6],[2,5]);
+  Move3: this.move([6,2],[4,2]);
+  Move4: this.move([1,4],[2,4]);
+  Move5: this.move([6,6],[5,6]);
+  Move6: this.move([1,3],[3,3]);
+  Move7: this.move([7,5],[6,6]);
+  Move8: this.move([0,5],[1,4]);
+  Move9: this.move([7,6],[5,5]);
 }
 
 /**
@@ -114,10 +108,10 @@ Chess.prototype.display = function(){
 
   var board = Array.matrix(8,8,0);
 
-  pieces.forEach(function(value, index){
-    var x = pieces[index].position[0];
-    var y = pieces[index].position[1];
-    board[x][y] = pieces[index].letter;
+  self.pieces.forEach(function(value, index){
+    var x = self.pieces[index].position[0];
+    var y = self.pieces[index].position[1];
+    board[x][y] = self.pieces[index].letter;
   })
   var spacer = '+---+---+---+---+---+---+---+---+\n';
     return spacer +
