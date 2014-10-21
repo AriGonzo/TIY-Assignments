@@ -774,9 +774,86 @@ collection.forEach(function(piece, index){
 * symbol: `piece`
   * Type: identifier
   * Name: "parameter piece"
-  * meaning: the sybmol for the elements of the array
+  * meaning: the symbol for the elements of the array
 
 * symbol: `index`
   * Type: identifier
   * Name: "parameter index"
-  * meaning: the sybmol for the index of the array
+  * meaning: the symbol for the index of the array
+
+#### 38
+```javascript
+function Piece(name, color){
+```
+
+* symbol: "function"
+  * Type: keyword
+  * Name: "function declaration"
+  * meaning: literally declaring a function
+
+* symbol `Piece`
+  * Type: identifier
+  * name: "Piece"
+  * meaning: name of the object constructor
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: `name` `color`
+  * type: identifier parameters
+  * name:  "passed the paramater name and color"
+  * meaning: "parameters of the constructor Piece"
+
+#### 39
+```javascript
+Piece.prototype.setPosition = function (position){
+```
+
+* symbol: `Piece`
+  * Type: Identifier
+  * Name: "Piece"
+  * meaning: "Constructor Piece"
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: Piece, prototype
+
+* symbol: `prototype`
+  * Type: keyword
+  * name: "object prototype"
+  * meaning: symbolizes adding an attribute to object contructor
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: setPosition, prototype
+
+* symbol: `setPosition`
+  * Type: identifier
+  * Name: 'setPosition'
+  * meaning: adding the setPosition method to Piece
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `function`
+  * Type: Literal
+  * Name: function definition
+  * meaning: the identifier on the left is a function
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: `position`
+  * Type: identifier
+  * Name: "parameter position"
+  * meaning: the parameter needed to pass setPosition()
