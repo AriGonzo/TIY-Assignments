@@ -857,3 +857,28 @@ Piece.prototype.setPosition = function (position){
   * Type: identifier
   * Name: "parameter position"
   * meaning: the parameter needed to pass setPosition()
+
+#### 40
+```javascript
+describe('NFC object', function () {
+```
+
+* symbol: `describe`
+  * Type: keyword
+  * name: `describe`
+  * meaning: function of mocha testing framework
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: `"NFC object"`
+  * Type: String
+  * name: "String NFC Object"
+  * meaning: describing what is being tested
+
+* symbol: `function`
+  * Type: Literal
+  * Name: function definition
+  * meaning: the thing being tested is a function
