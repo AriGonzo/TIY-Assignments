@@ -466,7 +466,7 @@ var bytes=[ 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2];
   * Name: Number
   * Symbols: 0x54, 0x65, 0x73, 0x74, 0x73, 0xd7, 0x90, 0xc2, 0xa2
 
-#### 23
+#### 24
 ```javascript
 it('should encode and decode Russian', function() {
 ```
@@ -480,7 +480,7 @@ it('should encode and decode Russian', function() {
   * Symbol: "..." / '...'
   * Values = 'should encode and decode Russian'
 
-#### 24
+#### 25
 ```javascript
 function Sizzle( selector, context, results, seed ) {
 ```
@@ -491,7 +491,7 @@ function Sizzle( selector, context, results, seed ) {
 
   * //@params: selector, context, results, seed
 
-#### 25
+#### 26
 ```javascript
 function listSheets (spreadsheet) {
 ```
@@ -501,7 +501,7 @@ function listSheets (spreadsheet) {
   * symbol: function
 
   * //@params: spreadsheet
-#### 26
+#### 27
 ```javascript
 sheets = spreadsheet.getSheets();
 ```
@@ -514,7 +514,7 @@ sheets = spreadsheet.getSheets();
   * symbol: getSheets()
   * type: Function Invocation
 
-#### 27
+#### 28
 ```javascript
   for (i = 0; i < sheetNames.length; i +=1) {
 ```
@@ -534,7 +534,7 @@ sheets = spreadsheet.getSheets();
   * type: String method
   * symbol: .length
 
-#### 28
+#### 29
 ```javascript
 it('should work properly', function () {
 ```
@@ -549,7 +549,7 @@ it('should work properly', function () {
   * Symbol: "..." / '...'
   * Values = 'should work properly'
 
-#### 29
+#### 30
 ```javascript
   describe('node insertion', function () {
 ```
@@ -563,7 +563,7 @@ it('should work properly', function () {
   * Symbol: "..." / '...'
   * Values = 'node insertion'
 
-#### 30
+#### 31
 ```javascript
 var astar = {
     init: function(graph) {
@@ -585,7 +585,7 @@ var astar = {
   * symbol: "init"
 
 
-#### 31
+#### 32
 ```javascript
 document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
 ```
@@ -625,7 +625,7 @@ document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
   * name: "boolean False"
   * meaning: opposite of true
 
-#### 33
+#### 34
 ```javascript
 window.lazySizes = factory();
 ```
@@ -657,7 +657,7 @@ window.lazySizes = factory();
   * Name: "function factory"
   * meaning:
 
-#### 34
+#### 35
 ```javascript
 function Author(name, books) {
 ```
@@ -687,7 +687,7 @@ function Author(name, books) {
   * name: "passed the paramater books"
   * meaning: "parameter of the function Author"
 
-#### 35
+#### 37
 
   ```javascript
   function Chess(){
@@ -714,7 +714,7 @@ function Author(name, books) {
   * meaning: "holds the scope of the function"
 
 
-#### 36
+#### 38
 ```javascript
 this.arrPieces = [];
 ```
@@ -745,7 +745,7 @@ this.arrPieces = [];
   * Name: "Array"
   * meaning: "empty array"
 
-#### 37
+#### 39
 ```javascript
 collection.forEach(function(piece, index){
 ```
@@ -781,7 +781,7 @@ collection.forEach(function(piece, index){
   * Name: "parameter index"
   * meaning: the symbol for the index of the array
 
-#### 38
+#### 40
 ```javascript
 function Piece(name, color){
 ```
@@ -806,7 +806,7 @@ function Piece(name, color){
   * name:  "passed the paramater name and color"
   * meaning: "parameters of the constructor Piece"
 
-#### 39
+#### 41
 ```javascript
 Piece.prototype.setPosition = function (position){
 ```
@@ -858,7 +858,7 @@ Piece.prototype.setPosition = function (position){
   * Name: "parameter position"
   * meaning: the parameter needed to pass setPosition()
 
-#### 40
+#### 42
 ```javascript
 describe('NFC object', function () {
 ```
@@ -883,7 +883,7 @@ describe('NFC object', function () {
   * Name: function definition
   * meaning: the thing being tested is a function
 
-#### 41
+#### 43
 ```javascript
 function Rabbit(adjective)
 ```
@@ -903,7 +903,7 @@ function Rabbit(adjective)
   * Name: "is passed parameter adjective"
   * meaning: the parameter needed to pass Rabbit()
 
-#### 42
+#### 44
 ```javascript
 this.adjective = adjective;
 ```
@@ -929,7 +929,7 @@ this.adjective = adjective;
   * Name: "adjective"
   * meaning: the value of the property "adjective"
 
-#### 43
+#### 45
 ```javascript
 Dog.prototype.bark = function() {
 ```
@@ -965,6 +965,153 @@ Dog.prototype.bark = function() {
   * Type: operator
   * Name: is assigned
   * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `function`
+  * Type: Literal
+  * Name: function definition
+  * meaning: the thing being tested is a function
+
+#### 46
+```javascript
+ var Application = function (canvas, options) {
+```
+
+* symbol: `var`
+  * Type: Keyword
+  * Name: Variable declarations
+  * Meaning: the next word is a variable
+
+* symbol: `Application`
+  * Type: identifier
+  * name: "Application"
+  * meaning: name of the object constructor
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `function`
+  * Type: Literal
+  * Name: function definition
+  * meaning: the thing being tested is a function
+
+* symbol: `canvas` `options`
+  * type: identifier parameters
+  * name:  "passed the paramater canvas and options"
+  * meaning: "parameters of the constructor Application"
+
+#### 47
+```javascript
+this.exposed = {};
+```
+
+* symbol: `this`
+  * Type: identifier
+  * name: "this"
+  * meaning: implies the nearest object
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: this, exposed  
+
+* symbol: `exposed`
+  * Type: identifier
+  * Name: "exposed"
+  * meaning: name of the key for the dictionary
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `{}`
+  * Type: object literal
+  * Name: "empty object"
+  * meaning: "this.exposed is assigned an empty object"
+
+#### 48
+```javascript
+function Ring(name, location) {
+```
+
+* symbol: `function`
+  * Type: keyword
+  * Name: "function declaration"
+  * meaning: literally declaring a function
+
+* symbol: `Ring`
+  * type: identifier
+  * Name: "Author"
+  * meaning: name of the object constructor
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: `name`
+  * Type: identifier
+  * name: "passed the paramater name"
+  * meaning: "parameter of the function Ring"
+
+* symbol: `location`
+  * Type: identifier
+  * name: "passed the paramater books"
+  * meaning: "parameter of the function Ring"
+
+#### 49
+```javascript
+this.timesOver = [];
+```
+
+* symbol: `this`
+  * Type: identifier
+  * name: "this"
+  * meaning: implies the nearest object
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: this, arrPieces
+
+* symbol: `timesOver`
+  * Type: identifier
+  * Name: "timesOver"
+  * meaning: name of the array
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `[]`
+  * Type: Array Literal
+  * Name: "Array"
+  * meaning: "empty array"
+
+#### 50
+```javascript
+describe('srcObj()', function () {
+```
+
+* symbol: `describe`
+  * Type: keyword
+  * name: `describe`
+  * meaning: function of mocha testing framework
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: `"srcObj()"`
+  * Type: String
+  * name: "String NFC Object"
+  * meaning: describing what is being tested
 
 * symbol: `function`
   * Type: Literal
