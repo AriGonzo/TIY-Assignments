@@ -15,7 +15,7 @@ isn't perfect and bitchin' and just winning every second .... And I'm not
 perfect and bitchin', and just delivering the goods at every frickin' turn.
 Major League 3? I don't know. I haven't read it. I don't care. Let me just
 say this: It's nothing this side of deplorable, that a certain Chaim Levine
-- yeah, that's Chuck's real name - mistook this rock star for his own
+yeah, that's Chuck's real name - mistook this rock star for his own
 selfish exit strategy, bro. No. She's not there now. So ... you know ...
 within that is tremendous focus, and tremendous clarity, and tremendous
 peace.</font>
