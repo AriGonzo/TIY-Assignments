@@ -612,7 +612,7 @@ document.addEventListener('deviceready', handleNfcFromIntentFilter, false);
 
 * symbol: ` "device ready" `
   * Type: String
-  * name: "string device ready"
+  * name: `string device ready`
   * meaning: a parameter of addEventListener, a string"
 
 * symbol: `handleNfcFromIntentFilter`
@@ -635,24 +635,24 @@ window.lazySizes = factory();
   * name: "window"
   * meaning: name of an object
 
-* symbol "."
+* symbol `.`
   * Type: Operator
   * Name: dot
   * meaning: is between an object and a property or method
   * Operands: window, lazySizes
 
-* symbol: "lazySizes"
+* symbol: `lazySizes`
   * Type: Identifier
   * Name: "lazySizes"
   * meaning: is the definition of a method to window
 
-* symbol: "="
+* symbol: `=`
   * Type: Operator
   * Name: "is assigned"
   * meaning: assigns the value on the right to the element on the left
   * Operands: window.lazySizes, factory()
 
-* symbol: "factory()"
+* symbol: `factory()`
   * Type: function definition
   * Name: "function factory"
   * meaning:
@@ -662,27 +662,121 @@ window.lazySizes = factory();
 function Author(name, books) {
 ```
 
+* symbol: `function`
+  * Type: keyword
+  * Name: "function declaration"
+  * meaning: literally declaring a function
+
+* symbol: `Author`
+  * type: identifier
+  * Name: "Author"
+  * meaning: name of the object constructor
+
+* symbol: `()`
+  * Type: operator
+  * name: "call/create instance"
+  * meaning: invokes a function and holds the parameters, if any
+
+* symbol: `name`
+  * Type: identifier
+  * name: "passed the paramater name"
+  * meaning: "parameter of the function Author"
+
+* symbol: `books`
+  * Type: identifier
+  * name: "passed the paramater books"
+  * meaning: "parameter of the function Author"
+
+#### 35
+
+  ```javascript
+  function Chess(){
+  ```
+
 * symbol: "function"
   * Type: keyword
   * Name: "function declaration"
   * meaning: literally declaring a function
 
-* symbol: "Author"
-  * type: identifier
-  * Name: "Author"
+* symbol `Chess`
+  * Type: identifier
+  * name: "Chess"
   * meaning: name of the object constructor
 
-* symbol: "()"
+* symbol: `()`
   * Type: operator
   * name: "call/create instance"
   * meaning: invokes a function and holds the parameters, if any
 
-* symbol: "name"
-  * Type: identifier
-  * name: "passed the paramater name"
-  * meaning: "parameter of the function Author"
+* symbol: `{`
+  * Type: function literal
+  * name: Curly Brace
+  * meaning: "holds the scope of the function"
 
-* symbol: "books"
+
+#### 36
+```javascript
+this.arrPieces = [];
+```
+
+* symbol: `this`
   * Type: identifier
-  * name: "passed the paramater books"
-  * meaning: "parameter of the function Author"
+  * name: "this"
+  * meaning: implies the nearest object
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: this, arrPieces
+
+* symbol: `arrPieces`
+  * Type: identifier
+  * Name: "arrPieces"
+  * meaning: name of the array
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `[]`
+  * Type: Array Literal
+  * Name: "Array"
+  * meaning: "empty array"
+
+#### 37
+```javascript
+collection.forEach(function(piece, index){
+```
+
+* symbol: `collection`
+  * Type: identifier
+  * Name: "Collection"
+  * meaning: the name of the array
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: collection, forEach
+
+* symbol: `forEach`
+  * Type: identifier
+  * Name: Method forEach
+  * meaning: The name of the method
+
+* symbol: `function`
+  * Type: keyword
+  * Name: callback
+  * meaning: anonymous function
+
+* symbol: `piece`
+  * Type: identifier
+  * Name: "parameter piece"
+  * meaning: the sybmol for the elements of the array
+
+* symbol: `index`
+  * Type: identifier
+  * Name: "parameter index"
+  * meaning: the sybmol for the index of the array
