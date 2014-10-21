@@ -882,3 +882,91 @@ describe('NFC object', function () {
   * Type: Literal
   * Name: function definition
   * meaning: the thing being tested is a function
+
+#### 41
+```javascript
+function Rabbit(adjective)
+```
+
+* symbol: `function`
+  * Type: Literal
+  * Name: function definition
+  * meaning: the identifier on the left is a function
+
+* symbol: `Rabbit`
+  * Type: identifier
+  * name: "Rabbit"
+  * meaning: name of the object constructor
+
+* symbol: `adjective`
+  * Type: identifier
+  * Name: "is passed parameter adjective"
+  * meaning: the parameter needed to pass Rabbit()
+
+#### 42
+```javascript
+this.adjective = adjective;
+```
+
+* symbol: `this`
+  * Type: identifier
+  * name: "this"
+  * meaning: implies the nearest object
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: this, adjective
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `adjective`
+  * Type: identifier
+  * Name: "adjective"
+  * meaning: the value of the property "adjective"
+
+#### 43
+```javascript
+Dog.prototype.bark = function() {
+```
+
+* symbol: `Dog`
+  * Type: Identifier
+  * Name: "Dog"
+  * meaning: "Constructor Piece"
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: Dog, prototype
+
+* symbol: `prototype`
+  * Type: keyword
+  * name: "object prototype"
+  * meaning: symbolizes adding an attribute to object contructor
+
+* symbol: `.`
+  * Type: Operator
+  * Name: dot
+  * meaning: is between an object and a property or method
+  * Operends: bark, prototype
+
+* symbol: `bark`
+  * Type: identifier
+  * Name: 'bark'
+  * meaning: adding the bark method to Dog()
+
+* symbol: `=`
+  * Type: operator
+  * Name: is assigned
+  * meaning: assigns the value on the right to the variable on the left
+
+* symbol: `function`
+  * Type: Literal
+  * Name: function definition
+  * meaning: the thing being tested is a function
