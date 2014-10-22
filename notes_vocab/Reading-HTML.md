@@ -1,31 +1,35 @@
 #### 1
 ```html
-<a>
+<aside>
 ```
 
 * meaning: Also known as the anchor element, this tag defines a hyperlink the name of the target destination of a
 hyperlink, or both.
 
-* example: ```<a href="http://www.meetup.com/The-Iron-Yard-Orlando/">http://www.meetup.com/The-Iron-Yard-Orlando/</a>```
+* example: <aside class="metadata clearfix">
   * URL: http://orlando.theironyard.com/
-* example: `<a href="http://olivierlacan.com/tools/">tools</a>`
-  * URL: http://orlando.theironyard.com/
-* example: `<a class="title may-blank loggedin" href="https://www.youtube.com/watch?v=V_Nr31Lv6H8&amp;app=desktop" tabindex="1">The Russian cat video to end all Russian cat videos!</a>`
-  * URL: http://www.reddit.com/r/videos/comments/2jvnfh/the_russian_cat_video_to_end_all_russian_cat/
- 
+* example: <aside>
+                <ul class="semantic-list">
+                    <li class="category">
+            </aside>
+  * URL: http://html5doctor.com/understanding-aside/
+* example: `<aside id="author-bio">
+            </aside>`
+  * URL: http://html5doctor.com/understanding-aside/
+
 #### 2
 ```html
-<img>
+<div>
 ```
 
-* meaning: represents an image on the document
+* meaning: a block level container for editing and CSS
 
-* example: ```<img alt="image" src="http://media.tumblr.com/c5b6fcd73c1e6a076269eb477b09c379/tumblr_inline_ndk4rsMem41t311sy.jpg">```
+* example: `<div id="logo">`
+  * URL: http://learnlayout.com/
+* example: `<div id="menu">`
   * URL: http://orlando.theironyard.com/
-* example: ```<img class="event-item-lol-image" src="https://i.chzbgr.com/maxW500/8348656896/hB4014937/" title="A Tiny Cute-and-Spooky Kitty">```
-  * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
-* example: ```<img src="http://media.tumblr.com/805cd883f4122aaaaaab2589c11d66d5/tumblr_inline_ncpzt8sS1E1t0hk69.png">```
-  * URL: http://orlando.theironyard.com/
+* example: <div class="gold-wrap cloneable-link">
+  * URL: http://www.reddit.com
 
 #### 3  
 ```html
@@ -138,3 +142,149 @@ hyperlink, or both.
   * URL: http://en.wikipedia.org/wiki/Batman
 * example: `<td><code>white</code> = "#FFFFFF"</td>`
   * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col
+
+
+#### 11
+```html
+<strong>
+```
+
+* meaning: used to give strong importance. bold text
+
+* example: `<strong>it’s recommended to use classes to indicate meaning</strong>`
+  * URL: http://html5doctor.com/i-b-em-strong-element/
+* example: `<b>STRONG</b>`
+  * URL: http://accessibility.psu.edu/boldface
+* example: `<strong>Here we are…</strong>`
+  * URL: http://orlando.theironyard.com/
+
+
+#### 12
+```html
+<em>
+```
+
+* meaning: a semantic version of italics. meant to stress a point with emphasis.
+
+* example: `<em>flow</em>`
+  * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em
+* example: `<em>By Sarah Elbadri, Campus Director</em>`
+  * URL: http://orlando.theironyard.com/
+* example: `<em>See? Super excited. And it’s an official picture, because David is in it too (albeit without his actual knowledge)</em>`
+  URL: http://orlando.theironyard.com/
+
+#### 13
+```html
+<span>
+```
+
+* meaning: an inline container. giving it an id you can specify formatting of CSS
+
+* example: `<span class="oauth-login-options-text-no-icons">Sign in</span>`
+  * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+* example: `<span class="icon">2</span>`
+  * URL: http://orlando.theironyard.com/
+* example: `<span class="label">Copy short URL</span>`
+  * URL: http://orlando.theironyard.com/
+
+#### 14
+```html
+<input>
+```
+
+* meaning: tag for user input field
+
+* example:`<input type="search" id="main-q" name="q" data-placeholder="Search" data-value="" value="" placeholder="">`
+  * example: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input
+* example: `<input type="text" name="q" placeholder="search" tabindex="20">`
+  * example: http://www.reddit.com/
+* example: `<input type="text" class="search-query" name="q" placeholder="Search">`
+  * example: http://dailyjs.com/
+
+#### 15
+```html
+<b>
+```
+
+* meaning: inline bold text formatting
+
+* example: `<b>B</b>`
+  * URL: http://accessibility.psu.edu/boldface
+* example: `<b>Bold</b>`
+  * example: http://en.wikipedia.org/wiki/Bold_(detergent)
+* example: `<b>be bold when updating the encyclopedia</b>`
+  URL: http://en.wikipedia.org/wiki/Wikipedia:Be_bold
+
+#### 16
+```html
+<i>
+```
+
+* meaning: italic formatting for text
+
+* example: `<i>The Scarlet Letter</i>`
+  * URL: http://en.wikipedia.org/wiki/Italic_type
+* example: `<i>Queen Mary</i>`
+  * URL: http://en.wikipedia.org/wiki/Italic_type
+* example: `<i>Detective Comics</i>`
+  * URL: http://en.wikipedia.org/wiki/Batman
+
+#### 17
+```html
+<button>
+```
+
+* meaning: represents a clickable button
+
+* example: `<button type="submit" onclick="javascript:doNLSubmit();" title="Signup Now!">Submit</button>`
+  * URL: http://www.htmlgoodies.com/tutorials/buttons/article.php/3478871
+* example: `<button class="button primary merge-branch-action js-details-target" type="button">
+            <span class="octicon octicon-git-merge"></span>
+            Merge pull request
+          </button>`
+  * URL: https://github.com/AriGonzo/TIY-Assignments/pull/11
+* example: `<button class="IGidwf z-b-G">Resume</button>`
+  * URL: http://mail.google.com
+
+#### 18
+```html
+<br>
+```
+
+* meaning: line breaks
+
+* example: `<br>`
+  * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente
+* example: `<br>`
+  * URL: http://en.wikipedia.org/wiki/Batman
+* example: `<br>`
+  * URL: http://accessibility.psu.edu/boldface
+
+#### 19
+```html
+<a>
+```
+
+* meaning: Also known as the anchor element, this tag defines a hyperlink the name of the target destination of a
+hyperlink, or both.
+
+* example: ```<a href="http://www.meetup.com/The-Iron-Yard-Orlando/">http://www.meetup.com/The-Iron-Yard-Orlando/</a>```
+  * URL: http://orlando.theironyard.com/
+* example: `<a href="http://olivierlacan.com/tools/">tools</a>`
+  * URL: http://orlando.theironyard.com/
+* example: `<a class="title may-blank loggedin" href="https://www.youtube.com/watch?v=V_Nr31Lv6H8&amp;app=desktop" tabindex="1">The Russian cat video to end all Russian cat videos!</a>`
+  * URL: http://www.reddit.com/r/videos/comments/2jvnfh/the_russian_cat_video_to_end_all_russian_cat/
+
+#### 20
+```html
+<img>
+```
+
+* meaning: represents an image on the document
+
+* example: ```<img alt="image" src="http://media.tumblr.com/c5b6fcd73c1e6a076269eb477b09c379/tumblr_inline_ndk4rsMem41t311sy.jpg">```
+  * URL: http://orlando.theironyard.com/
+* example: ```<img class="event-item-lol-image" src="https://i.chzbgr.com/maxW500/8348656896/hB4014937/" title="A Tiny Cute-and-Spooky Kitty">```
+  * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+* example: ```<img src="http://media.tumblr.com/805cd883f4122aaaaaab2589c11d66d5/tumblr_inline_ncpzt8sS1E1t0hk69.png">```
+  * URL: http://orlando.theironyard.com/
