@@ -170,4 +170,4 @@ font-style: italic
 font-style: oblique
 ```
 
-allows italic or oblique faces to be selected within a font-family.
+* allows italic or oblique faces to be selected within a font-family.
