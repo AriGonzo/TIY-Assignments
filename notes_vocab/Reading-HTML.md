@@ -6,12 +6,12 @@
 * meaning: Also known as the anchor element, this tag defines a hyperlink the name of the target destination of a
 hyperlink, or both.
 
-* example: <aside class="metadata clearfix">
+* example: `<aside class="metadata clearfix">`
   * URL: http://orlando.theironyard.com/
-* example: <aside>
+* example: `<aside>
                 <ul class="semantic-list">
                     <li class="category">
-            </aside>
+            </aside>`
   * URL: http://html5doctor.com/understanding-aside/
 * example: `<aside id="author-bio">
             </aside>`
@@ -28,7 +28,7 @@ hyperlink, or both.
   * URL: http://learnlayout.com/
 * example: `<div id="menu">`
   * URL: http://orlando.theironyard.com/
-* example: <div class="gold-wrap cloneable-link">
+* example: `<div class="gold-wrap cloneable-link">`
   * URL: http://www.reddit.com
 
 #### 3  
@@ -50,7 +50,7 @@ hyperlink, or both.
 <h1>
 ```
 
-* meaning: the highest of importance for a header. <h1> - <h6> with <h1> being the biggest
+* meaning: the highest of importance for a header. `<h1> - <h6>` with `<h1>` being the biggest
 
 * example: `<h1>Heading elements</h1>`
   * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
