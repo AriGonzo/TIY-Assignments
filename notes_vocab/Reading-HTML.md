@@ -309,7 +309,7 @@ hyperlink, or both.
 
             <section class="movie-strip-module">`
   * URL: http://www.fandango.com
-
+ 
 
 #### 22
 ```html

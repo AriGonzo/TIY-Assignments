@@ -231,7 +231,7 @@ margin: 5%;
 
 ```CSS
 letter spacing
-
+ 
 examples:
 letter-spacing: 0.3em
 letter-spacing: 3px
