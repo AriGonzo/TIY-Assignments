@@ -19,14 +19,20 @@ header {
 #logo {
     margin-top: -75px;
     margin-left: 10%;
-    border: 5pt solid red;
+    border: 5pt solid white;
     width: 150px;
+}
+#blogTitle a {
+  color: #4F4F4F;
 }
 #logo img {
     width: 150px;
     height: 150px;
 }
-
+#logoTagLine a {
+  font-weight: bolder;
+  color:#4F4F4F;
+}
 h1 {
   font-size: 35px;
 }
@@ -34,13 +40,19 @@ section {
     width: 50%;
     margin: auto;
     margin-top: -80px;
+    font-size:18px;
     /* This totally works!
     margin-left: 25%;
     margin-right: 25%;
     */
 }
+#tube {
+  font-size:20px;
+  font-weight: lighter;
+}
 article {
   margin-left:50px;
+  color: #4F4F4F;
 }
 aside {
     padding-top:10px;
@@ -54,14 +66,14 @@ aside {
     </header>
     <nav id="logo"><a href="http://theironyard.com"><img src="http://static.tumblr.com/37ca133c1a84d5b7856c51a7682df3e9/w5gxxfv/6j4n8vkw8/tumblr_static_20mtuue2w17o0sksogs0c44cw.png"></a></nav>
     <aside>
-      <nav><a href="http://orlando.theironyard.com">The Iron Yard -- Orlando</a></nav>
+      <nav id = "LogoTagLine"><a href="http://orlando.theironyard.com">THE IRON YARD <span id = "tube">|</span>  ORLANDO</a></nav>
       <p>Happenings and updates from The Iron Yard in Orlando, FL.</p>
       <hr>
       <!-- OMG SEARCH IS HARD! -->
     </aside>
     <section>
       <article>
-        <h1><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">Successful Orlando Tech Meetup at The Iron Yard!</a></h1>
+        <h1 id="blogTitle"><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">Successful Orlando Tech Meetup at The Iron Yard!</a></h1>
 
         <p><em>By Susanna Miller, Campus Director</em></p>
 
@@ -72,7 +84,7 @@ aside {
         <nav>
           <a href="#" style="color: grey;">&#9829;</a>
           <a href="#">&#8644;</a>
-          <a href="#">???</a>
+          <a href="#">&#10156;</a>
         </nav>
 
         <nav><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">2 hours ago</a></nav>
@@ -89,7 +101,7 @@ aside {
         <nav>
           <a href="#" style="color: grey;">&#9829;</a>
           <a href="#">&#8644;</a>
-          <a href="#">???</a>
+          <a href="#">&#10156;</a>
         </nav>
 
         <nav><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">2 hours ago</a></nav>
