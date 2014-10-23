@@ -228,3 +228,14 @@ margin: 5%;
 ```
 
 * meaning: The margin CSS property sets the margin for all four sides
+
+```CSS
+letter spacing
+
+examples:
+letter-spacing: 0.3em
+letter-spacing: 3px
+letter-spacing: .3px
+```
+
+* meaning: specifies spacing behavior between text characters.

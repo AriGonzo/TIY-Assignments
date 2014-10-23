@@ -6,12 +6,12 @@
 * meaning: Also known as the anchor element, this tag defines a hyperlink the name of the target destination of a
 hyperlink, or both.
 
-* example: <aside class="metadata clearfix">
+* example: `<aside class="metadata clearfix">`
   * URL: http://orlando.theironyard.com/
-* example: <aside>
+* example: `<aside>
                 <ul class="semantic-list">
                     <li class="category">
-            </aside>
+            </aside>`
   * URL: http://html5doctor.com/understanding-aside/
 * example: `<aside id="author-bio">
             </aside>`
@@ -28,7 +28,7 @@ hyperlink, or both.
   * URL: http://learnlayout.com/
 * example: `<div id="menu">`
   * URL: http://orlando.theironyard.com/
-* example: <div class="gold-wrap cloneable-link">
+* example: `<div class="gold-wrap cloneable-link">`
   * URL: http://www.reddit.com
 
 #### 3  
@@ -50,7 +50,7 @@ hyperlink, or both.
 <h1>
 ```
 
-* meaning: the highest of importance for a header. <h1> - <h6> with <h1> being the biggest
+* meaning: the highest of importance for a header. `<h1> - <h6>` with `<h1>` being the biggest
 
 * example: `<h1>Heading elements</h1>`
   * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
@@ -288,3 +288,80 @@ hyperlink, or both.
   * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
 * example: ```<img src="http://media.tumblr.com/805cd883f4122aaaaaab2589c11d66d5/tumblr_inline_ncpzt8sS1E1t0hk69.png">```
   * URL: http://orlando.theironyard.com/
+
+#### 21
+```html
+<section>
+```
+
+* meaning: a generic section of a document,
+
+* example `<section class="page symbol">`
+  * URL: http://unicode-table.com/en/27AC/
+* example: `<section class="movie-tickets-header">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h2 class="heading-size-l heading-style-1 inline">BUY MOVIE TICKETS</h2>
+                        <a class="cta movie-tickets-all" href="http://www.fandango.com/moviesintheaters">See All Movies</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="movie-strip-module">`
+  * URL: http://www.fandango.com
+
+
+#### 22
+```html
+<form>
+```
+
+* meaning: a document section that contains interactive controls to submit information to a web server.
+
+* example: `<form name="form_278c0333432ed44c4c25d663832ef382" id="form_278c0333432ed44c4c25d663832ef382" action="http://www.joomlashine.com/index.php?option=com_uniform&amp;view=form&amp;task=form.save&amp;form_id=3" method="post" class="form-validate Vertical " enctype="multipart/form-data"><div id="page-loading" class="jsn-bgloading hide"><i class="jsn-icon32 jsn-icon-loading"></i></div><span class="hide jsn-language" style="display:none;" data-value="{&quot;JSN_UNIFORM_CHARACTERS&quot;:&quot;Characters&quot;,&quot;JSN_UNIFORM_WORDS&quot;:&quot;Words&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_PASSWORD_MIN_MAX_CHARACTER&quot;:&quot;The password must contain minimum %mi% and maximum %mx% character(s)&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_EMAIL_CONFIRM&quot;:&quot;Both email addresses must be the same.&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_MIN_NUMBER&quot;:&quot;The number cannot be less than&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_MAX_NUMBER&quot;:&quot;The number cannot be greater than&quot;,&quot;JSN_UNIFORM_DATE_HOUR_TEXT&quot;:&quot;Hour&quot;,&quot;JSN_UNIFORM_DATE_MINUTE_TEXT&quot;:&quot;Minute&quot;,&quot;JSN_UNIFORM_DATE_CLOSE_TEXT&quot;:&quot;Close&quot;,&quot;JSN_UNIFORM_DATE_PREV_TEXT&quot;:&quot;Prev&quot;,&quot;JSN_UNIFORM_DATE_NEXT_TEXT&quot;:&quot;Next&quot;,&quot;JSN_UNIFORM_DATE_CURRENT_TEXT&quot;:&quot;Today&quot;,&quot;JSN_UNIFORM_DATE_MONTH_JANUARY&quot;:&quot;January&quot;,&quot;JSN_UNIFORM_DATE_MONTH_FEBRUARY&quot;:&quot;February&quot;,&quot;JSN_UNIFORM_DATE_MONTH_MARCH&quot;:&quot;March&quot;,&quot;JSN_UNIFORM_DATE_MONTH_APRIL&quot;:&quot;April&quot;,&quot;JSN_UNIFORM_DATE_MONTH_MAY&quot;:&quot;May&quot;,&quot;JSN_UNIFORM_DATE_MONTH_JUNE&quot;:&quot;June&quot;,&quot;JSN_UNIFORM_DATE_MONTH_JULY&quot;:&quot;July&quot;,&quot;JSN_UNIFORM_DATE_MONTH_AUGUST&quot;:&quot;August&quot;,&quot;JSN_UNIFORM_DATE_MONTH_SEPTEMBER&quot;:&quot;September&quot;,&quot;JSN_UNIFORM_DATE_MONTH_OCTOBER&quot;:&quot;October&quot;,&quot;JSN_UNIFORM_DATE_MONTH_NOVEMBER&quot;:&quot;November&quot;,&quot;JSN_UNIFORM_DATE_MONTH_DECEMBER&quot;:&quot;December&quot;,&quot;JSN_UNIFORM_DATE_MONTH_JANUARY_SHORT&quot;:&quot;Jan&quot;,&quot;JSN_UNIFORM_DATE_MONTH_FEBRUARY_SHORT&quot;:&quot;Feb&quot;,&quot;JSN_UNIFORM_DATE_MONTH_MARCH_SHORT&quot;:&quot;Mar&quot;,&quot;JSN_UNIFORM_DATE_MONTH_APRIL_SHORT&quot;:&quot;Apr&quot;,&quot;JSN_UNIFORM_DATE_MONTH_MAY_SHORT&quot;:&quot;May&quot;,&quot;JSN_UNIFORM_DATE_MONTH_JUNE_SHORT&quot;:&quot;Jun&quot;,&quot;JSN_UNIFORM_DATE_MONTH_JULY_SHORT&quot;:&quot;Jul&quot;,&quot;JSN_UNIFORM_DATE_MONTH_AUGUST_SHORT&quot;:&quot;Aug&quot;,&quot;JSN_UNIFORM_DATE_MONTH_SEPTEMBER_SHORT&quot;:&quot;Sep&quot;,&quot;JSN_UNIFORM_DATE_MONTH_OCTOBER_SHORT&quot;:&quot;Oct&quot;,&quot;JSN_UNIFORM_DATE_MONTH_NOVEMBER_SHORT&quot;:&quot;Nov&quot;,&quot;JSN_UNIFORM_DATE_MONTH_DECEMBER_SHORT&quot;:&quot;Dec&quot;,&quot;JSN_UNIFORM_DATE_DAY_SUNDAY&quot;:&quot;Sunday&quot;,&quot;JSN_UNIFORM_DATE_DAY_MONDAY&quot;:&quot;Monday&quot;,&quot;JSN_UNIFORM_DATE_DAY_TUESDAY&quot;:&quot;Tuesday&quot;,&quot;JSN_UNIFORM_DATE_DAY_WEDNESDAY&quot;:&quot;Wednesday&quot;,&quot;JSN_UNIFORM_DATE_DAY_THURSDAY&quot;:&quot;Thursday&quot;,&quot;JSN_UNIFORM_DATE_DAY_FRIDAY&quot;:&quot;Friday&quot;,&quot;JSN_UNIFORM_DATE_DAY_SATURDAY&quot;:&quot;Saturday&quot;,&quot;JSN_UNIFORM_DATE_DAY_SUNDAY_SHORT&quot;:&quot;Sun&quot;,&quot;JSN_UNIFORM_DATE_DAY_MONDAY_SHORT&quot;:&quot;Mon&quot;,&quot;JSN_UNIFORM_DATE_DAY_TUESDAY_SHORT&quot;:&quot;Tue&quot;,&quot;JSN_UNIFORM_DATE_DAY_WEDNESDAY_SHORT&quot;:&quot;Wed&quot;,&quot;JSN_UNIFORM_DATE_DAY_THURSDAY_SHORT&quot;:&quot;Thu&quot;,&quot;JSN_UNIFORM_DATE_DAY_FRIDAY_SHORT&quot;:&quot;Fri&quot;,&quot;JSN_UNIFORM_DATE_DAY_SATURDAY_SHORT&quot;:&quot;Sat&quot;,&quot;JSN_UNIFORM_DATE_DAY_SUNDAY_MIN&quot;:&quot;Su&quot;,&quot;JSN_UNIFORM_DATE_DAY_MONDAY_MIN&quot;:&quot;Mo&quot;,&quot;JSN_UNIFORM_DATE_DAY_TUESDAY_MIN&quot;:&quot;Tu&quot;,&quot;JSN_UNIFORM_DATE_DAY_WEDNESDAY_MIN&quot;:&quot;We&quot;,&quot;JSN_UNIFORM_DATE_DAY_THURSDAY_MIN&quot;:&quot;Th&quot;,&quot;JSN_UNIFORM_DATE_DAY_FRIDAY_MIN&quot;:&quot;Fr&quot;,&quot;JSN_UNIFORM_DATE_DAY_SATURDAY_MIN&quot;:&quot;Sa&quot;,&quot;JSN_UNIFORM_DATE_DAY_WEEK_HEADER&quot;:&quot;Wk&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_MAX_LENGTH&quot;:&quot;The information cannot contain more than&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_MIN_LENGTH&quot;:&quot;The information cannot contain less than&quot;,&quot;JSN_UNIFORM_CAPTCHA_PUBLICKEY&quot;:&quot;JSN_UNIFORM_CAPTCHA_PUBLICKEY&quot;,&quot;JSN_UNIFORM_BUTTON_BACK&quot;:&quot;Back&quot;,&quot;JSN_UNIFORM_BUTTON_NEXT&quot;:&quot;Next&quot;,&quot;JSN_UNIFORM_BUTTON_RESET&quot;:&quot;Reset&quot;,&quot;JSN_UNIFORM_BUTTON_SUBMIT&quot;:&quot;Submit&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_CANNOT_EMPTY&quot;:&quot;This field can not be empty, please enter required information.&quot;,&quot;JSN_UNIFORM_CONFIRM_FIELD_INVALID&quot;:&quot;The information is invalid, please correct.&quot;}"></span><span class="hide jsn-base-url" style="display:none;" data-value="http://www.joomlashine.com"></span><div class="jsn-row-container jsn-style-light"><div class="message-uniform"> </div><div data-value="3" class="jsn-form-content"><div class="jsn-row-container row-fluid"><div class="jsn-container-left span12"><div class="control-group  your_name ui-state-highlight"><label for="Your Name" class="control-label">Your Name<span class="required">*</span></label><div class="controls blank-required"><input class=" jsn-input-xlarge-fluid" id="18" name="18" type="text" value="" placeholder=""></div></div>`
+  * URL: http://www.joomlashine.com/contact-us.html
+* example: `<form action="/contact-us.html" method="post">`
+  * URL: http://www.joomlashine.com/contact-us.html
+* example: '<form method="post" enctype="multipart/form-data" id="gform_27" action="/contact-us/#gf_27">'
+  * URL: http://www.gravityhelp.com/contact-us/
+
+
+#### 23
+```html
+<title>
+```
+
+* meaning: defines the title of the document, shown in a browser's title bar or on the page's tab.
+
+* example: `<title>&lt;title&gt; - HTML (HyperText Markup Language) | MDN</title>`
+  * URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title
+* example: `<title>➬ — Front-Tilted Shadowed White Rightwards Arrow (U+27AC) —  Dingbats — Unicode character table</title>`
+  * URL: http://unicode-table.com/en/27AC/
+* example: `<title>TIY-Assignments/notes_vocab at master · AriGonzo/TIY-Assignments</title>`
+  * URL: https://github.com/AriGonzo/TIY-Assignments/tree/master/notes_vocab
+
+
+#### 24
+```html
+<cite>
+```
+
+* meaning: represents a reference to a creative work.
+
+* example: `<cite>[ISO-0000].</cite>`
+  URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite
+
+
+#### 25
+```html
+<code>
+```
+
+* meaning: represents a fragment of computer code.
+
+* example: <code>asyncEach</code>
+  * URL: http://dailyjs.com/
+* example: <code>asyncMap</code>
+  * URL: http://dailyjs.com/
+* example: <code>asyncReduce</code>
+  * URL: http://dailyjs.com/
