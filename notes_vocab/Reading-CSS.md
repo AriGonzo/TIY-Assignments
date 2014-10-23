@@ -170,4 +170,76 @@ font-style: italic
 font-style: oblique
 ```
 
+<<<<<<< HEAD
+* meaning: allows italic or oblique faces to be selected within a font-family.
+
+### Layout CSS
+
+```CSS
+float
+
+examples:
+float: left
+float: right
+float: none
+```
+* meaning: CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
+
+```CSS
+clear
+
+examples:
+clear: none
+clear: left
+clear: right
+clear: both
+```
+* meaning: The clear CSS property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them.
+
+```CSS
+position
+
+example:
+position: static
+position: relative
+position: absolute
+position: fixed
+position: sticky
+```
+* meaning: The position CSS property chooses alternative rules for positioning elements, designed to be useful for scripted animation effects.
+
+```CSS
+padding
+
+examples:
+padding: 10px 20px;
+padding: 5%;
+padding: 10px;
+```
+
+* meaning: The padding CSS property sets the required padding space on all sides of an element. The padding area is the space between the content of the element and its border. Negative values are not allowed.
+
+```CSS
+margin
+
+examples:
+margin: 1.6em 20px;
+margin: 10px;
+margin: 5%;
+```
+
+* meaning: The margin CSS property sets the margin for all four sides
+
+```CSS
+letter spacing
+ 
+examples:
+letter-spacing: 0.3em
+letter-spacing: 3px
+letter-spacing: .3px
+```
+
+* meaning: specifies spacing behavior between text characters.
+=======
 * allows italic or oblique faces to be selected within a font-family.
+>>>>>>> master
