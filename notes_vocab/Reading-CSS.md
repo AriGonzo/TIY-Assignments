@@ -170,6 +170,7 @@ font-style: italic
 font-style: oblique
 ```
 
+<<<<<<< HEAD
 * meaning: allows italic or oblique faces to be selected within a font-family.
 
 ### Layout CSS
@@ -239,3 +240,6 @@ letter-spacing: .3px
 ```
 
 * meaning: specifies spacing behavior between text characters.
+=======
+* allows italic or oblique faces to be selected within a font-family.
+>>>>>>> master
