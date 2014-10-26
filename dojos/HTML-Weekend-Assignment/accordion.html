@@ -5,7 +5,7 @@
     <script type="text/javascript">
       <!--
         function showMenu(id) {
-          var arrMenus = ['level1', 'level2', 'level3'];
+          var arrMenus = ['level1', 'level2', 'level3', 'subA'];
           var thisMenu = document.getElementById(id);
           arrMenus.forEach(function(value,index){
             var thisTab = value + 'Tab';
@@ -31,6 +31,9 @@
       section {
         display: none;
       }
+      #level1A {
+        display:none;
+      }
     </style>
   </head>
 
@@ -39,15 +42,16 @@
     <ul>
       <li><a id="level1Tab" href="#" onclick="showMenu('level1');"><h2>El Duderino</h2></a></li>
         <section id="level1">
-          <p class = "starting">I'm not Mr. Lebowski; you're Mr. Lebowski. I'm the Dude. Risus
+          <p>I'm not Mr. Lebowski; you're Mr. Lebowski. I'm the Dude. Risus
             nulla nullam vel nisi enim. I FUCK YOU! YOU CANNOT HURT ME! I BELIEF
             IN NUSSING! Vel auctor ante morbi id urna vel felis lacinia placerat
             vestibulum turpis nulla. I hope you're not avoiding this call because
             of the rug, which, I assure you, is not a problem. Viverra nec volutpat
             ac, ornare id lectus.</p>
           <ul>
-            <li class = "starting"><h3>Not into the whole</h3></li>
-            <p class ="submenu">Lebowski ipsum okay, Jackie, done. I like the way you do business.
+            <li><a id="subATab" href="#" onclick="showMenu('subA');"><h3>Not into the whole</h3></a></li>
+            <section id="subA">
+            <p>Lebowski ipsum okay, Jackie, done. I like the way you do business.
               Your money is being held by a kid named Larry Sellers. He lives in
               North Hollywood, on Radford, near the In-and-Out Burger. A real fuckin'
               brat, but I'm sure. Dolor sit amet, consectetur adipiscing elit praesent
@@ -62,6 +66,7 @@
               Walter, you can't do that. These guys're like me, they're pacifists.
               Smokey was a conscientious objector. Massa ac tortor ultrices faucibus
               curabitur eu mi sapien, ut ultricies ipsum morbi eget.</p>
+            </section>
             <li class = "starting"><h3>Big Lebowski</h3></li>
             <p class ="submenu">And Hill 364. These young men gave their lives. And Donny too. Donny
               who… who loved bowling. Cras pharetra faucibus tristique nullam non
