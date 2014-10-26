@@ -21,16 +21,92 @@
         }
     </script>
     <style>
+    * {
+      /*outline: 1px red solid;*/
+    }
     section {
       background-color: yellow;
       display: none;
+      height: 400px;
+    }
+    ul {
+      list-style: none;
+      font-size: 18px;
+      padding-left: 0
     }
     section h1 {
-      margin: 0
+      margin: 0;
+    }
+    li {
+      padding-bottom: 5px;
     }
     .tabs li {
       padding: 10px;
       display: inline;
+    }
+    .col1 {
+      width: 250px;
+      padding-top: 5%;
+      padding-left: 5%;
+    }
+    .col1 ul {
+      padding-left: 0;
+    }
+    .col2 {
+      width: 250px;
+      margin-left: 40%;
+      margin-top: -17%;
+    }
+    .col2 ul {
+      padding-left: 0;
+    }
+    .col3{
+      width: 250px;
+      margin-left: 70%;
+      margin-top: -17%;
+      padding-bottom: 10px;
+    }
+    .col3 ul {
+      padding-left: 0;
+    }
+    #prof {
+      padding-top: 50px;
+    }
+    #downloadsColM{
+      width: 250px;
+      margin-left: 40%;
+      margin-top: -10%;
+    }
+    #downloadsCol{
+      width: 250px;
+      margin-left: 70%;
+      margin-top: -10%;
+      padding-bottom: 10px;
+    }
+    #projCol2 {
+      width: 250px;
+      margin-left: 40%;
+      margin-top: -12%;
+    }
+    #projCol3 {
+      width: 250px;
+      margin-left: 70%;
+      margin-top: -21%;
+      padding-bottom: 10px;
+    }
+    .appCol2 {
+      width: 250px;
+      margin-left: 40%;
+      margin-top: -20%;
+    }
+    .appCol3 {
+      width: 250px;
+      margin-left: 70%;
+      margin-top: -11%;
+      padding-bottom: 10px;
+    }
+    #projHead {
+      padding-top: 5px;
     }
     </style>
   </head>
@@ -47,47 +123,58 @@
       </ul>
     </nav>
     <section id="products">
-      <h1>Learning & Games</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-        <li>Sui Maker</li>
-        <li>Wave Master</li>
-        <li>Golf Pro</li>
-      </ul>
-      <h1>Utilities</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-        <li>Sui Maker</li>
-        <li>Wave Master</li>
-      </ul>
-      <h1>Education</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Professionals</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
+      <div class="col1">
+        <h1>Learning & Games</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+          <li>Sui Maker</li>
+          <li>Wave Master</li>
+          <li>Golf Pro</li>
+        </ul>
+      </div>
+      <div class="col2">
+        <h1>Utilities</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+          <li>Sui Maker</li>
+          <li>Wave Master</li>
+        </ul>
+      </div>
+      <div class="col3">
+        <h1>Education</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+        <h1 id="prof">Professionals</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+      </div>
     </section>
     <section id="downloads">
+      <div class="col1">
         <h1>Education & Learning</h1>
         <ul>
           <li>Catch the Bullet</li>
           <li>Snoopy Doo</li>
           <li>Fallen Angel</li>
         </ul>
+      </div>
+      <div id="downloadsColM">
         <h1>Professionals</h1>
         <ul>
           <li>Catch the Bullet</li>
           <li>Snoopy Doo</li>
         </ul>
+      </div>
+      <div id="downloadsCol">
         <h1>Entertainment</h1>
         <ul>
           <li>Catch the Bullet</li>
@@ -99,78 +186,97 @@
           <li>Catch the Bullet</li>
           <li>Snoopy Doo</li>
         </ul>
+      </div>
     </section>
     <section id="applications">
-      <h1>Education & Learning</h1>
-      <ul>
-        <li>Test the Code</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Professionals</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
-      <h1>Entertainment</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Games</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
+      <div class="col1">
+        <h1>Education & Learning</h1>
+        <ul>
+          <li>Test the Code</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+        <h1>Professionals</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+      </div>
+      <div class="appCol2">
+        <h1>Entertainment</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+      </div>
+      <div class="appCol3">
+        <h1>Games</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+      </div>
     </section>
     <section id="projects">
-      <h1>Education & Learning</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Professionals</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
-      <h1>Entertainment</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Games</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
+      <div class="col1">
+        <h1>Education & Learning</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+      </div>
+      <div id="projCol2">
+        <h1 id="projHead">Professionals</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+        <h1>Entertainment</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+      </div>
+      <div id="projCol3">
+        <h1>Games</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+      </div>
     </section>
     <section id="freeware">
-      <h1>Education & Learning</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Professionals</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
-      <h1>Entertainment</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-        <li>Fallen Angel</li>
-      </ul>
-      <h1>Games</h1>
-      <ul>
-        <li>Catch the Bullet</li>
-        <li>Snoopy Doo</li>
-      </ul>
+      <div class="col1">
+        <h1>Education & Learning</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+        <h1>Professionals</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+      </div>
+      <div class="appCol2">
+        <h1>Entertainment</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+          <li>Fallen Angel</li>
+        </ul>
+      </div>
+      <div class="appCol3">
+        <h1>Games</h1>
+        <ul>
+          <li>Catch the Bullet</li>
+          <li>Snoopy Doo</li>
+        </ul>
+      </div>
     </section>
   </body>
 </html>
