@@ -2,7 +2,9 @@
 <html>
 
   <head>
-		<script type="text/javascript">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Roboto+Slab' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
 			<!--
 				function openClose(id) {
 						var thisItem = document.getElementById(id);
@@ -15,7 +17,40 @@
 				//-->
 		</script>
     <style>
+      body {
+        background-color: #CAB7D4;
+      }
+      * {
+      /*outline: 1px solid red;*/
+      }
+      h2, h3 {
+        padding: 5px 5px;
+        color: #64377B;
+        font-family: 'Roboto Slab', serif;
+        text-transform: uppercase;
+      }
       p {
+        font-family: 'Questrial', sans-serif;
+        padding: 2px;
+        color: #380054;
+        font-size: 1.3em;
+        text-align: justify;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 40px;
+        padding-bottom: 0;
+        margin: 0;
+        margin-right: 15px;
+      }
+      h2::before {
+        content: "\f000";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
       }
       ul {
         list-style: none;
@@ -25,10 +60,29 @@
       }
       section {
         display: none;
+        background-color: #A487B3;
+        padding: 10px 20px;
+        outline: 5px solid #380054;
+      }
+      article {
+        display: none;
+        padding: 5px 15px;
       }
       a {
         text-decoration: none;
         color: black;
+      }
+      .levelhead h2 {
+        border-bottom: 1px #A487B3 solid;
+        padding-bottom: 10px;
+      }
+      #container {
+        width: 70%;
+        margin:auto;
+      }
+      span {
+        width: 50px;
+        font-size: 25px;
       }
     </style>
   </head>
@@ -37,7 +91,7 @@
   <body>
     <div id="container">
       <ul>
-        <li><a href="#" onclick="openClose('level1');"><h2>El Duderino</h2></a></li>
+        <li><a class="levelhead" href="#level1" onclick="openClose('level1');"><h2>El Duderino</h2></a></li>
           <section id='level1'>
             <p>I'm not Mr. Lebowski; you're Mr. Lebowski. I'm the Dude. Risus
               nulla nullam vel nisi enim. I FUCK YOU! YOU CANNOT HURT ME! I BELIEF
@@ -46,8 +100,8 @@
               of the rug, which, I assure you, is not a problem. Viverra nec volutpat
               ac, ornare id lectus.</p>
             <ul>
-              <li><a href="#" onclick="openClose('subA');"><h3>Not into the whole</h3></a></li>
-              <section id="subA">
+              <li><a href="#subA" onclick="openClose('subA');"><h3>Not into the whole</h3></a></li>
+              <article id="subA">
               <p>Lebowski ipsum okay, Jackie, done. I like the way you do business.
                 Your money is being held by a kid named Larry Sellers. He lives in
                 North Hollywood, on Radford, near the In-and-Out Burger. A real fuckin'
@@ -63,9 +117,9 @@
                 Walter, you can't do that. These guys're like me, they're pacifists.
                 Smokey was a conscientious objector. Massa ac tortor ultrices faucibus
                 curabitur eu mi sapien, ut ultricies ipsum morbi eget.</p>
-              </section>
-              <li><a href="#" onclick="openClose('subB');"><h3>Big Lebowski</h3></a></li>
-              <section id='subB'>
+              </article>
+              <li><a href="#subB" onclick="openClose('subB');"><h3>Big Lebowski</h3></a></li>
+              <article id='subB'>
               <p>And Hill 364. These young men gave their lives. And Donny too. Donny
                 who… who loved bowling. Cras pharetra faucibus tristique nullam non
                 accumsan justo nulla facilisi integer interdum elementum. Shomer shabbos.
@@ -80,9 +134,9 @@
                 laoreet et molestie sed, volutpat et erat nulla ut orci quis. Sure. That
                 and a pair of testicles. Neque consectetur tincidunt aliquam erat volutpat
                 donec.</p>
-              </section>
-              <li><a href="#" onclick="openClose('subC');"><h3>Whoa brotha</h3></a></li>
-              <section id="subC">
+              </article>
+              <li><a href="#subC" onclick="openClose('subC');"><h3>Whoa brotha</h3></a></li>
+              <article id="subC">
               <p class ="subC">Lebowski ipsum a MILLION BUCKS FROM FUCKING NEEDY LITTLE URBAN ACHIEVERS!
                 YOU ARE SCUM, MAN! Dolor sit amet, consectetur adipiscing elit praesent ac
                 magna justo pellentesque ac lectus quis. …which would place him high in the
@@ -97,10 +151,10 @@
                  sagittis massa ac tortor ultrices faucibus curabitur eu mi sapien, ut ultricies.
                  Wonderful woman. Very free-spirited. We're all very fond of her. Ipsum morbi
                  eget risus nulla nullam vel nisi.</p>
-               </section>
+               </article>
             </ul>
           </section>
-        <li><a href="#" onclick="openClose('level2');"><h2>Nobody mess with da Jesus</h2></a></li>
+        <li><a class="levelhead" href="#level2" onclick="openClose('level2');"><h2>Nobody mess with da Jesus</h2></a></li>
           <section id="level2">
             <p>All right, Plan B. You might want to watch out the front window there, Larry.
               Enim, vel auctor ante morbi id urna vel felis lacinia. Sure you'll see some tank
@@ -114,8 +168,8 @@
               Any further harm visited upon Bunny, shall be visited tenfold upon your head. Nisl
               euismod ac maecenas vitae eros.</p>
             <ul>
-              <li><a href="#" onclick="openClose('subD');"><h3>Not into the whole</h3></a></li>
-              <section id="subD">
+              <li><a href="#subD" onclick="openClose('subD');"><h3>Not into the whole</h3></a></li>
+              <article id="subD">
               <p>Tomorrow vee come back und cut off your chonson. Rhoncus at volutpat felis blandit
                 in libero turpis, laoreet. Life does not stop and start at your convenience, you
                 miserable piece of shit. Et molestie sed, volutpat et erat nulla ut orci quis neque
@@ -127,9 +181,9 @@
                 convallis ac, hendrerit eu urna curabitur. We want that money, Lebowski. Varius egestas nibh id.
                 You might fool the fucks in the league office, but you don't fool Jesus! Lacinia vestibulum
                 laoreet lobortis massa nec condimentum aliquam erat volutpat nullam ornare ipsum ut.</p>
-              </section>
-              <li><a href="#" onclick="openClose('subE');"><h3>Big Lebowski</h3></a></li>
-              <section id='subE'>
+              </article>
+              <li><a href="#subE" onclick="openClose('subE');"><h3>Big Lebowski</h3></a></li>
+              <article id='subE'>
               <p>Lebowski ipsum jeez. I miss vinyl. Dolor sit amet, consectetur adipiscing elit. I mean his
                 wife goes out and owes money and they pee on my rug. Praesent ac magna justo pellentesque ac
                 lectus quis elit. That, or Duder. His Dudeness. Or El Duderino, if you know, you're not into
@@ -139,9 +193,9 @@
                 and pull the fucking trigger til it goes "click". Urna sed orci ipsum, placerat id condimentum rutrum.
                 I hope you're not avoiding this call because of the rug, which, I assure you, is not a problem.
                 Rhoncus ac lorem aliquam placerat posuere neque, at dignissim magna ullamcorper.</p>
-              </section>
-              <li><a href="#" onclick="openClose('subF');"><h3>Whoa brotha</h3></a></li>
-              <section id='subF'>
+              </article>
+              <li><a href="#subF" onclick="openClose('subF');"><h3>Whoa brotha</h3></a></li>
+              <article id='subF'>
               <p>I got a nice quiet beach community here, and I aim to keep it nice and quiet. Vel venenatis eu,
                 volutpat non erat donec a metus ac eros dictum. I'm saying, Cynthia's Pomeranian. I'm looking after it
                 while Cynthia and Marty Ackerman are in Hawaii. Aliquet nulla consectetur egestas placerat maecenas
@@ -151,10 +205,10 @@
                 don't like you, jerk-off. Orci quis neque consectetur tincidunt aliquam erat volutpat. Ja, und maybe
                 vee stamp on it und skvush it, Lebowski! Donec aliquam orci eget mi lobortis sed tincidunt diam mattis
                 fusce sem quam. Over the line! Ultricies sed convallis ac, hendrerit eu urna curabitur.</p>
-              </section>
+              </article>
             </ul>
           </section>
-        <li><a href="#" onclick="openClose('level3');"><h2>Numero Tres</h2></a></li>
+        <li><a class="levelhead" href="#level3" onclick="openClose('level3');"><h2>Numero Tres</h2></a></li>
             <section id="level3">
               <p>Vee belief in nossing. Vitae risus ut ipsum suscipit dignissim. Uh-huh. Well, I still jerk off manually.
                 Ut convallis tortor ac quam tristique eget commodo diam. Excuse me! Mark it zero. Next frame. Vestibulum
@@ -167,8 +221,8 @@
                 look at me, I'm ramblin' again. Wal, uh hope you folks enjoyed yourselves. Porttitor, orci nec adipiscing semper,
                 ligula nisl hendrerit.</p>
               <ul>
-                <li><a href="#" onclick="openClose('subG');"><h3>8yr olds, dude</h3></a></li>
-                <section id='subG'>
+                <li><a href="#subG" onclick="openClose('subG');"><h3>8yr olds, dude</h3></a></li>
+                <article id='subG'>
                 <p>Lebowski ipsum shomer shabbos. Dolor sit amet, consectetur adipiscing elit. A way out west there was a fella,
                   fella I want to tell you about, fella by the name of Jeff Lebowski. At least, that was the handle his lovin' parents
                   gave him, but he never had much use for it himself. This Lebowski, he called himself the Dude. Now, Dude, that's a
@@ -179,9 +233,9 @@
                   suscipit malesuada non, ultrices non urna sed orci ipsum, placerat. Dieter doesn't care about anything. He's a nihilist.
                   Id condimentum rutrum, rhoncus. Obviously you're not a golfer. Ac lorem aliquam placerat posuere neque, at dignissim magna
                   ullamcorper in aliquam sagittis massa.</p>
-                </section>
-                <li><a href="#" onclick="openClose('subH');"><h3>Where's the Money, Lebowski?!</h3></a></li>
-                <section id='subH'>
+                </article>
+                <li><a href="#subH" onclick="openClose('subH');"><h3>Where's the Money, Lebowski?!</h3></a></li>
+                <article id='subH'>
                 <p>VEE FUCK YOU UP, MAN! VEE TAKE YOUR MONEY! Ac tortor ultrices faucibus curabitur eu mi sapien, ut. Yeah.
                   Roadie for Metallica. Speed of Sound Tour. Ultricies ipsum morbi eget risus nulla nullam vel nisi. They
                   won't hurt us, Donny. These men are cowards. Enim, vel auctor ante morbi id urna vel felis lacinia. We
@@ -192,9 +246,9 @@
                   trying to say. Nullam non accumsan justo. My art has been commended as being strongly vaginal. Which bothers
                   some men. The word itself makes some men uncomfortable. Vagina. Nulla facilisi integer interdum elementum nulla,
                   nec eleifend.</p>
-                </section>
-                <li><a href="#" onclick="openClose('subI');"><h3>Whoa brotha</h3></a></li>
-                <section id='subI'>
+                </article>
+                <li><a href="#subI" onclick="openClose('subI');"><h3>Whoa brotha</h3></a></li>
+                <article id='subI'>
                 <p>Your goons'll be able to get it off him, mean he's only fifteen and he's flunking social studies. So if you'll just write me
                   a check for my ten per cent… of half a million… fifty grand. Nisl euismod ac maecenas vitae. My name's Da Fino! I'm a private
                   snoop! Like you, man! Eros velit, eu suscipit erat integer. Sure you'll see some tank battles. But fighting in desert is very
@@ -204,7 +258,7 @@
                   that. Volutpat felis blandit in libero turpis. Goodnight, sweet prince. Laoreet et molestie sed, volutpat et erat nulla ut. Huh?
                   Oh. Yeah. Tape deck. Couple of Creedence tapes. And there was a, uh… my briefcase. Orci quis neque consectetur tincidunt aliquam
                   erat volutpat donec.</p>
-                </section>
+                </article>
             </ul>
           </section>
         </ul>
