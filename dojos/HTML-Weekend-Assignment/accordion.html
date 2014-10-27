@@ -61,10 +61,23 @@
         font-weight: normal;
         text-decoration: inherit;
       }
+      h3::before {
+        content: "\f087";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        padding-right: 5%;
       }
-      li {
+      h3:hover:before {
+        content: "\f0a4";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+      }
+      ul {
         list-style: none;
-        background-color: red;
       }
       .submenu {
         display: none;
