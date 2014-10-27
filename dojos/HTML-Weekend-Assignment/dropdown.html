@@ -2,7 +2,7 @@
 
 <html>
   <head>
-
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
     <script type="text/javascript">
       <!--
         function showMenu(id) {
@@ -12,33 +12,45 @@
             var thisTab = value + 'Tab';
             if(value==id){
               thisMenu.style.display = 'block';
-              document.getElementById(thisTab).style.backgroundColor = '#47cc58'
+              document.getElementById(thisTab).style.backgroundColor = '#B07916'
             }else{
               document.getElementById(value).style.display = 'none';
-              document.getElementById(thisTab).style.backgroundColor = '#fff'
+              document.getElementById(thisTab).style.backgroundColor = '#6C8B97'
             };
           });
         }
     </script>
     <style>
     * {
-      outline: 1px red solid;
+      /*outline: 1px red solid;*/
+    }
+    body {
+    	background-color: #6C8B97;
+    	font-family: 'Josefin Sans', sans-serif;
     }
     section {
-      background-color: yellow;
+      background-color: #26657D;
       display: none;
       height: 400px;
+    }
+    h1 {
+    	font-weight: bold;
     }
     ul {
       list-style: none;
       font-size: 18px;
-      padding-left: 0
+      padding-left: 0;
+      margin-bottom: 0;
     }
     section h1 {
       margin: 0;
+      font-size: 25px;
+      color: #000000;
     }
     li {
       padding-bottom: 5px;
+      color: #789400;
+      font-size: 20px;
     }
     .tabs li {
       padding: 10px;
@@ -55,7 +67,7 @@
     .col2 {
       width: 250px;
       margin-left: 40%;
-      margin-top: -17%;
+      margin-top: -18.5%;
     }
     .col2 ul {
       padding-left: 0;
@@ -63,7 +75,7 @@
     .col3{
       width: 250px;
       margin-left: 70%;
-      margin-top: -17%;
+      margin-top: -16%;
       padding-bottom: 10px;
     }
     .col3 ul {
@@ -75,12 +87,12 @@
     #downloadsColM{
       width: 250px;
       margin-left: 40%;
-      margin-top: -10%;
+      margin-top: -11.5%;
     }
     #downloadsCol{
       width: 250px;
       margin-left: 70%;
-      margin-top: -10%;
+      margin-top: -9.5%;
       padding-bottom: 10px;
     }
     #projCol2 {
