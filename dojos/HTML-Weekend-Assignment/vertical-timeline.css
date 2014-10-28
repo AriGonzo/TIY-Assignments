@@ -115,6 +115,7 @@ body {
 @media (max-width: 768px) {
     .timeline {
         border: none;
+        margin-left: -4em;
     }
     .timeline > li:before {
         position: static;
@@ -123,8 +124,14 @@ body {
     .timeline > li time {
         position: static;
         float: left;
+        padding-bottom: 17px;
     }
     .timeline > li article {
         clear: both;
+    }
+    .timeline > li article:after {
+      content: "\25B2";
+      top: 3em;
+      left: 1.5em;
     }
 }
