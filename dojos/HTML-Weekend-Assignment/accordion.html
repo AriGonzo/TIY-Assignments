@@ -4,111 +4,9 @@
   <head>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab' rel='stylesheet' type='text/css'>
-    <script type="text/javascript">
-			<!--
-				function openClose(id) {
-						var thisItem = document.getElementById(id);
-						if (thisItem.style.display=='block'){
-								thisItem.style.display='none';
-						} else {
-								thisItem.style.display='block';
-						}
-				}
-				//-->
-		</script>
-    <style>
-      body {
-        background-color: #CAB7D4;
-      }
-      * {
-      /*outline: 1px solid red;*/
-      }
-      h2, h3 {
-        padding: 5px 5px;
-        color: #64377B;
-        font-family: 'Roboto Slab', serif;
-        text-transform: uppercase;
-      }
-      p {
-        font-family: 'Questrial', sans-serif;
-        padding: 2px;
-        color: #380054;
-        font-size: 1.3em;
-        text-align: justify;
-      }
-      h3 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 40px;
-        padding-bottom: 0;
-        margin: 0;
-        margin-right: 15px;
-
-      }
-      h2::before {
-        content: "\f087";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        padding-right: 5%;
-      }
-      h2:hover:before {
-        content: "\f0a4";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-      }
-      h3::before {
-        content: "\f087";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        padding-right: 5%;
-      }
-      h3:hover:before {
-        content: "\f0a4";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-      }
-      ul {
-        list-style: none;
-      }
-      .submenu {
-        display: none;
-      }
-      section {
-        display: none;
-        background-color: #A487B3;
-        padding: 10px 20px;
-        outline: 5px solid #380054;
-      }
-      article {
-        display: none;
-        padding: 5px 15px;
-      }
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      .levelhead h2 {
-        border-bottom: 1px #A487B3 solid;
-        padding-bottom: 10px;
-      }
-      #container {
-        width: 70%;
-        margin:auto;
-      }
-      span {
-        width: 50px;
-        font-size: 25px;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="accordion.css">
   </head>
 
 
@@ -285,8 +183,126 @@
                 </article>
             </ul>
           </section>
+          <li><a class="levelhead" href="#level3" onclick="openClose('level4');"><h2>The Dude Abides</h2></a></li>
+              <section id="level4">
+                <p>Vee belief in nossing. Vitae risus ut ipsum suscipit dignissim. Uh-huh. Well, I still jerk off manually.
+                  Ut convallis tortor ac quam tristique eget commodo diam. Excuse me! Mark it zero. Next frame. Vestibulum
+                  nulla facilisi morbi. I don't know about you, but I take comfort in that. It's good knowin' he's out there,
+                  the Dude, takin' her easy for all us sinners. Shit. I sure hope he makes The finals. Welp, that about does her,
+                  wraps her all up. Things seem to've worked out pretty good for the Dude'n Walter, and it was a purt good story,
+                  dontcha think? Made me laugh to beat the band. Parts, anyway. Course—I didn't like seein' Donny go. But then,
+                  happen to know that there's a little Lebowski on the way. I guess that's the way the whole durned human comedy
+                  keeps perpetuatin' itself, down through the generations, westward the wagons, across the sands a time until— aw,
+                  look at me, I'm ramblin' again. Wal, uh hope you folks enjoyed yourselves. Porttitor, orci nec adipiscing semper,
+                  ligula nisl hendrerit.</p>
+                <ul>
+                  <li><a href="#subJ" onclick="openClose('subJ');"><h3>8yr olds, dude</h3></a></li>
+                  <article id='subJ'>
+                  <p>Lebowski ipsum shomer shabbos. Dolor sit amet, consectetur adipiscing elit. A way out west there was a fella,
+                    fella I want to tell you about, fella by the name of Jeff Lebowski. At least, that was the handle his lovin' parents
+                    gave him, but he never had much use for it himself. This Lebowski, he called himself the Dude. Now, Dude, that's a
+                    name no one would self-apply where I come from. But then, there was a lot about the Dude that didn't make a whole
+                    lot of sense to me. And a lot about where he lived, likewise. But then again, maybe that's why I found the place s'durned
+                    innarestin'. Praesent ac magna justo. Nice marmot. Pellentesque ac lectus quis elit blandit fringilla a ut turpis. Lady,
+                    I got buddies who died face-down in the mud so you and I could enjoy this family restaurant! Praesent felis ligula, malesuada
+                    suscipit malesuada non, ultrices non urna sed orci ipsum, placerat. Dieter doesn't care about anything. He's a nihilist.
+                    Id condimentum rutrum, rhoncus. Obviously you're not a golfer. Ac lorem aliquam placerat posuere neque, at dignissim magna
+                    ullamcorper in aliquam sagittis massa.</p>
+                  </article>
+                  <li><a href="#subK" onclick="openClose('subK');"><h3>Where's the Money, Lebowski?!</h3></a></li>
+                  <article id='subK'>
+                  <p>VEE FUCK YOU UP, MAN! VEE TAKE YOUR MONEY! Ac tortor ultrices faucibus curabitur eu mi sapien, ut. Yeah.
+                    Roadie for Metallica. Speed of Sound Tour. Ultricies ipsum morbi eget risus nulla nullam vel nisi. They
+                    won't hurt us, Donny. These men are cowards. Enim, vel auctor ante morbi id urna vel felis lacinia. We
+                    wanted to talk about little Larry. May we come in? Placerat vestibulum turpis nulla, viverra nec volutpat
+                    ac, ornare id. One a those days, huh. Wal, a wiser fella than m'self once said, sometimes you eat the bar and
+                    sometimes the bar, wal, he eats you. Lectus cras pharetra faucibus tristique. It's all a goddamn fake. Like
+                    Lenin said, look for the person who will benefit. And you will, uh, you know, you'll, uh, you know what I'm
+                    trying to say. Nullam non accumsan justo. My art has been commended as being strongly vaginal. Which bothers
+                    some men. The word itself makes some men uncomfortable. Vagina. Nulla facilisi integer interdum elementum nulla,
+                    nec eleifend.</p>
+                  </article>
+                  <li><a href="#subL" onclick="openClose('subL');"><h3>Whoa brotha</h3></a></li>
+                  <article id='subL'>
+                  <p>Your goons'll be able to get it off him, mean he's only fifteen and he's flunking social studies. So if you'll just write me
+                    a check for my ten per cent… of half a million… fifty grand. Nisl euismod ac maecenas vitae. My name's Da Fino! I'm a private
+                    snoop! Like you, man! Eros velit, eu suscipit erat integer. Sure you'll see some tank battles. But fighting in desert is very
+                    different from fighting in canopy jungle. Purus lacus, pretium vel venenatis eu, volutpat non erat donec a metus ac eros. I was,
+                    uh, one of the authors of the Port Huron Statement —The original Port Huron Statement. Not the compromised second draft.
+                    Dictum aliquet nulla consectetur egestas placerat maecenas pulvinar nisl et nisl rhoncus at. You know, little of this, little of
+                    that. Volutpat felis blandit in libero turpis. Goodnight, sweet prince. Laoreet et molestie sed, volutpat et erat nulla ut. Huh?
+                    Oh. Yeah. Tape deck. Couple of Creedence tapes. And there was a, uh… my briefcase. Orci quis neque consectetur tincidunt aliquam
+                    erat volutpat donec.</p>
+                  </article>
+              </ul>
+            </section>
+            <li><a class="levelhead" href="#level5" onclick="openClose('level5');"><h2>YOU'RE OUT OF YOUR ELEMENT</h2></a></li>
+                <section id="level5">
+                  <p>Vee belief in nossing. Vitae risus ut ipsum suscipit dignissim. Uh-huh. Well, I still jerk off manually.
+                    Ut convallis tortor ac quam tristique eget commodo diam. Excuse me! Mark it zero. Next frame. Vestibulum
+                    nulla facilisi morbi. I don't know about you, but I take comfort in that. It's good knowin' he's out there,
+                    the Dude, takin' her easy for all us sinners. Shit. I sure hope he makes The finals. Welp, that about does her,
+                    wraps her all up. Things seem to've worked out pretty good for the Dude'n Walter, and it was a purt good story,
+                    dontcha think? Made me laugh to beat the band. Parts, anyway. Course—I didn't like seein' Donny go. But then,
+                    happen to know that there's a little Lebowski on the way. I guess that's the way the whole durned human comedy
+                    keeps perpetuatin' itself, down through the generations, westward the wagons, across the sands a time until— aw,
+                    look at me, I'm ramblin' again. Wal, uh hope you folks enjoyed yourselves. Porttitor, orci nec adipiscing semper,
+                    ligula nisl hendrerit.</p>
+                  <ul>
+                    <li><a href="#subM" onclick="openClose('subM');"><h3>8yr olds, dude</h3></a></li>
+                    <article id='subM'>
+                    <p>Lebowski ipsum shomer shabbos. Dolor sit amet, consectetur adipiscing elit. A way out west there was a fella,
+                      fella I want to tell you about, fella by the name of Jeff Lebowski. At least, that was the handle his lovin' parents
+                      gave him, but he never had much use for it himself. This Lebowski, he called himself the Dude. Now, Dude, that's a
+                      name no one would self-apply where I come from. But then, there was a lot about the Dude that didn't make a whole
+                      lot of sense to me. And a lot about where he lived, likewise. But then again, maybe that's why I found the place s'durned
+                      innarestin'. Praesent ac magna justo. Nice marmot. Pellentesque ac lectus quis elit blandit fringilla a ut turpis. Lady,
+                      I got buddies who died face-down in the mud so you and I could enjoy this family restaurant! Praesent felis ligula, malesuada
+                      suscipit malesuada non, ultrices non urna sed orci ipsum, placerat. Dieter doesn't care about anything. He's a nihilist.
+                      Id condimentum rutrum, rhoncus. Obviously you're not a golfer. Ac lorem aliquam placerat posuere neque, at dignissim magna
+                      ullamcorper in aliquam sagittis massa.</p>
+                    </article>
+                    <li><a href="#subN" onclick="openClose('subN');"><h3>Where's the Money, Lebowski?!</h3></a></li>
+                    <article id='subN'>
+                    <p>VEE FUCK YOU UP, MAN! VEE TAKE YOUR MONEY! Ac tortor ultrices faucibus curabitur eu mi sapien, ut. Yeah.
+                      Roadie for Metallica. Speed of Sound Tour. Ultricies ipsum morbi eget risus nulla nullam vel nisi. They
+                      won't hurt us, Donny. These men are cowards. Enim, vel auctor ante morbi id urna vel felis lacinia. We
+                      wanted to talk about little Larry. May we come in? Placerat vestibulum turpis nulla, viverra nec volutpat
+                      ac, ornare id. One a those days, huh. Wal, a wiser fella than m'self once said, sometimes you eat the bar and
+                      sometimes the bar, wal, he eats you. Lectus cras pharetra faucibus tristique. It's all a goddamn fake. Like
+                      Lenin said, look for the person who will benefit. And you will, uh, you know, you'll, uh, you know what I'm
+                      trying to say. Nullam non accumsan justo. My art has been commended as being strongly vaginal. Which bothers
+                      some men. The word itself makes some men uncomfortable. Vagina. Nulla facilisi integer interdum elementum nulla,
+                      nec eleifend.</p>
+                    </article>
+                    <li><a href="#subO" onclick="openClose('subO');"><h3>Whoa brotha</h3></a></li>
+                    <article id='subO'>
+                    <p>Your goons'll be able to get it off him, mean he's only fifteen and he's flunking social studies. So if you'll just write me
+                      a check for my ten per cent… of half a million… fifty grand. Nisl euismod ac maecenas vitae. My name's Da Fino! I'm a private
+                      snoop! Like you, man! Eros velit, eu suscipit erat integer. Sure you'll see some tank battles. But fighting in desert is very
+                      different from fighting in canopy jungle. Purus lacus, pretium vel venenatis eu, volutpat non erat donec a metus ac eros. I was,
+                      uh, one of the authors of the Port Huron Statement —The original Port Huron Statement. Not the compromised second draft.
+                      Dictum aliquet nulla consectetur egestas placerat maecenas pulvinar nisl et nisl rhoncus at. You know, little of this, little of
+                      that. Volutpat felis blandit in libero turpis. Goodnight, sweet prince. Laoreet et molestie sed, volutpat et erat nulla ut. Huh?
+                      Oh. Yeah. Tape deck. Couple of Creedence tapes. And there was a, uh… my briefcase. Orci quis neque consectetur tincidunt aliquam
+                      erat volutpat donec.</p>
+                    </article>
+                </ul>
+              </section>
         </ul>
       </div>
+      <script type="text/javascript">
+        <!--
+          function openClose(id) {
+              var thisItem = document.getElementById(id);
+              if (thisItem.style.display=='block'){
+                  thisItem.style.display='none';
+              } else {
+                  thisItem.style.display='block';
+              }
+          }
+          //-->
+      </script>
   </body>
 
 </html>
