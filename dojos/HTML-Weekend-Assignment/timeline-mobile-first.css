@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+li {
+  list-style-type: none;
+}
+
+h3 {
+  border-bottom: 1px white solid;
+  margin-bottom: -1ex;
+  padding: 1.5ex 0;
+}
+
+#container {
+  width: 90%;
+  margin-top: 5%;
+  margin: auto;
+  margin-left: 1em;
+}
+
+#container ol li {
+  /*outline: 1px red solid;*/
+  margin-bottom: 5ex;
+  margin-top: 10ex;
+  background-color: blue;
+}
+
+#container ol li:nth-child(even){
+  background-color: lightBlue;
+}
+
+.timeline > li time {
+    position: static;
+    float: left;
+    padding-bottom: 17px;
+    margin bottom: 10px;
+    margin-top: -8ex;
+    width: 5px;
+}
+.timeline > li article:before {
+  color: rgb(107, 191, 238);
+  position: static;
+  letter-spacing: -0.2em;
+  content: "\25B2";
+  top: 3em;
+  left: 1.5em;
+}

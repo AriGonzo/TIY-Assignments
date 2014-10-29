@@ -129,9 +129,12 @@ body {
     .timeline > li article {
         clear: both;
     }
-    .timeline > li article:after {
+    .timeline > li article:before {
+      content: "\25C0";
+      color: rgb(107, 191, 238);
+      position: absolute;
+      top: 100%; right: 100%;
+      letter-spacing: -0.2em;
       content: "\25B2";
-      top: 3em;
-      left: 1.5em;
     }
 }
