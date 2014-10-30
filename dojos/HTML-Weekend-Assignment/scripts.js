@@ -5,7 +5,7 @@
  * @todo FIX THIS FUNCTION!
  *
  * @param DOMEvent event
- * @return undefined
+ * @return undefined   
  */
 function clickNavItem(event){
    if (isClosed(this.parentElement)){
