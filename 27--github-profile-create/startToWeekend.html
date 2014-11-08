@@ -104,6 +104,9 @@
       .repoList {
         list-style-type: none;
       }
+      .octicon:before {
+        margin-right: 1ex;
+      }
     </style>
   </head>
   <body>
@@ -111,7 +114,7 @@
       <div class="container">
         <nav class="navbar navbar-default">
           <div class="container center">
-          <a class="navbar-brand" href="#">Github</a>
+          <a class="navbar-brand" href="#"><span class ="mega-octicon octicon-mark-github"></span></a>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
           <input type="text" class="form-control search" placeholder="Search Github">
@@ -130,17 +133,17 @@
       </div>
       <div class="container content">
         <div class="container">
-          <aside class="col-sm-3 col-md-3">
-            <a href="https://avatars2.githubusercontent.com/u/8780547?v=2&s=460"><img id="avatar" src="https://avatars3.githubusercontent.com/u/8821473?v=3&s=460" alt=""></a>
+          <aside class="col-sm-4 col-md-4">
+            <a href="https://avatars2.githubusercontent.com/u/8780547?v=2&s=460"><img id="avatar" src="" alt=""></a>
               <ul class="userInfo">
-                <li><h3 class="name">{{Name}}</h3>
-                <li><h4 class="user">{{user}}</h4>
+                <li><h3 id="name"></h3>
+                <li><h4 id="user"></h4>
                 <hr>
-                <li><span class="octicon octicon-organization"></span>&nbsp;&nbsp;{{company}}
-                <li><span class="octicon octicon-location"></span>&nbsp;&nbsp;{{location}}
-                <li><span class="octicon octicon-mail"></span>&nbsp;&nbsp;<a href="mailto:arielgonzalez515@gmail.com">{{email}}</a>
-                <li><span class="octicon octicon-link"></span>&nbsp;&nbsp;{{link}}
-                <li><span class="octicon octicon-clock"></span>&nbsp;&nbsp;{{created on}}
+                <li><span id="company" class="octicon octicon-organization"></span>
+                <li><span id="location" class="octicon octicon-location"></span>
+                <li><span class="octicon octicon-mail"></span><a id="email" href=" "></a>
+                <li><span class="octicon octicon-link"></span><a id="link" href=""></a>
+                <li><span id="created" class="octicon octicon-clock"></span>
                 <hr>
             <p><a href="#">1 Follower</a> <a href="">1 Starred</a> <a href="">0 Following</a></p>
             <!-- How to do these #'s -->
@@ -148,7 +151,7 @@
             <h5>Organizations</h5>
             <a href="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84"><img class="orgs img-rounded" src="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84" alt=""></a>
           </aside>
-          <section class="col-sm-9 col-md-9">
+          <section class="col-sm-8 col-md-8">
             <nav>
               <ul class="nav nav-tabs">
                 <li><a id="contribmenu" href="#" onclick="drop('contrib')">Contributions</a></li>
@@ -207,23 +210,33 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
-    ;(function(){
-      var profile;
+    var $name = $('#name');
+    var $user = $('#user');
+    var $company = $('#company');
+    var $location = $('#location');
+    var $email = $('#email');
+    var $link = $('#link');
+    var $avatar = $('#avatar')
+    var $created = $('#created')
 
-      jQuery.ajax('octocat.json', {
-      success: function(data){
-        profile = data;
-        console.log(data);
-        var avatar_url = data.avatar_url;
+    $.ajax ({
+      type: 'GET',
+      url: 'https://api.github.com/users/AriGonzo',
+      success: function(objects){
+        $name.html(objects.name);
+        $user.html(objects.login);
+        $company.html(objects.company);
+        $location.html(objects.location);
+        $avatar.attr('src', objects.avatar_url);
+        $link.html(objects.blog).attr('href', objects.blog);
+        $email.html(objects.email).attr('href', objects.email);
 
-        jQuery('#avatar')
-            .attr('href', avatar_url)
-            .children('img')
-              .attr('src', avatar_url)
-       }
-     });
-     console.log('outside', profile);
-   });
+        var date = new Date(objects.created_at);
+        date = date.toDateString();
+        date = date.slice(3);
+        $created.html("Joined on " + date);
+      }
+    });
     </script>
     <script>
       function drop(id) {
@@ -241,5 +254,6 @@
            });
         }
     </script>
+
   </body>
 </html>
