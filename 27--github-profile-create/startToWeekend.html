@@ -14,6 +14,9 @@
       .userInfo > li {
         list-style: none;
       }
+      .userInfo {
+        padding: 0;
+      }
       .content {
         width: 971px;/*70%*/
         margin: 0 auto 5% auto;
@@ -72,29 +75,33 @@
       .orgs {
         width: 30px;
       }
-      .popular {
-        height: 300px;
-        background-color: lightgray;
-        border: 1px solid;
-        margin-right: 4%;
+      .popular, .contrib2 {
+        margin-top: 3ex;
+        width: 48%;
+        border: 1px solid lightgray;
+        padding: 0;
+        text-indent: 1em;
       }
       .col-md-6 {
-        width: 48%;
+        width: 35%;
+        margin-right: 23px;
       }
       .contrib2 {
         height: 200px;
-        background-color: lightgray;
-        border: 1px solid;
-      }
+
       .pubCon {
         height: 250px;
         border: 1px solid;
         background-color: lightgray;
         margin-top: 30px;
+        width: 50%;
       }
-      .conActivity {
-        height: 450px;
-        border: 1px solid;
+        .popular hr, .contrib2 hr, #conActivity hr {
+        margin-bottom: 2ex;
+      }
+      #conActivity {
+        height: 1450px;
+        border: 1px solid red;
         background-color: lightgray;
         margin-top: 30px;
       }
@@ -107,10 +114,25 @@
       .octicon:before {
         margin-right: 1ex;
       }
+      #name {
+        margin-top: 6px;
+        font-weight: bold;
+        font-size: 28px;
+      }
+      #user {
+        font-size: 20px;
+        margin-top: -7px;
+        font-weight: 300;
+      }
+      #location:before {
+        padding-right: 4px;
+      }
+      #graph {
+        width: 50%;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
       <div class="container">
         <nav class="navbar navbar-default">
           <div class="container center">
@@ -133,7 +155,7 @@
       </div>
       <div class="container content">
         <div class="container">
-          <aside class="col-sm-4 col-md-4">
+          <aside class="col-sm-3 col-md-3">
             <a href="https://avatars2.githubusercontent.com/u/8780547?v=2&s=460"><img id="avatar" src="" alt=""></a>
               <ul class="userInfo">
                 <li><h3 id="name"></h3>
@@ -151,7 +173,7 @@
             <h5>Organizations</h5>
             <a href="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84"><img class="orgs img-rounded" src="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84" alt=""></a>
           </aside>
-          <section class="col-sm-8 col-md-8">
+          <section class="col-sm-9 col-md-9">
             <nav>
               <ul class="nav nav-tabs">
                 <li><a id="contribmenu" href="#" onclick="drop('contrib')">Contributions</a></li>
@@ -160,8 +182,52 @@
               </ul>
             </nav>
             </section>
+
+            <section id="contrib">
+              <section class="popular col-sm-6 col-md-6">
+                <h5 class="blockHead">Popular repositories</h5>
+                <hr>
+                <ul class="popRepos list-unstyled">
+                  <li class="octicon octicon-repo-forked" style="text-indent: 0;"><a href="#">asoper29.github.io</a></li>
+                  <hr>
+                  <li class="octicon octicon-repo"><a href="#">etsydemo</a></li>
+                  <hr>
+                  <li class="octicon octicon-repo-forked"><a href="#">FEE--2014--FALL</a></li>
+                  <hr>
+                  <li class="octicon octicon-repo-forked"><a href="#">freelancer-theme</a></li>
+                  <hr>
+                  <li class="octicon octicon-repo-forked"><a href="#">hGraph</a></li>
+                </ul>
+              </section>
+              <section class="contrib2 col-sm-6 col-md-6">
+                <h5 class="blockHead">Repositories contributed to</h5>
+                <hr>
+                <ul class="reposCon2 list-unstyled">
+                  <li class="octicon octicon-repo" style="text-indent: 0;"><a href="#">asoper29/24--Weekend-Warriors</a></li>
+                  <hr>
+                  <li class="octicon octicon-repo"><a href="#">mema82/Surf-and-Paddle</a></li>
+                  <hr>
+                  <li class="octicon octicon-repo"><a href="#">TheIronYard--... /FEE--201400F...</a></li>
+                </ul>
+              </section>
+            </section>
+
+            <section id="contrib-stat">
+              <section id="graph" class="pubCon col-sm-9 col-md-9">
+                <h5 class="blockHead">Contributions</h5>
+                <img class="conImg" src="http://i.imgur.com/hQfVa8N.png" alt="Some Stuff Goes Here">
+              </section>
+
+              <section id="conActivity" class="col-sm-9 col-md-9">
+                <h5 class="activeHead">Contribution activity</h5>
+                <h6><span class="octicon octicon-git-commit">10 Commits</span></h6>
+                <h6><span class="octicon octicon-git-pull-request">3 Pull Requests</span></h6>
+                <h6><span class="octicon octicon-issue-opened">1 Issue Reported</span></h6>
+              </section>
+            </section>
+
             <section id="repos">
-              <section class="listOfRepos col-sm-12 col-md-12">
+              <section class="listOfRepos col-sm-12 col-md-12 hidden">
                 <ul class="repoList">
                   <a href="#"><li><h3>Repo #1</h3></li></a>
                   <hr>
@@ -183,7 +249,7 @@
               </section>
             </section>
             <section id="activity">
-              <section class="listOfActive col-sm-12 col-md-12">
+              <section class="listOfActive col-sm-12 col-md-12 hidden">
                 <ul class="activeList">
                   <a href="#"><li><h3>PR #1</h3></li></a>
                   <hr>
@@ -205,40 +271,31 @@
               </section>
             </section>
           </section>
-        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
-    var $name = $('#name');
-    var $user = $('#user');
-    var $company = $('#company');
-    var $location = $('#location');
-    var $email = $('#email');
-    var $link = $('#link');
-    var $avatar = $('#avatar')
-    var $created = $('#created')
-
     $.ajax ({
       type: 'GET',
       url: 'https://api.github.com/users/AriGonzo',
       success: function(objects){
-        $name.html(objects.name);
-        $user.html(objects.login);
-        $company.html(objects.company);
-        $location.html(objects.location);
-        $avatar.attr('src', objects.avatar_url);
-        $link.html(objects.blog).attr('href', objects.blog);
-        $email.html(objects.email).attr('href', objects.email);
+        $('#name').html(objects.name);
+        $('#user').html(objects.login);
+        $('#company').html(objects.company);
+        $('#location').html(objects.location);
+        $('#avatar').attr('src', objects.avatar_url);
+        $('#link').html(objects.blog).attr('href', objects.blog);
+        $('#email').html(objects.email).attr('href', objects.email);
+
 
         var date = new Date(objects.created_at);
         date = date.toDateString();
         date = date.slice(3);
-        $created.html("Joined on " + date);
+        $('#created').html("Joined on " + date);
       }
     });
     </script>
-    <script>
+<script>
       function drop(id) {
            var navID = ['contrib','repos','activity'];
            var dropDown = document.getElementById(id);
@@ -246,10 +303,11 @@
              var dropMenu = value + 'menu';
               if(value==id){
                   dropDown.style.display = 'block';
-                  document.getElementById(dropMenu).style.backgroundColor = 'lightgray'
+                  document.getElementById(dropMenu).style.borderColor = 'lightgray'
+                  document.getElementById(dropMenu).style.borderBottomColor = 'white'
               }else{
                   document.getElementById(value).style.display = 'none';
-                  document.getElementById(dropMenu).style.backgroundColor = '#fff'
+                  document.getElementById(dropMenu).style.borderColor = 'transparent'
               };
            });
         }
