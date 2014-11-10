@@ -316,10 +316,12 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
+
     var user = prompt("Which user are you looking for?")
+
     $.ajax ({
       type: 'GET',
-      url: 'https://api.github.com/users/'+user,
+      url: 'https://api.github.com/users/' + user,
       success: function(objects){
         $('#name').html(objects.name);
         $('#user').html(objects.login);
@@ -333,6 +335,7 @@
         $('#created').html("Joined on " + new Date(objects.created_at).toDateString().slice(3));
       }
     });
+
     $.ajax ({
       type: 'GET',
       url: 'https://api.github.com/users/'+ user + '/repos',
@@ -348,6 +351,7 @@
         $('.repo9').html(objects[8].name).attr('href', 'http://github.com/' + objects[8].full_name);
     }
   });
+
   $.ajax ({
     type: 'GET',
     url: 'https://api.github.com/users/AriGonzo/starred',
@@ -355,23 +359,22 @@
       $('starred').html(objects.length)
     }
   });
-    </script>
-<script>
-      function drop(id) {
-           var navID = ['contrib','repos','activity'];
-           var dropDown = document.getElementById(id);
-           navID.forEach(function(value,index){
-             var dropMenu = value + 'menu';
-              if(value==id){
-                  dropDown.style.display = 'block';
-                  document.getElementById(dropMenu).style.borderColor = 'lightgray'
-                  document.getElementById(dropMenu).style.borderBottomColor = 'white'
-              }else{
-                  document.getElementById(value).style.display = 'none';
-                  document.getElementById(dropMenu).style.borderColor = 'transparent'
-              };
-           });
-        }
+
+  function drop(id) {
+       var navID = ['contrib','repos','activity'];
+       var dropDown = document.getElementById(id);
+       navID.forEach(function(value,index){
+         var dropMenu = value + 'menu';
+          if(value==id){
+              dropDown.style.display = 'block';
+              document.getElementById(dropMenu).style.borderColor = 'lightgray'
+              document.getElementById(dropMenu).style.borderBottomColor = 'white'
+          }else{
+              document.getElementById(value).style.display = 'none';
+              document.getElementById(dropMenu).style.borderColor = 'transparent'
+          };
+       });
+    }
     </script>
 
   </body>
