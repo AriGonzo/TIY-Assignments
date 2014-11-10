@@ -1,5 +1,5 @@
 
-    var user = prompt("Which user are you looking for?")
+    var user = prompt("Which user are you looking for?");
 
     $.ajax ({
       type: 'GET',
@@ -13,7 +13,7 @@
         $('#link').html(objects.blog).attr('href', objects.blog);
         $('#email').html(objects.email).attr('href', objects.email);
         $('#followers').html(objects.followers);
-        $('#following').html(objects.following)
+        $('#following').html(objects.following);
         $('#created').html("Joined on " + new Date(objects.created_at).toDateString().slice(3));
       }
     });
@@ -38,7 +38,7 @@
       type: 'GET',
       url: 'https://api.github.com/users/AriGonzo/starred',
       success: function(objects){
-        $('starred').html(objects.length)
+        $('starred').html(objects.length);
       }
     });
 
@@ -49,11 +49,11 @@
              var dropMenu = value + 'menu';
               if(value==id){
                   dropDown.style.display = 'block';
-                  document.getElementById(dropMenu).style.borderColor = 'lightgray'
-                  document.getElementById(dropMenu).style.borderBottomColor = 'white'
+                  document.getElementById(dropMenu).style.borderColor = 'lightgray';
+                  document.getElementById(dropMenu).style.borderBottomColor = 'white';
               }else{
                   document.getElementById(value).style.display = 'none';
-                  document.getElementById(dropMenu).style.borderColor = 'transparent'
-              };
+                  document.getElementById(dropMenu).style.borderColor = 'transparent';
+              }
            });
         }

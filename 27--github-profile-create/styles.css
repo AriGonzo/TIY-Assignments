@@ -44,7 +44,7 @@ button {
   align-content: center;
 }
 .sign-up {
-  background-color: lawngreen;
+  background-color: #73CE53;
   color: white;
 }
 #avatar {
@@ -84,10 +84,8 @@ aside {
   margin-bottom: 2ex;
 }
 #conActivity {
-  border: 1px solid red;
-  background-color: lightgray;
   margin-top: 30px;
-  margin-left: 17.5em;
+  margin-left: 20.5em;
 }
 #repos, #activity {
   display: none;
@@ -99,6 +97,11 @@ aside {
 .octicon:before {
   margin-right: 1ex;
   color: gainsboro;
+}
+.octicon-logo-github:before {
+  font-size: 20pt;
+  margin: 0;
+  color: black;
 }
 #name {
   margin-top: 6px;
@@ -137,10 +140,17 @@ aside {
 #r1 {
   text-indent: 0;
 }
+.activeHead {
+  font-size: 14pt;
+  margin: -6px 0 0 -12px;
+  padding-bottom: 26px;
+  font-weight: 400;
+}
 #klout li {
   display: inline;
   padding: 0;
   text-align: center;
+  margin-bottom: 35px;
 }
 .popular h5 {
   padding: 10px 0;
@@ -155,4 +165,9 @@ aside {
 }
 #klout p{
   font-size: 8pt;
+}
+#conActivity h6 {
+  text-align: center;
+  padding-top: 5ex;
+  padding-bottom: 10ex;
 }
