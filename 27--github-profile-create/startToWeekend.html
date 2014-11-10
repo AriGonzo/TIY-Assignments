@@ -4,165 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css">
+    <link href="styles.css" rel="stylesheet">
     <style>
-      .container {
-        margin: 0 0 0 0;
-        padding: 0;
-        width: 100%;
-        position: relative;
-      }
-      .userInfo > li {
-        list-style: none;
-      }
-      .userInfo {
-        padding: 0;
-      }
-      .content {
-        width: 971px;/*70%*/
-        margin: 0 auto 5% auto;
-      }
-      .center {
-        width: 971px;/*70%;*/
-        margin: 0 auto;
-        padding: 0 2%;
-      }
-      .search {
-        width: 200px;
-      }
-      .navbar-brand {
-        color: black;
-        font-weight: bold;
-        font-size: 20pt;
-      }
-      .navbar-form .form-control {
-        display: inline-block;
-        width: 345px;
-        vertical-align: middle;
-        height: 30px;
-        margin: 1% 0;
-      }
-      .btn {
-        margin: 1% 0;
-        font-weight: bold;
-        font-size: 8pt;
-      }
-      button {
-        width: 60px;
-        align-content: center;
-      }
-      .sign-up {
-        background-color: lawngreen;
-        color: white;
-      }
-      #avatar {
-        width: 220px;/*100%*/
-        border-radius: 8px;
-      }
-      aside {
-        margin:0;
-        padding: 0;
-      }
-      .name {
-        margin: 0;
-      }
-      .user {
-        margin: 0;
-        color: gray;
-      }
-      .glyphicon {
-        color: lightgray;
-      }
-      .orgs {
-        width: 30px;
-      }
-      .popular, .contrib2 {
-        margin-top: 3ex;
-        width: 48%;
-        border: 1px solid lightgray;
-        padding: 0;
-        text-indent: 1em;
-      }
-      .col-md-6 {
-        width: 35%;
-        margin-right: 23px;
-        margin-top: 23px;
-      }
-        .popular hr, .contrib2 hr, #conActivity hr {
-        margin-bottom: 2ex;
-      }
-      #conActivity {
-        border: 1px solid red;
-        background-color: lightgray;
-        margin-top: 30px;
-        margin-left: 17.5em;
-      }
-      #repos, #activity {
-        display: none;
-      }
-      .repoList {
-        list-style-type: none;
-
-      }
-      .octicon:before {
-        margin-right: 1ex;
-        color: gainsboro;
-      }
-      #name {
-        margin-top: 6px;
-        font-weight: bold;
-        font-size: 28px;
-      }
-      #user {
-        font-size: 20px;
-        margin-top: -7px;
-        font-weight: 300;
-      }
-      #location:before {
-        padding-right: 4px;
-      }
-      #graph {
-        width: 50%;
-        padding: 0;
-      }
-      #graph img{
-        margin-top: 4ex;
-      }
-      #contribmenu {
-        border-color: lightgray;
-        border-bottom-color: white;
-      }
-      #navBar {
-        padding: 0;
-      }
-      .listOfRepos, .listOfActive {
-        width: 75%;
-      }
-      .repoList>li {
-        font-size: 16pt;
-        vertical-align: center;
-      }
-      #r1 {
-        text-indent: 0;
-      }
-      #klout li {
-        display: inline;
-        padding: 0;
-        text-align: center;
-      }
-      .popular h5 {
-        padding: 10px 0;
-        margin: 0;
-        background-color: #F5F5F5;
-      }
-      #klout {
-        padding: 0;
-      }
-      #klout a {
-        font-size: 24pt;
-      }
-      #klout p{
-        font-size: 8pt;
-      }
     </style>
   </head>
   <body>
@@ -244,7 +87,7 @@
                 <ul class="reposCon2 list-unstyled">
                   <li class="octicon octicon-repo" style="text-indent: 0;"><a href="#">asoper29/24--Weekend-Warriors</a></li>
                   <hr>
-                  <li class="octicon octicon-repo"><a href="#">mema82/Surf-and-Paddle</a></li>
+                  <li class="octicon octicon-repo"><a href="#">rgcoders/Surf-and-Paddle</a></li>
                   <hr>
                   <li class="octicon octicon-repo"><a href="#">TheIronYard--... /FEE--201400F...</a></li>
                 </ul>
@@ -315,67 +158,7 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
-
-    var user = prompt("Which user are you looking for?")
-
-    $.ajax ({
-      type: 'GET',
-      url: 'https://api.github.com/users/' + user,
-      success: function(objects){
-        $('#name').html(objects.name);
-        $('#user').html(objects.login);
-        $('#company').html(objects.company);
-        $('#location').html(objects.location);
-        $('#avatar').attr('src', objects.avatar_url);
-        $('#link').html(objects.blog).attr('href', objects.blog);
-        $('#email').html(objects.email).attr('href', objects.email);
-        $('#followers').html(objects.followers);
-        $('#following').html(objects.following)
-        $('#created').html("Joined on " + new Date(objects.created_at).toDateString().slice(3));
-      }
-    });
-
-    $.ajax ({
-      type: 'GET',
-      url: 'https://api.github.com/users/'+ user + '/repos',
-      success: function(objects){
-        $('.repo1').html(objects[0].name).attr('href', 'http://github.com/' + objects[0].full_name);
-        $('.repo2').html(objects[1].name).attr('href', 'http://github.com/' + objects[1].full_name);
-        $('.repo3').html(objects[2].name).attr('href', 'http://github.com/' + objects[2].full_name);
-        $('.repo4').html(objects[3].name).attr('href', 'http://github.com/' + objects[3].full_name);
-        $('.repo5').html(objects[4].name).attr('href', 'http://github.com/' + objects[4].full_name);
-        $('.repo6').html(objects[5].name).attr('href', 'http://github.com/' + objects[5].full_name);
-        $('.repo7').html(objects[6].name).attr('href', 'http://github.com/' + objects[6].full_name);
-        $('.repo8').html(objects[7].name).attr('href', 'http://github.com/' + objects[7].full_name);
-        $('.repo9').html(objects[8].name).attr('href', 'http://github.com/' + objects[8].full_name);
-    }
-  });
-
-  $.ajax ({
-    type: 'GET',
-    url: 'https://api.github.com/users/AriGonzo/starred',
-    success: function(objects){
-      $('starred').html(objects.length)
-    }
-  });
-
-  function drop(id) {
-       var navID = ['contrib','repos','activity'];
-       var dropDown = document.getElementById(id);
-       navID.forEach(function(value,index){
-         var dropMenu = value + 'menu';
-          if(value==id){
-              dropDown.style.display = 'block';
-              document.getElementById(dropMenu).style.borderColor = 'lightgray'
-              document.getElementById(dropMenu).style.borderBottomColor = 'white'
-          }else{
-              document.getElementById(value).style.display = 'none';
-              document.getElementById(dropMenu).style.borderColor = 'transparent'
-          };
-       });
-    }
-    </script>
+    <script src="scripts.js"></script>
 
   </body>
 </html>
