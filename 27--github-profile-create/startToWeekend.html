@@ -85,34 +85,27 @@
       .col-md-6 {
         width: 35%;
         margin-right: 23px;
-      }
-      .contrib2 {
-        height: 200px;
-
-      .pubCon {
-        height: 250px;
-        border: 1px solid;
-        background-color: lightgray;
-        margin-top: 30px;
-        width: 50%;
+        margin-top: 23px;
       }
         .popular hr, .contrib2 hr, #conActivity hr {
         margin-bottom: 2ex;
       }
       #conActivity {
-        height: 1450px;
         border: 1px solid red;
         background-color: lightgray;
         margin-top: 30px;
+        margin-left: 17.5em;
       }
       #repos, #activity {
         display: none;
       }
       .repoList {
         list-style-type: none;
+
       }
       .octicon:before {
         margin-right: 1ex;
+        color: gainsboro;
       }
       #name {
         margin-top: 6px;
@@ -129,6 +122,46 @@
       }
       #graph {
         width: 50%;
+        padding: 0;
+      }
+      #graph img{
+        margin-top: 4ex;
+      }
+      #contribmenu {
+        border-color: lightgray;
+        border-bottom-color: white;
+      }
+      #navBar {
+        padding: 0;
+      }
+      .listOfRepos, .listOfActive {
+        width: 75%;
+      }
+      .repoList>li {
+        font-size: 16pt;
+        vertical-align: center;
+      }
+      #r1 {
+        text-indent: 0;
+      }
+      #klout li {
+        display: inline;
+        padding: 0;
+        text-align: center;
+      }
+      .popular h5 {
+        padding: 10px 0;
+        margin: 0;
+        background-color: #F5F5F5;
+      }
+      #klout {
+        padding: 0;
+      }
+      #klout a {
+        font-size: 24pt;
+      }
+      #klout p{
+        font-size: 8pt;
       }
     </style>
   </head>
@@ -165,15 +198,20 @@
                 <li><span id="location" class="octicon octicon-location"></span>
                 <li><span class="octicon octicon-mail"></span><a id="email" href=" "></a>
                 <li><span class="octicon octicon-link"></span><a id="link" href=""></a>
-                <li><span id="created" class="octicon octicon-clock"></span>
+                <li><span id="created" class="octicon octicon-clock"></span></li>
                 <hr>
-            <p><a href="#">1 Follower</a> <a href="">1 Starred</a> <a href="">0 Following</a></p>
-            <!-- How to do these #'s -->
+            <ul id="klout">
+              <li class="col-md-4"><a id="followers"href="#"></a><br><p>Followers</p></li>
+              <li class="col-md-4"><a id="starred" href=""></a><br><p>Starred</p></li>
+              <li class="col-md-4"><a id="following" href=""></a><br><p>Following</p></li`>
+            </ul>
+
+
             <hr>
             <h5>Organizations</h5>
             <a href="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84"><img class="orgs img-rounded" src="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84" alt=""></a>
           </aside>
-          <section class="col-sm-9 col-md-9">
+          <section id="navBar" class="col-sm-9 col-md-9">
             <nav>
               <ul class="nav nav-tabs">
                 <li><a id="contribmenu" href="#" onclick="drop('contrib')">Contributions</a></li>
@@ -188,18 +226,19 @@
                 <h5 class="blockHead">Popular repositories</h5>
                 <hr>
                 <ul class="popRepos list-unstyled">
-                  <li class="octicon octicon-repo-forked" style="text-indent: 0;"><a href="#">asoper29.github.io</a></li>
+                  <li id="r1" class="octicon octicon-repo-forked"><a class="repo1" href=""></a>
+                      <small> </li>
                   <hr>
-                  <li class="octicon octicon-repo"><a href="#">etsydemo</a></li>
+                  <li class="octicon octicon-repo"><a class="repo2"href=""></a></li>
                   <hr>
-                  <li class="octicon octicon-repo-forked"><a href="#">FEE--2014--FALL</a></li>
+                  <li class="octicon octicon-repo-forked"><a  class="repo3" href=""></a></li>
                   <hr>
-                  <li class="octicon octicon-repo-forked"><a href="#">freelancer-theme</a></li>
+                  <li class="octicon octicon-repo-forked"><a class="repo4" href=""></a></li>
                   <hr>
-                  <li class="octicon octicon-repo-forked"><a href="#">hGraph</a></li>
+                  <li class="octicon octicon-repo-forked"><a class="repo5" href=""></a></li>
                 </ul>
               </section>
-              <section class="contrib2 col-sm-6 col-md-6">
+              <section class="popular contrib2 col-sm-6 col-md-6">
                 <h5 class="blockHead">Repositories contributed to</h5>
                 <hr>
                 <ul class="reposCon2 list-unstyled">
@@ -210,46 +249,48 @@
                   <li class="octicon octicon-repo"><a href="#">TheIronYard--... /FEE--201400F...</a></li>
                 </ul>
               </section>
-            </section>
 
             <section id="contrib-stat">
               <section id="graph" class="pubCon col-sm-9 col-md-9">
-                <h5 class="blockHead">Contributions</h5>
+
                 <img class="conImg" src="http://i.imgur.com/hQfVa8N.png" alt="Some Stuff Goes Here">
               </section>
 
-              <section id="conActivity" class="col-sm-9 col-md-9">
+              <section id="conActivity" class="col-sm-9 col-md-">
                 <h5 class="activeHead">Contribution activity</h5>
                 <h6><span class="octicon octicon-git-commit">10 Commits</span></h6>
                 <h6><span class="octicon octicon-git-pull-request">3 Pull Requests</span></h6>
                 <h6><span class="octicon octicon-issue-opened">1 Issue Reported</span></h6>
               </section>
             </section>
+          </section>
 
             <section id="repos">
-              <section class="listOfRepos col-sm-12 col-md-12 hidden">
+              <section class="listOfRepos col-sm-12 col-md-12">
                 <ul class="repoList">
-                  <a href="#"><li><h3>Repo #1</h3></li></a>
+                  <li><a class="repo1" href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #2</h3></li></a>
+                  <li><a class="repo2"href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #3</h3></li></a>
+                  <li><a class="repo3"href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #4</h3></li></a>
+                  <li><a class="repo4" href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #5</h3></li></a>
+                  <li><a class="repo5" href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #6</h3></li></a>
+                  <li><a class="repo6" href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #7</h3></li></a>
+                  <li><a class="repo7" href="#"></a>
                   <hr>
-                  <a href="#"><li><h3>Repo #8</h3></li></a>
+                  <li><a class="repo8" href="#"></a>
+                  <hr>
+                  <li><a class="repo9" href="#"></a>
                   <hr>
                 </ul>
               </section>
             </section>
             <section id="activity">
-              <section class="listOfActive col-sm-12 col-md-12 hidden">
+              <section class="listOfActive col-sm-12 col-md-12">
                 <ul class="activeList">
                   <a href="#"><li><h3>PR #1</h3></li></a>
                   <hr>
@@ -275,9 +316,10 @@
     </div>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
+    var user = prompt("Which user are you looking for?")
     $.ajax ({
       type: 'GET',
-      url: 'https://api.github.com/users/AriGonzo',
+      url: 'https://api.github.com/users/'+user,
       success: function(objects){
         $('#name').html(objects.name);
         $('#user').html(objects.login);
@@ -286,14 +328,33 @@
         $('#avatar').attr('src', objects.avatar_url);
         $('#link').html(objects.blog).attr('href', objects.blog);
         $('#email').html(objects.email).attr('href', objects.email);
-
-
-        var date = new Date(objects.created_at);
-        date = date.toDateString();
-        date = date.slice(3);
-        $('#created').html("Joined on " + date);
+        $('#followers').html(objects.followers);
+        $('#following').html(objects.following)
+        $('#created').html("Joined on " + new Date(objects.created_at).toDateString().slice(3));
       }
     });
+    $.ajax ({
+      type: 'GET',
+      url: 'https://api.github.com/users/'+ user + '/repos',
+      success: function(objects){
+        $('.repo1').html(objects[0].name).attr('href', 'http://github.com/' + objects[0].full_name);
+        $('.repo2').html(objects[1].name).attr('href', 'http://github.com/' + objects[1].full_name);
+        $('.repo3').html(objects[2].name).attr('href', 'http://github.com/' + objects[2].full_name);
+        $('.repo4').html(objects[3].name).attr('href', 'http://github.com/' + objects[3].full_name);
+        $('.repo5').html(objects[4].name).attr('href', 'http://github.com/' + objects[4].full_name);
+        $('.repo6').html(objects[5].name).attr('href', 'http://github.com/' + objects[5].full_name);
+        $('.repo7').html(objects[6].name).attr('href', 'http://github.com/' + objects[6].full_name);
+        $('.repo8').html(objects[7].name).attr('href', 'http://github.com/' + objects[7].full_name);
+        $('.repo9').html(objects[8].name).attr('href', 'http://github.com/' + objects[8].full_name);
+    }
+  });
+  $.ajax ({
+    type: 'GET',
+    url: 'https://api.github.com/users/AriGonzo/starred',
+    success: function(objects){
+      $('starred').html(objects.length)
+    }
+  });
     </script>
 <script>
       function drop(id) {
