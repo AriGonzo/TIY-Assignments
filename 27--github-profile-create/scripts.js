@@ -38,7 +38,7 @@
       type: 'GET',
       url: 'https://api.github.com/users/AriGonzo/starred',
       success: function(objects){
-        $('starred').html(objects.length);
+        $('#starred').text(objects.length);
       }
     });
 
