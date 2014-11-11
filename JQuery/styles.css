@@ -28,7 +28,7 @@ select {
   color: #FFF;
 }
 input {
-  border: 2px solid white;
+  border: 3px solid white;
 }
 #biography, #comments, #affiliations {
   height: 22ex;

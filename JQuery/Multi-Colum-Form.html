@@ -12,13 +12,13 @@
         <form>
           <div id="col1" class="col-sm-6 col-md-4">
             <a><label for="first_name">First Name</label></a>
-            <input type="text" id="first_name" placeholder="Bob">
+            <input type="text" id="first_name" placeholder="Bob" required>
             </input>
             <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" placeholder="Smith">
+            <input type="text" id="last_name" placeholder="Smith" required>
             </input>
             <label for="email">email address</label>
-            <input type="email" id="email" placeholder="Bobrey.Smith@gmail.com"></input>
+            <input type="email" id="email" placeholder="Bobrey.Smith@gmail.com" required></input>
             <label for="country">Country</label>
             <select name="country" id="county">
               <option>Choose a Country</option>
@@ -33,7 +33,7 @@
           </div>
           <div id="col2" class="col-sm-6 col-md-4">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phoneNum" placeholder="407-555-5555"></input>
+            <input type="tel" id="phoneNum" placeholder="407-555-5555" required></input>
             <label for="affiliations">Affiliations</label>
             <input type="text" id="affiliations"></input>
             <label for="occupation">Occupation</label>
@@ -44,8 +44,8 @@
               <option value="supervillian">Super Villian</option>
               <option value="coder">Coder</option>
             </select>
-            <label for="dogsname">Dog's Name</label>
-            <input type="text" id="dogsname" placeholder="Ruffles"></input>
+            <label for="dogsname">Biggest Secret?</label>
+            <input type="password" id="secret"></input>
             <label for="gadget">Favorite Gadget</label>
             <input type="text" id="gadget" placeholder="iPhone"></input>
           </div>
@@ -67,10 +67,10 @@
             <label for="comments">Comments</label>
             <input type="text" id="comments"></input>
           </div>
+          <div id="button-submit">
+            <input class="submit" type="submit" value="Send Your Data"></input>
+          </div>
         </form>
-        <div id="button-submit">
-          <input class="submit" type="submit" value="Send Your Data"></input>
-        </div>
       </div>
     </div>
   </body>
