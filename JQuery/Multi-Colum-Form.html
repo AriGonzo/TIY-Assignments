@@ -1,6 +1,7 @@
 <!DOCTYPE>
   <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -9,8 +10,8 @@
     <div class="container">
       <div class="main">
         <form>
-          <div class="col-md-4">
-            <label for="first_name">First Name</label>
+          <div id="col1" class="col-sm-6 col-md-4">
+            <a><label for="first_name">First Name</label></a>
             <input type="text" id="first_name" placeholder="Bob">
             </input>
             <label for="last_name">Last Name</label>
@@ -29,7 +30,7 @@
             <label for="biography">Biography</label>
             <input type="text" id="biography" placeholder="tell us a bit about yourself"></input>
           </div>
-          <div class="col-md-4">
+          <div id="col2" class="col-sm-6 col-md-4">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phoneNum" placeholder="407-555-5555"></input>
             <label for="affiliations">Affiliations</label>
@@ -46,7 +47,7 @@
             <label for="gadget">Favorite Gadget</label>
             <input type="text" id="gadget" placeholder="iPhone"></input>
           </div>
-          <div class="col-md-4">
+          <div id="col3" class="col-sm-12 col-md-4">
             <label for="talent">Type of Talent</label>
             <select name="talent" id="talent">
               <option value="juggling">Juggling</option>

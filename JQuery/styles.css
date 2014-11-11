@@ -1,3 +1,55 @@
+body {
+  background-color: #47A3DA;
+}
+#col1, #col2, #col3 {
+  /* width: 100%; */
+}
 input, select {
-  width: 100%
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid white;
+  color: #FFF;
+  height: 6ex;
+
+}
+input {
+  font-weight: bold;
+}
+select {
+  font-weight: bold;
+  color: #FFF;
+}
+label {
+  margin-top: 5ex;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+::-webkit-input-placeholder {
+  color: #10689A;
+  font-style: italic;
+  font-weight: lighter;
+}
+:-moz-placeholder {
+  color: #10689A;
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  color: #10689A;
+  font-style: italic;
+}
+
+@media (max-width: 1200px){
+  #col1, #col2 {
+    width: 50%;
+  }
+  #col3 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  #col1, #col2, #col3 {
+    width: 100%;
+  }
 }
