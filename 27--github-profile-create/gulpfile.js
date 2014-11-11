@@ -11,12 +11,12 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function () {
-  gulp.src('./Users/arielgonzalez/Desktop/app/*.*')
+  gulp.src('~/**/*.html')
     .pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./Users/arielgonzalez/Desktop/app/*.*'], ['html']);
+  gulp.watch(['./*.html'], ['html']);
 });
 
 gulp.task('default', ['connect', 'watch']);

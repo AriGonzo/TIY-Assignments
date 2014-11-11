@@ -18,6 +18,7 @@
       }
     });
 
+
     $.ajax ({
       type: 'GET',
       url: 'https://api.github.com/users/'+ user + '/repos',
