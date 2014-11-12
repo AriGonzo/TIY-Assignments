@@ -34,13 +34,13 @@ input {
 #biography, #affiliations, #comments {
   background-color: transparent;
   height: 22ex;
-  width: 325px;
+  width: 90%;
   border: 3px solid white;
   color: white;
   padding-bottom: 18ex;
 }
 .textWrap {
-  width: inherit;
+  width: 100%;
 }
 #button-submit {
   width: 13em;
