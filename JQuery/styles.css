@@ -29,6 +29,7 @@ select {
 }
 input {
   border: 3px solid white;
+  padding-left: 1.5ex;
 }
 #biography, #comments, #affiliations {
   height: 22ex;
@@ -55,7 +56,6 @@ label {
 ::-webkit-input-placeholder {
   color: #10689A;
   font-style: italic;
-  padding-left: 1.5ex;
 }
 :-moz-placeholder {
   color: #10689A;

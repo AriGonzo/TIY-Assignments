@@ -9,21 +9,21 @@
   <body>
     <div class="container">
       <div class="main">
-        <form>
+        <form method="POST" id="ariForm">
           <div id="col1" class="col-sm-6 col-md-4">
             <a><label for="first_name">First Name</label></a>
-            <input type="text" id="first_name" placeholder="Bob" required>
+            <input type="text" id="first_name" name="first_name" placeholder="Bob" required>
             </input>
             <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" placeholder="Smith" required>
+            <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
             </input>
             <label for="email">email address</label>
-            <input type="email" id="email" placeholder="Bobrey.Smith@gmail.com" required></input>
+            <input type="email" id="email" name="email" placeholder="Bobrey.Smith@gmail.com" required></input>
             <label for="country">Country</label>
             <select name="country" id="county">
               <option>Choose a Country</option>
-              <option value="UnitedStates">United States</option>
-              <option value="UnitedKingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="United Kingdom">United Kingdom</option>
               <option value="Bulgaria">Bulgaria</option>
               <option value="Cuba">Cuba</option>
               <option value="Mexico">Mexico</option>
@@ -33,7 +33,7 @@
           </div>
           <div id="col2" class="col-sm-6 col-md-4">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phoneNum" placeholder="407-555-5555" required></input>
+            <input type="tel" id="phoneNum" name="phoneNum" placeholder="407-555-5555" required></input>
             <label for="affiliations">Affiliations</label>
             <input type="text" id="affiliations"></input>
             <label for="occupation">Occupation</label>
@@ -68,10 +68,17 @@
             <input type="text" id="comments"></input>
           </div>
           <div id="button-submit">
-            <input class="submit" type="submit" value="Send Your Data"></input>
+            <input class="submitBTN" type="submit" value="Send Your Data"></input>
           </div>
         </form>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      $('#ariForm').submit(function( event ){
+        event.preventDefault();
+        console.log($(this).serializeArray());
+      })
+    </script>
   </body>
   </html>
