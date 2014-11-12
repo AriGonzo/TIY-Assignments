@@ -1,0 +1,32 @@
+.container {
+  width: 1186px;
+}
+img {
+  border: none;
+  display: block;
+  margin: 15ex 49ex;
+
+}
+#images {
+  width: 700%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  list-style-type: none;
+}
+#images > li {
+  float: left;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+#images>li>a {
+  display: block;
+  text-align: center;
+  outline: none;
+}
+#imagecontain {
+  margin: 0 0 10px;
+  /* overflow: hidden; */
+  padding: 40px 0 60px;
+}
