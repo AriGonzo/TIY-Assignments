@@ -64,6 +64,7 @@ label {
 ::-webkit-input-placeholder {
   color: white;
   font-style: italic;
+	font-weight: lighter;
 }
 :-moz-placeholder {
   color: #10689A;
