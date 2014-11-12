@@ -33,6 +33,7 @@ input {
 }
 #biography, #comments, #affiliations {
   height: 22ex;
+  padding-bottom: 18ex;
 }
 #button-submit {
   width: 13em;
