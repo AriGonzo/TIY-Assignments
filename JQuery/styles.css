@@ -10,7 +10,7 @@
 	font-style: normal;
 }
 body {
-  background-color: #47A3DA;
+  background-color: #686b6d;
   font-family: 'Lato', Calibri, Arial, sans-serif;
   font-size: 14pt;
 }
@@ -49,7 +49,7 @@ input {
 #button-submit input {
   margin-top: 5ex;
   margin-bottom: 5ex;
-  background-color: #10689A;
+  background-color: #333333;
   border: none;
   text-transform: uppercase;
 }
@@ -62,7 +62,7 @@ label {
   font-weight: normal;
 }
 ::-webkit-input-placeholder {
-  color: #10689A;
+  color: white;
   font-style: italic;
 }
 :-moz-placeholder {
