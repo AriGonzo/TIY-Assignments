@@ -178,3 +178,85 @@ Enables binding angular expressions to onsubmit events.
 ```
 <form ng-submit="submit()" ng-controller="ExampleController">
 ```
+
+### Form
+
+The directive for a FormController
+
+* arguments:
+  * Name of the form
+* example: 
+```
+<form name="myForm" ng-controller="FormController" class="my-form">
+  userType: <input name="input" ng-model="userType" required>
+  <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+  <tt>userType = {{userType}}</tt><br>
+  <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br>
+  <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br>
+  <tt>myForm.$valid = {{myForm.$valid}}</tt><br>
+  <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br>
+ </form>
+```
+
+### Input
+
+HTML input element control. When used together with ngModel, it provides data-binding, input state control, and validation. Input control follows HTML5 input types
+
+* arguments:
+  * ngModel, and a slew of optional arguments: name, required, ngRequired,etc
+* examples:
+```
+<form name="myForm">
+    User name: <input type="text" name="userName" ng-model="user.name" required>
+    <span class="error" ng-show="myForm.userName.$error.required">
+      Required!</span><br>
+    Last name: <input type="text" name="lastName" ng-model="user.last"
+      ng-minlength="3" ng-maxlength="10">
+```
+* variants: 
+  * checkbox `Value1: <input type="checkbox" ng-model="value1"> <br/>`
+  * date 
+  ```<input type="date" id="exampleInput" name="input" ng-model="value" placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
+  ```
+  *   
+
+
+### Select
+
+HTML SELECT element with angular data-binding.
+
+* arguments:
+  * ngModel
+* example:
+```
+<select ng-model="myColor" ng-options="color.name for color in colors">
+```
+
+## Services
+
+### $controller
+
+Responsible for instantiating controllers.
+
+* arguments
+  * contructor- If called with a function then it's considered to be the controller constructor function. Otherwise it's considered to be a string which is used to retrieve the controller constructor using the following steps
+  * locals- Injection locals for Controller
+* returns - instance of given controller
+* example:
+```
+.controller('SideBar',['$http', function($http){
+```
+
+### $http
+
+The $http service facilitates communication with remote HTTP servers. Has a lot of useful methods 
+
+* arguments: 
+  * config- Object describing the request to be made and how it should be processed. The object has following properties:
+* returns - Promise
+* example:
+```
+ $http({method: $scope.method, url: $scope.url, cache: $templateCache}).
+ ```
+
+

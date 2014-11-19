@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html ng-app="profile">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css">
     <link href="styles.css" rel="stylesheet">
     <style>
@@ -19,7 +19,7 @@
             </div>
           </form>
           <ul class="nav navbar-nav">
-            <li><a href="#">Dino</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">Enterprise</a></li>
             <li><a href="#">Blog</a></li>
@@ -30,23 +30,23 @@
         </nav>
       </div>
       <div class="container content">
-        <div class="container">
+        <div class="container" ng-controller="SideBar as info">
           <aside class="col-sm-3 col-md-3">
-            <a href="https://avatars1.githubusercontent.com/u/8821473?v=3&s=400"><img id="avatar" src="" alt=""></a>
+            <a href="https://avatars1.githubusercontent.com/u/8821473?v=3&s=400"><img id="avatar" ng-src="{{info.data.avatar_url}}" alt=""></a>
               <ul class="userInfo">
-                <li><h3 id="name"></h3>
-                <li><h4 id="user"></h4>
+                <li><h3 id="name">{{info.data.name}}</h3>
+                <li><h4 id="user">{{info.data.login}}</h4>
                 <hr>
-                <li><span id="company" class="octicon octicon-organization"></span>
-                <li><span id="location" class="octicon octicon-location"></span>
-                <li><span class="octicon octicon-mail"></span><a id="email" href=" "></a>
-                <li><span class="octicon octicon-link"></span><a id="link" href=""></a>
-                <li><span id="created" class="octicon octicon-clock"></span></li>
+                <li><span id="company" class="octicon octicon-organization">{{info.data.company}}</span>
+                <li><span id="location" class="octicon octicon-location">{{info.data.location}}</span>
+                <li><span class="octicon octicon-mail"></span>{{info.data.email}}<a id="email" href=" "></a>
+                <li><span class="octicon octicon-link"></span>{{info.data.blog}}<a id="link" href=""></a>
+                <li><span id="created" class="octicon octicon-clock">{{info.data.created_at}}</span></li>
                 <hr>
             <ul id="klout">
-              <li class="col-md-4"><a id="followers"href="#"></a><br><p>Followers</p></li>
-              <li class="col-md-4"><a id="starred" href=""></a><br><p>Starred</p></li>
-              <li class="col-md-4"><a id="following" href=""></a><br><p>Following</p></li`>
+              <li class="col-md-4"><a id="followers"href="#">{{info.data.followers}}</a><br><p>Followers</p></li>
+              <li class="col-md-4"><a id="starred" href=""></a><br><p>{{starred}} Starred</p></li>
+              <li class="col-md-4"><a id="following" href="">{{info.data.following}}</a><br><p>{{following}} Following</p></li`>
             </ul>
 
 
@@ -161,7 +161,9 @@
           </section>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="scripts.js"></script>
 
   </body>
