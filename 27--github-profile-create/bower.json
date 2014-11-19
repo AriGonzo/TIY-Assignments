@@ -1,0 +1,24 @@
+{
+  "name": "Github Profile",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AriGonzo/TIY-Assignments",
+  "authors": [
+    "Ariel Gonzalez <ArielGonzalez515@gmail.com>"
+  ],
+  "description": "creating github profile in a multitude of ways",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.3.3",
+    "bootstrap": "~3.3.1",
+    "restangular": "~1.4.0"
+  }
+}
