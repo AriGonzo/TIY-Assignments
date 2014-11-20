@@ -30,38 +30,45 @@
       <div class="container" ng-controller="MainCtrl as app">
 
         <div ng-include="'components/navbar/navbar.html'"></div>
-        <header>
-          <form>
+        <header class = "well">
+          <form ng-submit="app.addComment(text, app.apiKey)">
 
             <fieldset class="form-group">
               <label>What's on your mind?</label>
-              <textarea class="form-control" ng-model="text"></textarea>
+              <textarea class="form-control" required
+                ng-model="text"></textarea>
             </fieldset>
 
             <fieldset class="form-group">
-              <input type="text" class="form-control" placeholder="Who are you?" ng-model="author">
-              <button class="btn btn-primary">POST</button><em>{{140 - text.length}} characters remaining</em>
+              <input type="text" ng-model="app.apiKey" required 
+                class="form-control" 
+                placeholder="Who are you? (Gimme yo' API key!)">
+              <button type="submit" class="btn btn-primary"
+              >POST</button><em>{{140 - text.length}} characters remaining</em>
             </fieldset>
-          </form>
-        </header>
-        <section class="col-md-12">
-          <blockquote>
-            <p>
-              {{text | limitTo:140}}
-            </p>
-            <cite>
-              &mdash; <strong>{{author || "Your Name"}}</strong>
-              on <time> {{date | date: 'h:mm a EEE MMM d yyyy' }} 
-            </cite>
+
+            <blockquote>
+              <p>
+                {{text || "Your text goes here, yo" | limitTo:140}}
+              </p>
+              <cite>
+                &mdash; <strong>{{app.apiKey || "Your Name"}}</strong>
+                on <time> {{date | date: 'h:mm a EEE MMM d yyyy' }} 
+              </cite>
           </blockquote>
-        </section>
-        <section class="col-md-12" ng-repeat="comment in app.comments">
-          <blockquote> 
-           {{comment.body}}
+        </form>
+      </header>
+
+        <section class="col-md-12">
+          <blockquote ng-repeat="comment in app.comments"> 
+           {{comment.body}} 
+          <button id="edit" ng-hide="timeElapsed" 
+            class="btn btn-default btn-xs">EDIT</button>
           <br><br>
           <cite>
             <img class="avatar" ng-src="{{comment.user.avatar_url}}"> &mdash; {{comment.user.login}} on <time>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
           </cite>
+
         </blockquote>
 
         </section>
@@ -84,6 +91,7 @@
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-resource/angular-resource.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

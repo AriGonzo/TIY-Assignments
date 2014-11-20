@@ -1,17 +1,45 @@
 'use strict';
 
 angular.module('yeomanProject')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($http, $interpolate) {
+    var apiUrl = 'https://api.github.com/repos/TheIronYard--Orlando/FEE--2014--FALL/issues/417/comments'
+    var apiKeyTpl = $interpolate('?access_token={{key}}');
     var self = this;
+
+    // this.apiKey = $cookies.apiKey;
 
     this.comments = [];
 
-    $http.get('https://api.github.com/repos/TheIronYard--Orlando/FEE--2014--FALL/issues/412/comments')
+    $http.get(apiUrl)
       .success(function(data){
         self.comments = data;
       });
-    $scope.date = new Date();
-    $scope.awesomeThings = [
+
+    this.date = new Date();
+
+    this.commentLimit = 140;
+
+    this.timeElapsed = function(timeNow, timeStamp){
+      timeNow = this.date;
+      timeStamp = this.comments.created_at;
+      console.log(timeNow);
+      if(timeNow > timeStamp){
+        return true;
+      }
+    }
+
+    this.addComment = function(text, apiKey){
+      var url = apiUrl + apiKeyTpl({key: apiKey})
+
+      // $cookies.apiKey = apiKey
+
+      $http.post(url, {body: text})
+        .success(function(data){
+          self.comments.push(data);
+        })
+    }
+
+    this.awesomeThings = [
       {
         'key': 'angular',
         'title': 'AngularJS',
@@ -76,7 +104,7 @@ angular.module('yeomanProject')
         'logo': 'node-sass.png'
       }
     ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
+    angular.forEach(this.awesomeThings, function(awesomeThing) {
       awesomeThing.rank = Math.random();
     });
   });
