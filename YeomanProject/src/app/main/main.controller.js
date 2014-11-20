@@ -17,12 +17,12 @@ angular.module('yeomanProject')
 
     this.date = new Date();
 
-    this.editComment = function(event){
-      //clicking the edit button will change the comment to a text input
-      $('#editBtn').html('Did it work?')
+    // this.editComment = function(event){
+    //   //clicking the edit button will change the comment to a text input
+    //   $('#editBtn').html('Did it work?')
 
-      $http.patch()
-    }
+    //   $http.patch()
+    // }
 
     this.commentLimit = 140;
 

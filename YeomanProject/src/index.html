@@ -67,7 +67,7 @@
           <br><br>
           <cite>
             <img class="avatar" ng-src="{{comment.user.avatar_url}}"> <a ng-href="{{comment.user.html_url}}"
-              rel="author"><label>{{comment.user.login}}</a> on <date>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date></label>
+              rel="author">{{comment.user.login}}</a> on <date>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
           </cite>
           <textarea id="edit" class="form-control" ng-model="text"></textarea>
 
