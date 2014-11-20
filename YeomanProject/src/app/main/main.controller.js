@@ -21,9 +21,9 @@ angular.module('yeomanProject')
 
     this.timeElapsed = function(timeNow, timeStamp){
       timeNow = this.date;
-      timeStamp = this.comments.created_at;
-      console.log(timeNow);
-      if(timeNow > timeStamp){
+      timeStamp = this.comments.created_at
+      
+      if(timeNow.getMinutes() - timeStamp.getMinutes ){
         return true;
       }
     }
