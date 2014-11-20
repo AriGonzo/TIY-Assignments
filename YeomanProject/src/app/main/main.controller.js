@@ -20,10 +20,10 @@ angular.module('yeomanProject')
     this.commentLimit = 140;
 
     this.timeElapsed = function(timeNow, timeStamp){
-      timeNow = this.date;
-      timeStamp = this.comments.created_at;
-      console.log(timeNow);
-      if(timeNow > timeStamp){
+      timeNow = Date.parse(this.date);
+      timeStamp = Date.parse(this.comments.created_at);
+      
+      if(timeNow < timeStamp){
         return true;
       }
     }
