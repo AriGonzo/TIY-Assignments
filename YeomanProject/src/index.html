@@ -62,13 +62,14 @@
         <section class="col-md-12">
           <blockquote ng-repeat="comment in app.comments"> 
            {{comment.body}} 
-          <button id="edit" ng-hide="timeElapsed" 
+          <button id="editBtn" ng-submit="app.editComment" ng-hide="timeElapsed" 
             class="btn btn-default btn-xs">EDIT</button>
           <br><br>
           <cite>
             <img class="avatar" ng-src="{{comment.user.avatar_url}}"> <a ng-href="{{comment.user.html_url}}"
-              rel="author">{{comment.user.login}}</a> on <time>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
+              rel="author"><label>{{comment.user.login}}</a> on <date>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date></label>
           </cite>
+          <textarea id="edit" class="form-control" ng-model="text"></textarea>
 
         </blockquote>
 
