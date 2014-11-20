@@ -66,7 +66,8 @@
             class="btn btn-default btn-xs">EDIT</button>
           <br><br>
           <cite>
-            <img class="avatar" ng-src="{{comment.user.avatar_url}}"> &mdash; {{comment.user.login}} on <time>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
+            <img class="avatar" ng-src="{{comment.user.avatar_url}}"> <a ng-href="{{comment.user.html_url}}"
+              rel="author">{{comment.user.login}}</a> on <time>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
           </cite>
 
         </blockquote>
