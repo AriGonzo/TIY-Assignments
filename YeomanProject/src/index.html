@@ -31,28 +31,27 @@
 
         <div ng-include="'components/navbar/navbar.html'"></div>
         <header class = "well">
-          <form ng-submit="addMessage(newMessageText)">
 
+          <form ng-submit="addMessage(messageText, messageAuthor)">
             <fieldset class="form-group">
               <label>What's on your mind?</label>
-              <textarea class="form-control" required 
-              ng-model="newMessageText" ng-change="messages.$save(message)"></textarea>
+              <textarea class="form-control" required ng-model="messageText"></textarea>
             </fieldset>
 
-            <!-- <fieldset class="form-group">
-              <input type="text" ng-model="app.apiKey" required 
+            <fieldset class="form-group">
+              <input type="text" ng-model="messageAuthor" required 
                 class="form-control" 
-                placeholder="Who are you? (Gimme yo' API key!)"> -->
+                placeholder="{{app.displayName}}">
               <button type="submit" class="btn btn-primary"
-              >POST</button><em>{{140 - text.length}} characters remaining</em>
+              >POST</button><em>{{140 - messageText.length}} characters remaining</em>
             </fieldset>
 
             <blockquote>
               <p>
-                {{text || "Your text goes here, yo" | limitTo:140}}
+                {{messageText || "Your text goes here, yo" | limitTo:140}}
               </p>
               <cite>
-                &mdash; <strong>{{app.apiKey || "Your Name"}}</strong>
+                <img class="avatar" ng-src="{{app.avatar}}"> &mdash; <strong>{{app.displayName || "Your Name"}}</strong>
                 on <time> {{app.date | date: 'h:mm a EEE MMM d yyyy' }} 
               </cite>
           </blockquote>
@@ -60,15 +59,15 @@
       </header>
 
         <section class="col-md-12">
-          <blockquote ng-repeat="message in app.messages"> 
-           {{message.body}} 
+          <blockquote ng-repeat="message in messages"> 
+           {{message.text}} 
           <!-- <button id="editBtn" ng-submit="app.editComment" ng-hide="timeElapsed" 
             class="btn btn-default btn-xs">EDIT</button> -->
             <button ng-click="messages.$remove(message)">X</button>
           <br><br>
           <cite>
-            <img class="avatar" ng-src="{{comment.user.avatar_url}}"> <a ng-href="{{comment.user.html_url}}"
-              rel="author">{{comment.user.login}}</a> on <date>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
+            <img class="avatar" ng-src="{{message.avatar}}"> <a ng-href="{{comment.user.html_url}}"
+              rel="author">{{message.author || "The Stranger"}}</a> on <date>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
           </cite>
           <textarea id="edit" class="form-control" ng-model="text"></textarea>
 
