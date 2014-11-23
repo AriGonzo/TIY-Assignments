@@ -46,7 +46,7 @@
               <em>{{140 - messageText.length}} characters remaining</em>
             </fieldset>
 
-            <blockquote>
+            <blockquote id="preview">
               <p>
                 {{messageText || "Your text shows up here, yo" | limitTo:140}}
               </p>
@@ -63,7 +63,8 @@
            {{message.text}} 
           <!-- <button id="editBtn" ng-submit="app.editComment" ng-hide="timeElapsed" 
             class="btn btn-default btn-xs">EDIT</button> -->
-            <button ng-click="messages.$remove(message)" class="ng-hide" ng-show="authorized()">X</button>
+            <button id="delete" ng-click="messages.$remove(message)" class="ng-hide glyphicon glyphicon-remove" 
+              ng-show="authorized()"></button>
           <br><br>
           <cite>
             <img class="avatar" ng-src="{{message.avatar}}"> <a ng-href="{{comment.user.html_url}}"

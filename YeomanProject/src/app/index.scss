@@ -1,3 +1,25 @@
+body {
+  background-color: #7abce2;
+  background-image: url(http://www.macwallhd.com/wp-content/Wallpapers/20120813/Cool%20Mac%20Wallpapers%20With%20Comic%20Book%20Superhero-36783370.jpeg);
+}
+
+#preview{
+  background-color: transparent;
+}
+
+#bs-example-navbar-collapse-6 {
+  border: 2px white dashed;
+}
+
+cite {
+  font-style: italic;
+  font-size: small;
+}
+
+blockquote {
+  background-color: #DCF0FC;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -27,7 +49,7 @@ blockquote.ng-binding {
   border: 1px gray dotted;
 }
 
-#editBtn.btn-xs {
+#delete.btn-xs {
   margin-top: 0;
   font-size: 9px;
   position: absolute;
