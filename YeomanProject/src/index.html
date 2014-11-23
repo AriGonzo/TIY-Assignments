@@ -31,6 +31,12 @@
 
         <div ng-include="'components/navbar/navbar.html'"></div>
         <header class = "well">
+          
+          <nav id="logInOut">
+            <button ng-hide="loggedIn()" ng-click="logIn()">Login</button>
+            <button ng-show="loggedIn()" ng-click="logOut()">Logout</button>
+            <button ng-click="test()">User Status</button>
+          </nav>
 
           <form ng-submit="addMessage(messageText, messageAuthor)">
             <fieldset class="form-group">
@@ -38,17 +44,15 @@
               <textarea class="form-control" required ng-model="messageText"></textarea>
               <button type="submit" class="btn btn-primary"
               >POST</button>
-              <button ng-show="loggedIn()" ng-click="logIn()">Login</button>
-              <button ng-hide="loggedIn()" class="ng-hide" ng-click="logOut()">Logout</button>
               <em>{{140 - messageText.length}} characters remaining</em>
             </fieldset>
 
             <blockquote>
               <p>
-                {{messageText || "Your text goes here, yo" | limitTo:140}}
+                {{messageText || "Your text shows up here, yo" | limitTo:140}}
               </p>
               <cite>
-                <img class="avatar" ng-src="{{app.avatar}}"> &mdash; <strong>{{app.displayName || "Your Name"}}</strong>
+                <img class="avatar" ng-src="{{app.avatar}}"> &mdash; <strong>{{app.displayName || displayName || "Your Name"}}</strong>
                 on <time> {{app.date | date: 'h:mm a EEE MMM d yyyy' }} 
               </cite>
           </blockquote>
@@ -60,11 +64,11 @@
            {{message.text}} 
           <!-- <button id="editBtn" ng-submit="app.editComment" ng-hide="timeElapsed" 
             class="btn btn-default btn-xs">EDIT</button> -->
-            <button ng-click="messages.$remove(message)">X</button>
+            <button ng-click="messages.$remove(message)" class="ng-hide" ng-show="authorized()">X</button>
           <br><br>
           <cite>
             <img class="avatar" ng-src="{{message.avatar}}"> <a ng-href="{{comment.user.html_url}}"
-              rel="author">{{message.author || "The Stranger"}}</a> on <date>{{comment.updated_at | date: 'h:mm a EEE MMM d yyyy'}}</date>
+              rel="author">{{message.author || "The Stranger"}}</a> on <date>{{message.date | date: 'h:mm a EEE MMM d yyyy'}}</date>
           </cite>
           <textarea id="edit" class="form-control" ng-model="text"></textarea>
 

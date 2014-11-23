@@ -12,13 +12,9 @@ angular.module('yeomanProject', ["firebase"])
     $scope.messages = sync.$asArray();
 
     var obj = $firebase(ref).$asObject();
-
-    // obj.$bindTo($scope, "messages").then(function() {
-    //   $scope.messages.name = self.displayName;
-    //   ref.$set({name: self.displayName});
-    // });
-    
+       
     $scope.logIn = function(){
+      console.log(auth)
       auth.$authWithOAuthPopup("facebook").then(function(authData) {
         console.log("Logged in as:", authData.facebook.displayName);
         self.displayName = authData.facebook.displayName;
@@ -29,19 +25,27 @@ angular.module('yeomanProject', ["firebase"])
     }
 
     $scope.loggedIn = function() {
-      if(self.displayName.length > 0) {
-        return false;
+      if(auth.$getAuth() != null) {
+        return true;
       }
+    }
+
+    $scope.test = function(){
+      console.log(auth.$getAuth())
+    }
+
+    $scope.logOut = function(){
+      auth.$unauth()
+      window.location.reload()
     }
     
     this.date = new Date();
+    this.timeStamp = new Date();
 
     // this.editComment = function(event){
     //   //clicking the edit button will change the comment to a text input
     //   $('#editBtn').html('Did it work?')
 
-    //   $http.patch()
-    // }
 
     this.commentLimit = 140;
 
@@ -55,15 +59,25 @@ angular.module('yeomanProject', ["firebase"])
     // }
 
     $scope.addMessage = function(messageText, messageAuthor){
-        $scope.messages.$add({
-          'text': messageText, 
-          'author': self.displayName,
-          'avatar': self.avatar,
-        });
-        $scope.messageText = '';
-        console.log($scope.messages);
+        if(auth.$getAuth() != null) {
+          $scope.messages.$add({
+            'text': messageText,
+            'author': self.displayName,
+            'avatar': self.avatar,
+            'date': self.timeStamp.toJSON()
+          });
+          $scope.messageText = '';
+          console.log($scope.messages);
+        } else {
+          alert("Please log in before commenting");
+        }
     };
 
+    $scope.authorized = function(message) {
+      if(self.displayName === this.message.author){
+        return true;
+      }
+    } 
 
 
   });
