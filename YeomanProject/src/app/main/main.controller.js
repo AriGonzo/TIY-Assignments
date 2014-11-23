@@ -17,14 +17,22 @@ angular.module('yeomanProject', ["firebase"])
     //   $scope.messages.name = self.displayName;
     //   ref.$set({name: self.displayName});
     // });
+    
+    $scope.logIn = function(){
+      auth.$authWithOAuthPopup("facebook").then(function(authData) {
+        console.log("Logged in as:", authData.facebook.displayName);
+        self.displayName = authData.facebook.displayName;
+        self.avatar = authData.facebook.cachedUserProfile.picture.data.url;
+      }).catch(function(error) {
+        console.error("Authentication failed: ", error);
+      });
+    }
 
-    auth.$authWithOAuthPopup("facebook").then(function(authData) {
-      console.log("Logged in as:", authData.facebook.displayName);
-      self.displayName = authData.facebook.displayName;
-      self.avatar = authData.facebook.cachedUserProfile.picture.data.url;
-    }).catch(function(error) {
-      console.error("Authentication failed: ", error);
-    });
+    $scope.loggedIn = function() {
+      if(self.displayName.length > 0) {
+        return false;
+      }
+    }
     
     this.date = new Date();
 
@@ -49,10 +57,10 @@ angular.module('yeomanProject', ["firebase"])
     $scope.addMessage = function(messageText, messageAuthor){
         $scope.messages.$add({
           'text': messageText, 
-          'author': messageAuthor,
+          'author': self.displayName,
           'avatar': self.avatar,
         });
-        $scope.messageText = 'BOOYA';
+        $scope.messageText = '';
         console.log($scope.messages);
     };
 

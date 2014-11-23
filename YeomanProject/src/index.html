@@ -36,14 +36,11 @@
             <fieldset class="form-group">
               <label>What's on your mind?</label>
               <textarea class="form-control" required ng-model="messageText"></textarea>
-            </fieldset>
-
-            <fieldset class="form-group">
-              <input type="text" ng-model="messageAuthor" required 
-                class="form-control" 
-                placeholder="{{app.displayName}}">
               <button type="submit" class="btn btn-primary"
-              >POST</button><em>{{140 - messageText.length}} characters remaining</em>
+              >POST</button>
+              <button ng-show="loggedIn()" ng-click="logIn()">Login</button>
+              <button ng-hide="loggedIn()" class="ng-hide" ng-click="logOut()">Logout</button>
+              <em>{{140 - messageText.length}} characters remaining</em>
             </fieldset>
 
             <blockquote>
