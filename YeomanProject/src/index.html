@@ -52,7 +52,7 @@
               </p>
               <cite>
                 <img class="avatar" ng-src="{{app.avatar}}"> &mdash; <strong>{{app.displayName || displayName || "Your Name"}}</strong>
-                on <time> {{app.date | date: 'h:mm a EEE MMM d yyyy' }} 
+                on &ensp;<time> {{app.date | date: 'h:mm a EEE MMM d yyyy' }} 
               </cite>
           </blockquote>
         </form>
@@ -68,7 +68,7 @@
           <br><br>
           <cite>
             <img class="avatar" ng-src="{{message.avatar}}"> <a ng-href="{{comment.user.html_url}}"
-              rel="author">{{message.author || "The Stranger"}}</a> on <date>{{message.date | date: 'h:mm a EEE MMM d yyyy'}}</date>
+              rel="author">{{message.author || "The Stranger"}}</a> on &ensp; <date>{{message.date | date: 'h:mm a EEE MMM d yyyy'}}</date>
           </cite>
           <textarea id="edit" class="form-control" ng-model="text"></textarea>
 
