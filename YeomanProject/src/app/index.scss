@@ -7,6 +7,10 @@ body {
   background-color: transparent;
 }
 
+#textEntry {
+  background-color: #F5F5F5;
+}
+
 #bs-example-navbar-collapse-6 {
   border: 2px white dashed;
 }
@@ -14,6 +18,10 @@ body {
 cite {
   font-style: italic;
   font-size: small;
+}
+
+section.well {
+  margin-top: 30px;
 }
 
 blockquote {

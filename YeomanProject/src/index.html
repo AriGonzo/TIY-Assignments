@@ -29,8 +29,7 @@
 
       <div class="container" ng-controller="MainCtrl as app">
 
-        <div ng-include="'components/navbar/navbar.html'"></div>
-        <header class = "well">
+        <section class = "well">
           
           <nav id="logInOut">
             <button ng-hide="loggedIn()" ng-click="logIn()">Login</button>
@@ -40,7 +39,7 @@
           <form ng-submit="addMessage(messageText, messageAuthor)">
             <fieldset class="form-group">
               <label>What's on your mind?</label>
-              <textarea class="form-control" required ng-model="messageText"></textarea>
+              <textarea class="form-control" requirex`d ng-model="messageText"></textarea>
               <button type="submit" class="btn btn-primary"
               >POST</button>
               <em>{{140 - messageText.length}} characters remaining</em>
@@ -56,10 +55,10 @@
               </cite>
           </blockquote>
         </form>
-      </header>
+      </section>
 
         <section class="col-md-12">
-          <blockquote ng-repeat="message in messages"> 
+          <blockquote ng-repeat="message in messages.slice().reverse()" type="alert.type" close="alerts.splice(index, 1)"> 
            {{message.text}} 
           <!-- <button id="editBtn" ng-submit="app.editComment" ng-hide="timeElapsed" 
             class="btn btn-default btn-xs">EDIT</button> -->

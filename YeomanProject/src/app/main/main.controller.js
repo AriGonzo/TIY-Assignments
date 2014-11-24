@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('yeomanProject', ["firebase"])
+var app = angular.module('yeomanProject', ["firebase"])
   .controller('MainCtrl', function ($firebase, $firebaseAuth, $scope) {
     var ref = new Firebase('https://github-comments.firebaseio.com/');
     var sync = $firebase(ref);
@@ -39,6 +39,12 @@ angular.module('yeomanProject', ["firebase"])
       window.location.reload()
     }
     
+    app.filter('reverse', function() {
+      return function(items) {
+        return items.slice().reverse();
+    };
+  });
+
     this.date = new Date();
     this.timeStamp = new Date();
 
